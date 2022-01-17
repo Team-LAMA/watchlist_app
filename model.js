@@ -42,7 +42,7 @@ const model = {
 		},
   },
 
-	// other(oter) shit
+	// Oter shit
 	movies: [
 		{
 			ID: null,
@@ -76,8 +76,8 @@ const model = {
 			profileName: "",
 			profilePicture: "",
 			userDescription: "",
-			followedListIDs: [],
-			//followedUserIDs: [], // spørre Therese om vi skal ha denne
+			followedUserIDs: [],
+			// followedListIDs: [],
 		},
 	],
 }   
