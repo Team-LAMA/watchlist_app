@@ -7,9 +7,21 @@ const model = {
 		userID: "",
 		listID: "",
 	},
-
+	idIndex: {
+		userId: 1,
+		movieId: 1,
+		listId: 1,
+	},
 	inputs: {
-    login: {
+		
+		makeUser: {
+			username: "",
+			password: "",
+			profileName: "",
+			profilePicture: "",
+			userDescription: "",
+		},
+		login: {
 			username: "",
 			password: "",
 		},
@@ -27,15 +39,15 @@ const model = {
 			rating: "",
 		},
 
-    editProfile: {
-      image: "",
-      name: "",
-      description: "",
-    },
+		editProfile: {
+		image: "",
+		name: "",
+		description: "",
+		},
 
-    editList: {
-      name: "",
-    },
+		editList: {
+		name: "",
+		},
     
 		search: {
 			searchWord: "",
@@ -60,7 +72,7 @@ const model = {
 		{
 			ID: null,
 			name: "",
-			movieIDs: [],
+			movies: [],
 			personalComments: [],
 			ratings: [],
 			lastChanged: null,
@@ -72,11 +84,11 @@ const model = {
 			ID: null,
 			username: "",
 			password: "",
-			movieListIDs: [],
+			movieLists: [],
 			profileName: "",
 			profilePicture: "",
 			userDescription: "",
-			followedUserIDs: [],
+			followedUsers: [],
 			// followedListIDs: [],
 		},
 	],
