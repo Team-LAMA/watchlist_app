@@ -7,7 +7,7 @@
 	position: fixed;
 	width: 50.625vh;
 	height: 90vh;
-	background-color: black;
+	outline: 1px black dotted;
 	top: 0;
 	left: 0;
 }
