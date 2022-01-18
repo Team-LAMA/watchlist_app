@@ -4,7 +4,7 @@ const model = {
 	app: {
 		page: "",
 		lastPage: "",
-		userID: "",
+		userID: 0,
 		listID: "",
 	},
 	idIndex: {
