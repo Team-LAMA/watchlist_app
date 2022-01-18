@@ -61,4 +61,35 @@ h1{
     height: 10vh;
     background-color: blue;
     top: 80vh;
-}
+
+    #logo {
+        position: fixed;
+      width: 50.625vh;
+        height: 7vh;
+        top: 0px;
+        left: 0px;
+    
+      font-size: xx-large;
+        background-color: lightgrey;
+    
+        display: flex;
+        justify-content: center;
+      align-items: center;
+    }
+    
+    #app {
+      position: fixed;
+      width: 50.625vh;
+      height: 90vh;
+      outline: 1px black dashed;
+      top: 0;
+      left: 0;
+    }
+    
+    #navbar {
+      position: fixed;
+      width: 50.625vh;
+      height: 10vh;
+      background-color: blue;
+      top: 80vh;
+    }
