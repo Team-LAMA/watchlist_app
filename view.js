@@ -1,1 +1,2 @@
+navbarView();
 searchView();
