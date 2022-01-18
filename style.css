@@ -1,0 +1,21 @@
+.logo {
+    font-size: 15px;
+}
+
+
+#app{
+	position: fixed;
+	width: 50.625vh;
+	height: 90vh;
+	outline: 1px black dotted;
+	top: 0;
+	left: 0;
+}
+
+#navbar{
+	position: fixed;
+	width: 50.625vh;
+	height: 10vh;
+	background-color: blue;
+	top: 80vh;
+}

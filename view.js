@@ -1,1 +1,2 @@
-homeView()
+navbarView();
+searchView();
