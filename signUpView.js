@@ -1,8 +1,8 @@
 function signUpView() {
     let html ="";
-
+    html += generateLogoHTML();
     html += /*html*/`
-    <div class="logo">My Movie List</div>
+    <div class="signUpView">
     <br/>
     <br/>
     <h1>Sign Up</h1>
@@ -14,7 +14,10 @@ function signUpView() {
     <input onchange="setEmail(this.value)" type="text" placeholder="Email"/>
     <br/>
     <button class="signUp" onclick="signUp()">Sign Up</button>
+    </div>
     `;
 
+    html += generateNavbarHTML();
     document.getElementById('app').innerHTML = html;
 }
+
