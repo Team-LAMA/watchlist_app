@@ -1,4 +1,4 @@
-signInView();
+//signInView();
 signUpView();
-navbarView();
-searchView();
+//navbarView();
+//searchView();
