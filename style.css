@@ -29,3 +29,13 @@
   background-color: blue;
   top: 80vh;
 }
+
+.followedList {
+  position: fixed;
+  top: 40vh;
+}
+
+.NotificationList {
+  position: fixed;
+  top: 10vh;
+}
