@@ -45,3 +45,20 @@ h1{
     transition: box-shadow 0.1s, background-color 0.1s;
     cursor: pointer;
 }
+
+#app{
+    position: fixed;
+    width: 50.625vh;
+    height: 90vh;
+    outline: 1px black dashed;
+    top: 0;
+    left: 0;
+}
+
+#navbar{
+    position: fixed;
+    width: 50.625vh;
+    height: 10vh;
+    background-color: blue;
+    top: 80vh;
+}

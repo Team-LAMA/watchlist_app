@@ -17,10 +17,8 @@ const model = {
 		makeUser: {
 			username: "",
 			password: "",
-			profileName: "",
-			profilePicture: "",
-			userDescription: "",
 		},
+
 		login: {
 			username: "",
 			password: "",
@@ -126,7 +124,7 @@ const model = {
 			],
 			personalComments: ["SUPER BRA!!!", "Dårlig", "Liker ikke slanger"],
 			ratings: [10, 0, 0],
-			lastChanged: new Date.now - 86435489,
+			lastChanged: new Date().now - 86435489,
 		},
 		{
 			ID: 1,
@@ -165,7 +163,7 @@ const model = {
 			],
 			personalComments: ["Veldig tøff", "Litt tøff", "Ikke noe tøff, eller kanskje litt"],
 			ratings: [9, 6.3, 3],
-			lastChanged: new Date.now - 96435489,
+			lastChanged: new Date().now - 96435489,
 		},
 		{
 			ID: 2,
@@ -204,7 +202,7 @@ const model = {
 			],
 			personalComments: ["Hmm", "Hmmmmmmm", "Hmmmmmmmmmmmmmmmmmm"],
 			ratings: [1, 1, 1],
-			lastChanged: new Date.now - 7200000,
+			lastChanged: new Date().now - 7200000,
 		},
 	],
 
@@ -213,6 +211,7 @@ const model = {
 			ID: 0,
 			username: "Team3",
 			password: "321",
+			eMail: "Team3@mail.no",
 			movieLists: [],
 			profileName: "Meg",
 			profilePicture: "",
@@ -224,6 +223,7 @@ const model = {
 			ID: 1,
 			username: "Terje",
 			password: "Passord1",
+			eMail: "Terje@getacademy.no",
 			movieLists: [],
 			profileName: "Deg",
 			profilePicture: "",
@@ -235,6 +235,7 @@ const model = {
 			ID: 2,
 			username: "Mamsen0001",
 			password: "LOVE",
+			eMail: "mamsen0001@hotmail.com",
 			movieLists: [],
 			profileName: "Mamma",
 			profilePicture: "",
