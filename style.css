@@ -1,13 +1,60 @@
-.logo {
-    font-size: 15px;
+#logo {
+	position: fixed;
+  width: 50.625vh;
+	height: 7vh;
+	top: 0px;
+
+  font-size: 2vh;
+	background-color: lightgrey;
+
+	display: flex;
+	justify-content: center;
+  align-items: center;
 }
 
+#app {
+  position: fixed;
+  width: 50.625vh;
+  height: 90vh;
+  outline: 1px black dashed;
+  top: 0;
+  left: 0;
 
-#app{
+	display: flex;
+	justify-content: center;
+}
+
+#navbar {
+  position: fixed;
+  width: 50.625vh;
+  height: 10vh;
+  background-color: blue;
+  top: 80vh;
+}
+
+.search.searchBarBG{
 	position: fixed;
-	width: 50.625vh;
-	height: 90vh;
-	background-color: black;
-	top: 0;
-	left: 0;
+	width: calc(50.625vh*0.9);
+	height: 5vh;
+	top: 10vh;
+	border-radius: 1vh;
+	background-color: #bdbdbd;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.search.searchBar{
+	margin: 0px;
+	width: calc(50.625vh*0.85 - 4vh);
+	height: 3vh;
+	border-radius: .75vh;
+}
+
+.search.searchButton{
+	margin: 0px;
+	width: 3vh;
+	height: 3vh;
+	margin-left: 1vh;
+	border-radius: .75vh;
 }
