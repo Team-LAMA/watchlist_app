@@ -1,95 +1,83 @@
-html,
-body {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.logo {
-    font-size: 15px;
-    color: red;
-}
-
-h1{
-    color: red;
-    margin: 5px;
-    padding: 5px;
-}
-
 .signUp {
-    background-color: rgb(97, 76, 76);
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-family: inherit;
-    padding: 5px 10px;
-    margin: 5px;
-    transition: box-shadow 0.1s, background-color 0.1s;
-    cursor: pointer;
+  background-color: rgb(97, 76, 76);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: inherit;
+  padding: 5px 10px;
+  margin: 5px;
+  transition: box-shadow 0.1s, background-color 0.1s;
+  cursor: pointer;
 }
 
 .signIn {
-    background-color: rgb(177, 77, 77);
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-family: inherit;
-    padding: 5px 10px;
-    margin: 5px;
-    transition: box-shadow 0.1s, background-color 0.1s;
-    cursor: pointer;
+  background-color: rgb(177, 77, 77);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: inherit;
+  padding: 5px 10px;
+  margin: 5px;
+  transition: box-shadow 0.1s, background-color 0.1s;
+  cursor: pointer;
 }
 
-#app{
-    position: fixed;
-    width: 50.625vh;
-    height: 90vh;
-    outline: 1px black dashed;
-    top: 0;
-    left: 0;
+#app {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 50.625vh;
+  height: 90vh;
+  outline: 1px black dashed;
+  top: 0;
+  left: 0;
 }
 
-#navbar{
-    position: fixed;
-    width: 50.625vh;
-    height: 10vh;
-    background-color: blue;
-    top: 80vh;
+#navbar {
+  position: fixed;
+  width: 50.625vh;
+  height: 10vh;
+  background-color: blue;
+  top: 80vh;
+}
 
-    #logo {
-        position: fixed;
-      width: 50.625vh;
-        height: 7vh;
-        top: 0px;
-        left: 0px;
-    
-      font-size: xx-large;
-        background-color: lightgrey;
-    
-        display: flex;
-        justify-content: center;
-      align-items: center;
-    }
-    
-    #app {
-      position: fixed;
-      width: 50.625vh;
-      height: 90vh;
-      outline: 1px black dashed;
-      top: 0;
-      left: 0;
-    }
-    
-    #navbar {
-      position: fixed;
-      width: 50.625vh;
-      height: 10vh;
-      background-color: blue;
-      top: 80vh;
-    }
+#logo {
+  position: fixed;
+  width: 50.625vh;
+  height: 7vh;
+  top: 0px;
+  left: 0px;
+  font-size: 2vh;
+  background-color: lightgrey;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  position: fixed;
+  width: 50.625vh;
+  height: 90vh;
+  outline: 1px black dashed;
+  top: 0;
+  left: 0;
+}
+
+#navbar {
+  position: fixed;
+  width: 50.625vh;
+  height: 10vh;
+  background-color: blue;
+  top: 80vh;
+}
+
+.signUpView {
+  position: fixed;
+  top: 10vh;
+}
+
+.signInView {
+  position: fixed;
+  top: 10vh;
+}
