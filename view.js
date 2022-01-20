@@ -1,3 +1,4 @@
+//homeView();
 signInView();
 //signUpView();
 //navbarView();
