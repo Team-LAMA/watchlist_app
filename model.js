@@ -19,7 +19,7 @@ const model = {
 			password: "",
 		},
 
-		login: {
+		signIn: {
 			username: "",
 			password: "",
 		},
