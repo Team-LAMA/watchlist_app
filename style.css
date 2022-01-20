@@ -37,10 +37,8 @@
   position: fixed;
   width: 50.625vh;
   height: 10vh;
-  background-color: blue;
+  background-color: rgb(46, 159, 252);
   top: 80vh;
-  display: flex;
-  justify-content: center;
 }
 
 #logo {
@@ -63,14 +61,6 @@
   outline: 1px black dashed;
   top: 0;
   left: 0;
-}
-
-#navbar {
-  position: fixed;
-  width: 50.625vh;
-  height: 10vh;
-  background-color: rgb(46, 159, 252);
-  top: 80vh;
 }
 
 .signUpView {
