@@ -5,11 +5,11 @@ function signInView() {
     <div class="signInView">
         <h1>Sign in</h1>
         <br/>
-        <input onchange="setUsername(this.value)" type="text" placeholder="Username"/>
+        <input onchange="setUsername(this)" type="text" placeholder="Username"/>
         <br/>
-        <input onchange="setPassword(this.value)" type="password" placeholder="Password"/>
+        <input onchange="setPassword(this)" type="password" placeholder="Password"/>
         <br/>
-        <button class="signUp" onclick="signUp()">Sign Up</button>
+        <button class="signUp" onclick="model.app.page = signUp;updateView()">Sign Up</button>
         <button class="signIn" onclick="signIn()">Sign In</button>
     </div>
     `;
