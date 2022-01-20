@@ -39,3 +39,31 @@
   position: fixed;
   top: 10vh;
 }
+
+.homeBtn {
+  width: calc(50.625vh/4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchBtn {
+  width: calc(50.625vh/4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listBtn {
+  width: calc(50.625vh/4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userBtn {
+  width: calc(50.625vh/4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
