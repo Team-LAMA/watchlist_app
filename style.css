@@ -1,17 +1,24 @@
 #logo {
-	position: fixed;
+  position: fixed;
   width: 50.625vh;
-	height: 7vh;
-	top: 0px;
-	left: 0px;
-
-  font-size: xx-large;
-	background-color: lightgrey;
-
-	display: flex;
-	justify-content: center;
+  height: 7vh;
+  top: 0px;
+  left: 0px;
+  font-size: 2vh;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
+
+#navbar {
+  position: fixed;
+  width: 50.625vh;
+  height: 10vh;
+  background-color: rgb(46, 159, 252);
+  top: 80vh;
+}
+
 
 #app {
   position: fixed;
@@ -22,16 +29,42 @@
   left: 0;
 }
 
-#navbar {
+.signUp {
+  background-color: rgb(97, 76, 76);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: inherit;
+  padding: 5px 10px;
+  margin: 5px;
+  transition: box-shadow 0.1s, background-color 0.1s;
+  cursor: pointer;
+}
+
+.signIn {
+  background-color: rgb(177, 77, 77);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: inherit;
+  padding: 5px 10px;
+  margin: 5px;
+  transition: box-shadow 0.1s, background-color 0.1s;
+  cursor: pointer;
+}
+
+.signUpView {
   position: fixed;
-  width: 50.625vh;
-  height: 10vh;
-  background-color: blue;
-  top: 80vh;
+  top: 40vh;
+}
+
+.signInView {
+  position: fixed;
+  top: 10vh;
 }
 
 .followedList {
-  position: fixed;
+	position: fixed;
   top: 40vh;
 }
 
