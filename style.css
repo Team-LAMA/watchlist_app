@@ -20,6 +20,8 @@
   outline: 1px black dashed;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
 }
 
 #navbar {
@@ -28,4 +30,75 @@
   height: 10vh;
   background-color: blue;
   top: 80vh;
+}
+
+.profileInfo {
+	position: fixed;
+	width: calc(50.625vh*0.9);
+	top:13.5vh;
+	/* background-color: brown; */
+
+	display: flex;
+}
+
+.profileImage{
+	width: 10vh;
+	height: 10vh;
+
+	border: 1px solid black;
+}
+
+.profileDescription {
+	border: solid black 1px;
+	height: 10vh;
+	margin-left: 2vh;
+	width: calc(50.625vh*0.9 - 12vh);
+	background-color: gray;
+}
+
+.userList {
+	position: fixed;
+	/* display: flex; */
+	margin-right: 5vw;
+	/* top: 40vh; */
+	height: 30vh;
+	width: 50vw;
+	/* background-color: gray; */
+	border: solid black 1px;
+	/* align-items: center; */
+}
+
+.userListList {
+	display: flex;
+	/* height: 10vh; */
+	/* width: 10vw; */
+
+	margin-right: 1vw;
+	background-color: gray;
+	border: dotted 1px black;
+}
+
+.topMoviesContainer {
+	position: fixed;
+	top: 30vh;
+	width: calc(50.625vh*0.9);
+	height: 47vh;
+	display: grid;
+	grid: 10vh auto auto auto /auto;
+	grid-gap: 2vh;
+	
+}
+
+.topMoviesList {
+	width: calc(50.625vh*0.8);
+	height: auto;
+	margin-left: calc(50.625vh*0.05);
+	background-color: blanchedalmond;
+	border: 2px solid black;
+}
+
+.topMoviesTitle {
+	width: calc(50.625vh*0.9);
+	height: 10vh;
+	background-color: red;
 }
