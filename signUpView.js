@@ -19,3 +19,4 @@ function signUpView() {
     document.getElementById('app').innerHTML = html;
 }
 
+
