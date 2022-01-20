@@ -1,1 +1,1 @@
-homeView();
+movieListView();
