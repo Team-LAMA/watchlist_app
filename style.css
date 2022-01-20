@@ -17,6 +17,7 @@
   width: 50.625vh;
   height: 10vh;
   background-color: rgb(46, 159, 252);
+	font-size: 3vh;
   top: 80vh;
 	display: flex;
   justify-content: center;
