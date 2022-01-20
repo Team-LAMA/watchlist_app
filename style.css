@@ -39,6 +39,8 @@
   height: 10vh;
   background-color: rgb(46, 159, 252);
   top: 80vh;
+
+	display:flex;
 }
 
 #logo {
