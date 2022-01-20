@@ -59,10 +59,10 @@
 .userList {
 	position: fixed;
 	/* display: flex; */
-	margin-right: 5vw;
+	margin-right: 5vh;
 	/* top: 40vh; */
 	height: 30vh;
-	width: 50vw;
+	width: 50vh;
 	/* background-color: gray; */
 	border: solid black 1px;
 	/* align-items: center; */
@@ -73,7 +73,7 @@
 	/* height: 10vh; */
 	/* width: 10vw; */
 
-	margin-right: 1vw;
+	margin-right: 1vh;
 	background-color: gray;
 	border: dotted 1px black;
 }
