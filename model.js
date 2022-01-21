@@ -52,7 +52,7 @@ const model = {
 		},
 	},
 
-	// Oter shit
+	// Otter shit
 	movies: [
 		{
 			ID: 0,
