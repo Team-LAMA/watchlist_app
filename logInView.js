@@ -1,1 +1,0 @@
-<div class="logo">My Movie List</div>
