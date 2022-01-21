@@ -7,6 +7,7 @@ function searchView(){
 	html += generateNavbarHTML();
 	html += generateLogoHTML();
 
+
 	html += /*html*/ `
 		<div class="search searchBarBG">
 			<input class="search searchBar">
@@ -15,5 +16,4 @@ function searchView(){
 	`
 
 	document.getElementById("app").innerHTML = html;
-
 }
