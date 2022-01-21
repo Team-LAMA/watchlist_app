@@ -4,7 +4,7 @@ const model = {
 	app: {
 		page: "",
 		lastPage: "",
-		userID: "",
+		userID: 2,
 		listID: "",
 	},
 	idIndex: {
@@ -19,7 +19,7 @@ const model = {
 			password: "",
 		},
 
-		login: {
+		signIn: {
 			username: "",
 			password: "",
 		},
@@ -124,7 +124,7 @@ const model = {
 			],
 			personalComments: ["SUPER BRA!!!", "Dårlig", "Liker ikke slanger"],
 			ratings: [10, 0, 0],
-			lastChanged: new Date().now - 86435489,
+			lastChanged: Date.now() - 86435489,
 		},
 		{
 			ID: 1,
@@ -163,7 +163,7 @@ const model = {
 			],
 			personalComments: ["Veldig tøff", "Litt tøff", "Ikke noe tøff, eller kanskje litt"],
 			ratings: [9, 6.3, 3],
-			lastChanged: new Date().now - 96435489,
+			lastChanged: Date.now() - 96435489,
 		},
 		{
 			ID: 2,
@@ -202,7 +202,7 @@ const model = {
 			],
 			personalComments: ["Hmm", "Hmmmmmmm", "Hmmmmmmmmmmmmmmmmmm"],
 			ratings: [1, 1, 1],
-			lastChanged: new Date().now - 7200000,
+			lastChanged: Date.now() - 7200000,
 		},
 	],
 
@@ -248,9 +248,9 @@ const model = {
 
 
 // Just for testing
-model.users[0].movieLists.push(model.movies[0]);
-model.users[1].movieLists.push(model.movies[1]);
-model.users[2].movieLists.push(model.movies[2]);
+model.users[0].movieLists.push(model.movieLists[0]);
+model.users[1].movieLists.push(model.movieLists[1]);
+model.users[2].movieLists.push(model.movieLists[2]);
 
 model.users[0].followedUsers.push(model.users[1]);
 model.users[0].followedUsers.push(model.users[2]);

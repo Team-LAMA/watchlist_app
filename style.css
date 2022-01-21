@@ -1,16 +1,26 @@
+
 #logo {
-	position: fixed;
+  position: fixed;
   width: 50.625vh;
-	height: 7vh;
-	top: 0px;
-	left: 0px;
-
-  font-size: xx-large;
-	background-color: lightgrey;
-
-	display: flex;
-	justify-content: center;
+  height: 7vh;
+  top: 0px;
+  left: 0px;
+  font-size: 2vh;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
   align-items: center;
+}
+
+#navbar {
+  position: fixed;
+  width: 50.625vh;
+  height: 10vh;
+  background-color: rgb(46, 159, 252);
+	font-size: 3vh;
+  top: 80vh;
+	display: flex;
+  justify-content: center;
 }
 
 #app {
@@ -20,16 +30,9 @@
   outline: 1px black dashed;
   top: 0;
   left: 0;
+
   display: flex;
   justify-content: center;
-}
-
-#navbar {
-  position: fixed;
-  width: 50.625vh;
-  height: 10vh;
-  background-color: blue;
-  top: 80vh;
 }
 
 .profileInfo {
@@ -101,4 +104,83 @@
 	width: calc(50.625vh*0.9);
 	height: 10vh;
 	background-color: red;
+}
+
+.NotificationList {
+  position: fixed;
+	top: 10vh;
+}
+
+.followedList {
+	position: fixed;
+  top: 40vh;
+}
+
+.signUpView, .signInView {
+  position: fixed;
+  top: 10vh;
+	font-size: 1.5vh;
+	text-align: center;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.signUpView>input, .signInView>input{
+	width: calc(50.625vh/3);
+	height: calc(50.625vh/30);
+	font-size: calc(50.625vh/30);
+	margin-bottom: 0.5vh;
+}
+
+.signUp {
+  background-color: rgb(97, 76, 76);
+}
+
+.signIn {
+  background-color: rgb(177, 77, 77);
+}
+
+.signIn, .signUp{
+  border: none;
+  border-radius: 0.5vh;
+  color: white;
+  font-family: inherit;
+	font-size: 1.6vh;
+  padding: 0.5vh 1vh;
+  margin: 0.5vh;
+  transition: box-shadow 0.1s, background-color 0.1s;
+  cursor: pointer;
+	width: 7.5vh;
+	height: 3vh;
+}
+
+.homeBtn {
+  width: calc(50.625vh/4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchBtn {
+  width: calc(50.625vh/4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listBtn {
+  width: calc(50.625vh/4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userBtn {
+  width: calc(50.625vh/4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
