@@ -1,5 +1,3 @@
-
-
 function searchView(){
 	let html = "";
 

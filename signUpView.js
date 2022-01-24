@@ -7,9 +7,10 @@ function signUpView() {
         <input onchange="setUsername(this.value)" type="text" placeholder="Create username"/>
         <input onchange="setPassword(this.value)" type="password" placeholder="Create password"/>
         <input onchange="setEmail(this.value)" type="text" placeholder="Email"/>
-				<div>
-        	<button class="signUp" onclick="signUp()">Sign Up</button>
-				</div>
+			<div>
+                <button class="signUp" onclick="signUp()">Sign Up</button>
+                <button class="signIn" onclick="model.app.page = 'signIn';updateView()">Sign In</button>
+			</div>
     </div>
     `;
 

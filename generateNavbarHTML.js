@@ -1,6 +1,3 @@
-
-
-
 function generateNavbarHTML(){
 	let html = "";
 
