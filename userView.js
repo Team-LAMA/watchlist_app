@@ -30,7 +30,7 @@ function userView(){
     `;
     html += generateNavbarHTML();
 	html += generateLogoHTML();
-    document.getElementById('app').innerHTML += html;
+    document.getElementById('app').innerHTML = html;
 }
 
 function sortMovies(){
