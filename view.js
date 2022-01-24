@@ -1,5 +1,8 @@
+
 //homeView();
 //signInView();
 //signUpView();
 //navbarView();
-searchView();
+//searchView();
+//searchView();
+userView();
