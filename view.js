@@ -1,6 +1,6 @@
 
-homeView();
-//signInView();
-//signUpView();
-//searchView();
-//userView();
+// homeView();
+signInView();
+// signUpView();
+// searchView();
+// userView();
