@@ -16,9 +16,9 @@
   width: 50.625vh;
   height: 10vh;
   background-color: rgb(46, 159, 252);
-	font-size: 3vh;
+  font-size: 3vh;
   top: 80vh;
-	display: flex;
+  display: flex;
   justify-content: center;
 }
 
@@ -28,96 +28,9 @@
   height: 90vh;
   outline: 1px black dashed;
   top: 0;
-  left: 0;	
-
-	display: flex;
-	justify-content: center;
-}
-
-.search.searchBarBG{
-	position: fixed;
-	width: calc(50.625vh*0.9);
-	height: 5vh;
-	top: 10vh;
-	border-radius: 1vh;
-	background-color: #bdbdbd;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.search.searchBar{
-	margin: 0px;
-	width: calc(50.625vh*0.85 - 4vh);
-	height: 3vh;
-	border-radius: .75vh;
-	font-size: 3vh;
-}
-
-.search.searchButton{
-	margin: 0px;
-	width: 3vh;
-	height: 3vh;
-	margin-left: 1vh;
-	border-radius: .75vh;
-}
-
-.search.results{
-	position: fixed;
-	top: 20vh;
-	width: 50.625vh;
-	height: 60vh;
-	background-color: black;
-}
-
-.NotificationList {
-  position: fixed;
-  top: 10vh;
-}
-
-.followedList {
-	position: fixed;
-  top: 40vh;
-}
-
-.signUpView, .signInView {
-  position: fixed;
-  top: 10vh;
-	font-size: 1.5vh;
-	text-align: center;
-	
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.signUpView>input, .signInView>input{
-	width: calc(50.625vh/3);
-	height: calc(50.625vh/30);
-	font-size: calc(50.625vh/30);
-	margin-bottom: 0.5vh;
-}
-
-.signUp {
-  background-color: rgb(97, 76, 76);
-}
-
-.signIn {
-  background-color: rgb(177, 77, 77);
-}
-
-.signIn, .signUp{
-  border: none;
-  border-radius: 0.5vh;
-  color: white;
-  font-family: inherit;
-	font-size: 1.6vh;
-  padding: 0.5vh 1vh;
-  margin: 0.5vh;
-  transition: box-shadow 0.1s, background-color 0.1s;
-  cursor: pointer;
-	width: 7.5vh;
-	height: 3vh;
+  left: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .homeBtn {
@@ -146,4 +59,128 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.NotificationList {
+  position: fixed;
+  top: 10vh;
+}
+
+.followedList {
+  position: fixed;
+  top: 40vh;
+}
+
+.signUpView,
+.signInView {
+  position: fixed;
+  top: 10vh;
+  font-size: 1.5vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signUpView>input,
+.signInView>input {
+  width: calc(50.625vh/3);
+  height: calc(50.625vh/30);
+  font-size: calc(50.625vh/30);
+  margin-bottom: 0.5vh;
+}
+
+.signUp {
+  background-color: rgb(97, 76, 76);
+}
+
+.signIn {
+  background-color: rgb(177, 77, 77);
+}
+
+.signIn,
+.signUp {
+  border: none;
+  border-radius: 0.5vh;
+  color: white;
+  font-family: inherit;
+  font-size: 1.6vh;
+  padding: 0.5vh 1vh;
+  margin: 0.5vh;
+  transition: box-shadow 0.1s, background-color 0.1s;
+  cursor: pointer;
+  width: 7.5vh;
+  height: 3vh;
+}
+
+.search.searchBarBG {
+  position: fixed;
+  width: calc(50.625vh*0.9);
+  height: 5vh;
+  top: 10vh;
+  border-radius: 1vh;
+  background-color: #bdbdbd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search.searchBar {
+  margin: 0px;
+  width: calc(50.625vh*0.85 - 4vh);
+  height: 3vh;
+  border-radius: .75vh;
+  font-size: 3vh;
+}
+
+.search.searchButton {
+  margin: 0px;
+  width: 3vh;
+  height: 3vh;
+  margin-left: 1vh;
+  border-radius: .75vh;
+}
+
+.search.resultContainer {
+  position: fixed;
+	top: 18vh;
+  width: calc(50.625vh*0.9);
+  height: 62vh;
+  /*background-color: grey;*/
+	/*border: 1px solid grey;*/
+
+	display: flex;
+	flex-direction: column;
+}
+
+.search.result {
+	width: calc(50.625vh*0.9);
+	height: 10vh;
+	margin-bottom: 1vh;
+	background-color: plum;
+	border-radius: 0.5vh;
+	outline: 1px black solid;
+	display: flex;
+}
+
+.search.result h3{
+	margin-left: 4vh;
+	font-size: 3vh;
+}
+
+.search.result.user{
+	margin-left: auto;
+	margin-right: 1vh;
+	outline: 0px;
+	width: 5vh;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+}
+
+.search.result img{
+	width: 5vh;
+	height: 5vh;
+	margin-left: auto;
+	padding-bottom: 2vh;
 }

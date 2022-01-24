@@ -89,7 +89,7 @@ const model = {
 	movieLists: [
 		{
 			ID: 0,
-			name: "Meg",
+			name: "Mine Favoritter",
 			movies: [
 				{
 					ID: 2,
@@ -128,7 +128,7 @@ const model = {
 		},
 		{
 			ID: 1,
-			name: "Deg",
+			name: "Dine Favoritter",
 			movies: [
 				{
 					ID: 2,
@@ -167,7 +167,7 @@ const model = {
 		},
 		{
 			ID: 2,
-			name: "Mamma",
+			name: "Mamma's favoritter",
 			movies: [
 				{
 					ID: 0,
@@ -214,7 +214,7 @@ const model = {
 			eMail: "Team3@mail.no",
 			movieLists: [],
 			profileName: "Meg",
-			profilePicture: "",
+			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
 			userDescription: "Lorem ipsum",
 			followedUsers: [],
 			// followedListIDs: [],
@@ -226,7 +226,7 @@ const model = {
 			eMail: "Terje@getacademy.no",
 			movieLists: [],
 			profileName: "Deg",
-			profilePicture: "",
+			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
 			userDescription: "Lærer ved GET Academy",
 			followedUsers: [],
 			// followedListIDs: [],
@@ -238,12 +238,51 @@ const model = {
 			eMail: "mamsen0001@hotmail.com",
 			movieLists: [],
 			profileName: "Mamma",
-			profilePicture: "",
+			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
 			userDescription: "Føler meg 20",
 			followedUsers: [],
 			// followedListIDs: [],
 		},
 	],
+
+	searchResults: [
+		{
+			ID: 0,
+			username: "Team3",
+			password: "321",
+			eMail: "Team3@mail.no",
+			movieLists: [],
+			profileName: "Meg",
+			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
+			userDescription: "Lorem ipsum",
+			followedUsers: [],
+			// followedListIDs: [],
+		},
+		{
+			ID: 1,
+			username: "Terje",
+			password: "Passord1",
+			eMail: "Terje@getacademy.no",
+			movieLists: [],
+			profileName: "Deg",
+			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
+			userDescription: "Lærer ved GET Academy",
+			followedUsers: [],
+			// followedListIDs: [],
+		},
+		{
+			ID: 2,
+			username: "Mamsen0001",
+			password: "LOVE",
+			eMail: "mamsen0001@hotmail.com",
+			movieLists: [],
+			profileName: "Mamma",
+			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
+			userDescription: "Føler meg 20",
+			followedUsers: [],
+			// followedListIDs: [],
+		},
+	], // contains user or list objects
 }
 
 
@@ -259,3 +298,17 @@ model.users[1].followedUsers.push(model.users[2]);
 
 model.users[2].followedUsers.push(model.users[0]);
 model.users[2].followedUsers.push(model.users[1]);
+
+
+
+model.searchResults[0].movieLists.push(model.movieLists[0]);
+model.searchResults[1].movieLists.push(model.movieLists[1]);
+model.searchResults[2].movieLists.push(model.movieLists[2]);
+
+model.searchResults[0].followedUsers.push(model.users[1]);
+model.searchResults[0].followedUsers.push(model.users[2]);
+
+model.searchResults[1].followedUsers.push(model.users[2]);
+
+model.searchResults[2].followedUsers.push(model.users[0]);
+model.searchResults[2].followedUsers.push(model.users[1]);
