@@ -2,5 +2,5 @@
 //homeView();
 //signInView();
 //signUpView();
-searchView();
-//userView();
+// searchView();
+userView();

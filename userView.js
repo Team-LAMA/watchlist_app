@@ -5,7 +5,13 @@ function userView(){
 			`
 	
 	if(model.app.userID == model.loginInfo.userId){
-		
+		html += /*html*/ `
+			<img class="user profileImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg">
+			<input type="file">
+            <div class="user profileDescription">NAME: 
+            <input type="text" placeholder="Your name here"> <hr> <br>
+             DESCRIPTION: <input type="text" placeholder="Your description here"> 
+		`
 	}
 	else {
 		html += /*html*/ `
@@ -15,7 +21,7 @@ function userView(){
 		`
 	}
 
-
+    if(model.app.userID == model.loginInfo.userId){
 	html += /*html*/ `
 					</div>
 			</div>
@@ -25,21 +31,50 @@ function userView(){
 					</div>
 					<div class="user topMoviesList">
 							<img class="user movieImage" src="${sortMovies()[0].image}">
-							<div class="user filmInfo" >TITLE: HOME ALONE ELNS<BR><BR> YEAR: OSVOSV</div>
-							<div class="user movieRating">10/10</div>
+							<div class="user filmInfo" >TITLE: <input type="text" placeholder="MOVIETITLE"><BR><BR> YEAR: <input type="number" min="1975" max="2025" placeholder="XXXX"></div>
+							<div class="user movieRating"><input type="number" min="1" max="10" placeholder="X">/10</div>
+                            <input type="file">
 					</div>
 					<div class="user topMoviesList">
 							<img class="user movieImage" src="${sortMovies()[1].image}">
-							<div class="user filmInfo" >TITLE: HOME ALONE ELNS<BR><BR> YEAR: OSVOSV</div>
-							<div class="user movieRating">10/10</div>
+							<div class="user filmInfo" >TITLE: <input type="text" placeholder="MOVIETITLE"><BR><BR> YEAR:<input type="number" min="1975" max="2025" placeholder="XXXX"></div>
+							<div class="user movieRating"><input type="number" min="1" max="10" placeholder="X">/10</div>
+                            <input type="file">
 					</div>
 					<div class="user topMoviesList">
 							<img class="user movieImage" src="${sortMovies()[2].image}">
-							<div class="user filmInfo" >TITLE: HOME ALONE ELNS<BR><BR> YEAR: OSVOSV</div>
-							<div class="user movieRating">10/10</div>
+							<div class="user filmInfo" >TITLE: <input type="text" placeholder="MOVIETITLE"><BR><BR> YEAR:<input type="number" min="1975" max="2025" placeholder="XXXX"></div>
+							<div class="user movieRating"><input type="number" min="1" max="10" placeholder="X">/10</div>
+                            <input type="file">
 					</div>
 			</div>
-	`;
+	`}
+    else {
+        html += /*html*/ `
+                        </div>
+                </div>
+                <div class="user topMoviesContainer">
+                        <div class="user topMoviesTitle">
+                                USERLIST: MAMMA'S FAVOURITES
+                        </div>
+                        <div class="user topMoviesList">
+                                <img class="user movieImage" src="${sortMovies()[0].image}">
+                                <div class="user filmInfo" >TITLE: HOME ALONE ELNS<BR><BR> YEAR: OSVOSV</div>
+                                <div class="user movieRating">10/10</div>
+                        </div>
+                        <div class="user topMoviesList">
+                                <img class="user movieImage" src="${sortMovies()[1].image}">
+                                <div class="user filmInfo" >TITLE: HOME ALONE ELNS<BR><BR> YEAR: OSVOSV</div>
+                                <div class="user movieRating">10/10</div>
+                        </div>
+                        <div class="user topMoviesList">
+                                <img class="user movieImage" src="${sortMovies()[2].image}">
+                                <div class="user filmInfo" >TITLE: HOME ALONE ELNS<BR><BR> YEAR: OSVOSV</div>
+                                <div class="user movieRating">10/10</div>
+                        </div>
+                </div>
+        `}
+
 	html += generateNavbarHTML();
 html += generateLogoHTML();
 	document.getElementById('app').innerHTML = html;

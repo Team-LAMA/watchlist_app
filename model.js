@@ -4,7 +4,7 @@ const model = {
 	app: {
 		page: "",				// The current page type
 		lastPage: "", 	// The last page type
-		userID: 2,			// User ID being viewed
+		userID: 1,			// User ID being viewed
 		listID: "",			// List ID being viewed
 	},
 
