@@ -17,7 +17,7 @@ function userView(){
 		html += /*html*/ `
 			<img class="user profileImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg">
 			<div class="user profileDescription">NAME: Therese <br> AGE: 26år <br> INTERESTS: Slangefilmer, Museskrekkfilm 
-				<div class="user followStar"> ☆★⭐</div>
+				<div class="user followStar"><img src="../img/64px-Empty_Star.svg.png"><img src="../img/64px-Full_Star_Yellow.svg.png"></div>
 		`
 	}
 

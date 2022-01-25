@@ -248,6 +248,8 @@
 .user.followStar {
 	float: right;
 	font-size: xx-large;
+	width: 10vh;
+	height: 10vh;
 }
 
 .user.filmInfo {
