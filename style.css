@@ -158,7 +158,7 @@
 	width: calc(50.625vh*0.9);
 	height: 10vh;
 	margin-bottom: 1vh;
-	background-color: plum;
+	background-color: lightgrey;
 	border-radius: 0.5vh;
 	outline: 1px black solid;
 	display: flex;

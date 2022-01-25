@@ -20,13 +20,13 @@ function searchView(){
 		<div class="search resultContainer">
 	`;
 
-	for(let i = 0; i < model.searchResults.length; i++) {
+	for(let i = 0; i < getSearchResults().length; i++) {
 		html += /*html*/ `
 			<div class="search result">
-				<h3>${model.searchResults[i].movieLists[0].name}</h3>
+				<h3>${getSearchResults()[i].movieLists[0].name}</h3>
 				<div class="search result user">
-					<img src="${model.searchResults[i].profilePicture}">
-					<div>${model.searchResults[i].profileName}</div>
+					<img src="${getSearchResults()[i].profilePicture}">
+					<div>${getSearchResults()[i].profileName}</div>
 				</div>
 			</div>
 		`

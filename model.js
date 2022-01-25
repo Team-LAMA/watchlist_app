@@ -262,14 +262,14 @@ model.users[2].followedUsers.push(model.users[1]);
 
 
 
-model.searchResults[0].movieLists.push(model.movieLists[0]);
-model.searchResults[1].movieLists.push(model.movieLists[1]);
-model.searchResults[2].movieLists.push(model.movieLists[2]);
+//model.searchResults[0].movieLists.push(model.movieLists[0]);
+//model.searchResults[1].movieLists.push(model.movieLists[1]);
+//model.searchResults[2].movieLists.push(model.movieLists[2]);
 
-model.searchResults[0].followedUsers.push(model.users[1]);
-model.searchResults[0].followedUsers.push(model.users[2]);
+//model.searchResults[0].followedUsers.push(model.users[1]);
+//model.searchResults[0].followedUsers.push(model.users[2]);
 
-model.searchResults[1].followedUsers.push(model.users[2]);
+//model.searchResults[1].followedUsers.push(model.users[2]);
 
-model.searchResults[2].followedUsers.push(model.users[0]);
-model.searchResults[2].followedUsers.push(model.users[1]);
+//model.searchResults[2].followedUsers.push(model.users[0]);
+//model.searchResults[2].followedUsers.push(model.users[1]);
