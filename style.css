@@ -33,42 +33,40 @@
   justify-content: center;
 }
 
-.homeBtn {
+.navbar.homeBtn {
   width: calc(50.625vh/4);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.searchBtn {
+.navbar.searchBtn {
   width: calc(50.625vh/4);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.listBtn {
+.navbar.listBtn {
   width: calc(50.625vh/4);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.userBtn {
+.navbar.userBtn {
   width: calc(50.625vh/4);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
-
-.NotificationList {
+.home.notificationList {
   position: fixed;
 	top: 10vh;
 }
 
-.followedList {
+.home.followedList {
   position: fixed;
   top: 40vh;
 }
@@ -92,6 +90,7 @@
   margin-bottom: 0.5vh;
 }
 
+/*Used in more than one view*/
 .signUp {
   background-color: rgb(97, 76, 76);
 }
@@ -113,7 +112,7 @@
   cursor: pointer;
   width: 7.5vh;
   height: 3vh;
-}
+}/**/
 
 .search.searchBarBG {
   position: fixed;
@@ -229,16 +228,6 @@
 	/* background-color: gray; */
 	border: solid black 1px;
 	/* align-items: center; */
-}
-
-.userListList {
-	display: flex;
-	/* height: 10vh; */
-	/* width: 10vw; */
-
-	margin-right: 1vh;
-	background-color: gray;
-	border: dotted 1px black;
 }
 
 .topMoviesContainer {

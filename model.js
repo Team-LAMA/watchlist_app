@@ -2,30 +2,30 @@
 
 const model = {
 	app: {
-		page: "",
-		lastPage: "",
-		userID: 2,
-		listID: "",
+		page: "",				// The current page type
+		lastPage: "", 	// The last page type
+		userID: 2,			// User ID being viewed
+		listID: "",			// List ID being viewed
 	},
-	idIndex: {
-		userId: 1,
-		movieId: 1,
-		listId: 1,
+
+	loginInfo: {
+		userId: 1,			// THe currently logged in UserID
 	},
+
 	inputs: {
+		makeUser: { 		// Used to make a new user
+			username: "",
+			password: "",
+			eMail: "",
+		},
 
-		makeUser: {
+		signIn: { 			// Used to log in
 			username: "",
 			password: "",
 		},
 
-		signIn: {
-			username: "",
-			password: "",
-		},
-
-		editMovie: {
-			title: "",
+		editMovie: {		// Used to hold temporary information for when a movie is being edited
+			title: "",		
 			image: "",
 			year: null,
 			genres: [],
@@ -37,23 +37,23 @@ const model = {
 			rating: "",
 		},
 
-		editProfile: {
+		editProfile: {	// Used to hold temporary information for when user information is being edited
 			image: "",
 			name: "",
 			description: "",
 		},
 
-		editList: {
+		editMovieList: {// Used to hold temporary information for when a movie list is being edited
 			name: "",
 		},
 
-		search: {
+		search: {				// Used to hold information used in a search
 			searchWord: "",
 		},
 	},
 
 	// Otter shit
-	movies: [
+	movies: [ 				// A list over all the existing movies (DATA)
 		{
 			ID: 0,
 			title: "Snakes on a plane",
@@ -86,7 +86,7 @@ const model = {
 		},
 	],
 
-	movieLists: [
+	movieLists: [			// A list over all the existing movieLists (DATA)
 		{
 			ID: 0,
 			name: "Mine Favoritter",
@@ -206,7 +206,7 @@ const model = {
 		},
 	],
 
-	users: [
+	users: [					// A list over all the existing users (DATA)
 		{
 			ID: 0,
 			username: "Team3",
@@ -244,45 +244,6 @@ const model = {
 			// followedListIDs: [],
 		},
 	],
-
-	searchResults: [
-		{
-			ID: 0,
-			username: "Team3",
-			password: "321",
-			eMail: "Team3@mail.no",
-			movieLists: [],
-			profileName: "Meg",
-			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
-			userDescription: "Lorem ipsum",
-			followedUsers: [],
-			// followedListIDs: [],
-		},
-		{
-			ID: 1,
-			username: "Terje",
-			password: "Passord1",
-			eMail: "Terje@getacademy.no",
-			movieLists: [],
-			profileName: "Deg",
-			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
-			userDescription: "Lærer ved GET Academy",
-			followedUsers: [],
-			// followedListIDs: [],
-		},
-		{
-			ID: 2,
-			username: "Mamsen0001",
-			password: "LOVE",
-			eMail: "mamsen0001@hotmail.com",
-			movieLists: [],
-			profileName: "Mamma",
-			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
-			userDescription: "Føler meg 20",
-			followedUsers: [],
-			// followedListIDs: [],
-		},
-	], // contains user or list objects
 }
 
 

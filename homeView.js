@@ -6,12 +6,12 @@ function homeView(){
 
   html += generateLogoHTML();
 
-  html += /*html*/ `<div class="NotificationList"><h1>Notifications</h1>`;
+  html += /*html*/ `<div class="home notificationList"><h1>Notifications</h1>`;
   for(let i = 0; i < model.movieLists.length; i++){
     console.log(model.movieLists[i].lastChanged)
   }
   html += /*html*/ `</div>`
-  html += /*html*/ `<div class="followedList"><h1>Following</h1>`
+  html += /*html*/ `<div class="home followedList"><h1>Following</h1>`
   for(let i = 0; i < model.users.length; i++){
     if(model.app.userID == model.users[i].ID){
 			user = model.users[i];
@@ -23,7 +23,6 @@ function homeView(){
 			<div onclick="openMovieList(${followedUser.movieLists[0].ID})">
 				${followedUser.username}
 			</div>
-    	</br>
 		`;
   }
   html += /*html*/ `</div>`
