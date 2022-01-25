@@ -1,3 +1,4 @@
+// SignUp view
 function signUpView() {
     let html ="";
     html += generateLogoHTML();

@@ -1,3 +1,4 @@
+//SignIn view
 function signInView() {
     let html = "";
     html += generateLogoHTML();

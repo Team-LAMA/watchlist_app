@@ -1,9 +1,10 @@
+// HomeView
 function homeView(){
   let html = "";
   let userCheck = 0;
 
 	let user = null;
-
+  //Added logo
   html += generateLogoHTML();
 
   html += /*html*/ `<div class="NotificationList"><h1>Notifications</h1>`;
@@ -27,6 +28,7 @@ function homeView(){
 		`;
   }
   html += /*html*/ `</div>`
+  //Added Navigationbar
   html += generateNavbarHTML();
   document.getElementById("app").innerHTML = html;
 }
