@@ -79,16 +79,6 @@
 	/* align-items: center; */
 }
 
-.userListList {
-	display: flex;
-	/* height: 10vh; */
-	/* width: 10vw; */
-
-	margin-right: 1vh;
-	background-color: gray;
-	border: dotted 1px black;
-}
-
 .topMoviesContainer {
 	position: fixed;
 	top: 30vh;
