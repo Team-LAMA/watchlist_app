@@ -1,30 +1,30 @@
 function userView(){
     let html = "";
     html += /*html*/ `
-        <div class="profileInfo">
-            <img class="profileImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg">
-            <div class="profileDescription">NAME: Therese <br> AGE: 26år <br> INTERESTS: Slangefilmer, Museskrekkfilm 
-                <div class="followStar"> ☆★⭐</div>
+        <div class="user profileInfo">
+            <img class="user profileImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg">
+            <div class="user profileDescription">NAME: Therese <br> AGE: 26år <br> INTERESTS: Slangefilmer, Museskrekkfilm 
+                <div class="user followStar"> ☆★⭐</div>
             </div>
         </div>
-        <div class="topMoviesContainer">
-            <div class="topMoviesTitle">
+        <div class="user topMoviesContainer">
+            <div class="user topMoviesTitle">
                 USERLIST: MAMMA'S FAVOURITES
             </div>
-            <div class="topMoviesList">
-                <img class="movieImage" src="${sortMovies()[0].image}">
-                <div class="filmInfo" >TITLE: HOME ALONE ELNS<BR><BR> YEAR: OSVOSV</div>
-                <div class="movieRating">10/10</div>
+            <div class="user topMoviesList">
+                <img class="user movieImage" src="${sortMovies()[0].image}">
+                <div class="user filmInfo" >TITLE: HOME ALONE ELNS<BR><BR> YEAR: OSVOSV</div>
+                <div class="user movieRating">10/10</div>
             </div>
-            <div class="topMoviesList">
-                <img class="movieImage" src="${sortMovies()[1].image}">
-                <div class="filmInfo" >TITLE: HOME ALONE ELNS<BR><BR> YEAR: OSVOSV</div>
-                <div class="movieRating">10/10</div>
+            <div class="user topMoviesList">
+                <img class="user movieImage" src="${sortMovies()[1].image}">
+                <div class="user filmInfo" >TITLE: HOME ALONE ELNS<BR><BR> YEAR: OSVOSV</div>
+                <div class="user movieRating">10/10</div>
             </div>
-            <div class="topMoviesList">
-                <img class="movieImage" src="${sortMovies()[2].image}">
-                <div class="filmInfo" >TITLE: HOME ALONE ELNS<BR><BR> YEAR: OSVOSV</div>
-                <div class="movieRating">10/10</div>
+            <div class="user topMoviesList">
+                <img class="user movieImage" src="${sortMovies()[2].image}">
+                <div class="user filmInfo" >TITLE: HOME ALONE ELNS<BR><BR> YEAR: OSVOSV</div>
+                <div class="user movieRating">10/10</div>
             </div>
         </div>
     `;

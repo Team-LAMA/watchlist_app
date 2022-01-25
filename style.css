@@ -35,7 +35,7 @@
   justify-content: center;
 }
 
-.profileInfo {
+.user.profileInfo {
 	position: fixed;
 	width: calc(50.625vh*0.9);
 	top:13.5vh;
@@ -44,14 +44,14 @@
 	display: flex;
 }
 
-.profileImage{
+.user.profileImage{
 	width: 10vh;
 	height: 10vh;
 
 	border: 1px solid black;
 }
 
-.movieImage{
+.user.movieImage{
 	width: 10vh;
 	height: 10vh;
 	/* display: flex; */
@@ -59,7 +59,7 @@
 	float: left;
 }
 
-.profileDescription {
+.user.profileDescription {
 	border: solid black 1px;
 	height: 10vh;
 	margin-left: 2vh;
@@ -67,19 +67,7 @@
 	background-color: gray;
 }
 
-.userList {
-	position: fixed;
-	/* display: flex; */
-	margin-right: 5vh;
-	/* top: 40vh; */
-	height: 30vh;
-	width: 50vh;
-	/* background-color: gray; */
-	border: solid black 1px;
-	/* align-items: center; */
-}
-
-.topMoviesContainer {
+.user.topMoviesContainer {
 	position: fixed;
 	top: 30vh;
 	width: calc(50.625vh*0.9);
@@ -90,7 +78,7 @@
 	
 }
 
-.topMoviesList {
+.user.topMoviesList {
 	width: calc(50.625vh*0.8);
 	height: auto;
 	margin-left: calc(50.625vh*0.05);
@@ -98,7 +86,7 @@
 	border: 2px solid black;
 }
 
-.topMoviesTitle {
+.user.topMoviesTitle {
 	width: calc(50.625vh*0.9);
 	height: 10vh;
 	background-color: gray;
@@ -106,17 +94,17 @@
 	text-align: center;
 }
 
-.followStar {
+.user.followStar {
 	float: right;
 	font-size: xx-large;
 }
 
-.filmInfo {
+.user.filmInfo {
 	text-align: center;
 	/* float: LEFT; */
 }
 
-.movieRating {
+.user.movieRating {
 	float: right;
 	font-size: xx-large;
 }
