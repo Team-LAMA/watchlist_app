@@ -14,6 +14,7 @@ const model = {
 
 		makeUser: {
 			username: "",
+			email: "",
 			password: "",
 		},
 
