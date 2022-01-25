@@ -27,25 +27,24 @@ function userView(){
 			</div>
 			<div class="user topMoviesContainer">
 					<div class="user topMoviesTitle">
-							USERLIST: MAMMA'S FAVOURITES
+							USERLIST: <input type="text" placeholder="MY FAVOURITES">
 					</div>
 					<div class="user topMoviesList">
 							<img class="user movieImage" src="${sortMovies()[0].image}">
-							<div class="user filmInfo" >TITLE: <input type="text" placeholder="MOVIETITLE"><BR><BR> YEAR: <input type="number" min="1975" max="2025" placeholder="XXXX"></div>
+							<div class="user filmInfo" >TITLE: HOME ALONE ELNS<BR><BR> YEAR: 2007</div>
 							<div class="user movieRating"><input type="number" min="1" max="10" placeholder="X">/10</div>
-                            <input type="file">
+                            
 					</div>
 					<div class="user topMoviesList">
 							<img class="user movieImage" src="${sortMovies()[1].image}">
-							<div class="user filmInfo" >TITLE: <input type="text" placeholder="MOVIETITLE"><BR><BR> YEAR:<input type="number" min="1975" max="2025" placeholder="XXXX"></div>
+							<div class="user filmInfo" >TITLE: HOME ALONE ELNS<BR><BR> YEAR:2006</div>
 							<div class="user movieRating"><input type="number" min="1" max="10" placeholder="X">/10</div>
-                            <input type="file">
+                            
 					</div>
 					<div class="user topMoviesList">
 							<img class="user movieImage" src="${sortMovies()[2].image}">
-							<div class="user filmInfo" >TITLE: <input type="text" placeholder="MOVIETITLE"><BR><BR> YEAR:<input type="number" min="1975" max="2025" placeholder="XXXX"></div>
+							<div class="user filmInfo" >TITLE: HOME ALONE ELNS<BR><BR> YEAR:2005</div>
 							<div class="user movieRating"><input type="number" min="1" max="10" placeholder="X">/10</div>
-                            <input type="file">
 					</div>
 			</div>
 	`}
