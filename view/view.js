@@ -52,7 +52,7 @@ window.onpopstate = function() {
 
 //homeView();
 //signInView();
-signUpView();
+//signUpView();
 //navbarView();
 //searchView();
 //userView();
