@@ -16,9 +16,9 @@
   width: 50.625vh;
   height: 10vh;
   background-color: rgb(46, 159, 252);
-	font-size: 3vh;
+  font-size: 3vh;
   top: 80vh;
-	display: flex;
+  display: flex;
   justify-content: center;
 }
 
@@ -29,40 +29,69 @@
   outline: 1px black dashed;
   top: 0;
   left: 0;
-
-	display: flex;
+  display: flex;
   justify-content: center;
 }
 
-.NotificationList {
-  position: fixed;
-  top: 10vh;
+.navbar.homeBtn {
+  width: calc(50.625vh/4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.followedList {
-	position: fixed;
+.navbar.searchBtn {
+  width: calc(50.625vh/4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar.listBtn {
+  width: calc(50.625vh/4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar.userBtn {
+  width: calc(50.625vh/4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home.notificationList {
+  position: fixed;
+	top: 10vh;
+}
+
+.home.followedList {
+  position: fixed;
   top: 40vh;
 }
 
 /*Sign In and Sign Up buttons and view*/
-.signUpView, .signInView {
+.signUpView,
+.signInView {
   position: fixed;
   top: 10vh;
-	font-size: 1.5vh;
-	text-align: center;
-	
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+  font-size: 1.5vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.signUpView>input, .signInView>input{
-	width: calc(50.625vh/3);
-	height: calc(50.625vh/30);
-	font-size: calc(50.625vh/30);
-	margin-bottom: 0.5vh;
+.signUpView>input,
+.signInView>input {
+  width: calc(50.625vh/3);
+  height: calc(50.625vh/30);
+  font-size: calc(50.625vh/30);
+  margin-bottom: 0.5vh;
 }
 
+/*Used in more than one view*/
 .signUp {
   background-color: rgb(97, 76, 76);
 }
@@ -71,45 +100,169 @@
   background-color: rgb(177, 77, 77);
 }
 
-.signIn, .signUp{
+.signIn,
+.signUp {
   border: none;
   border-radius: 0.5vh;
   color: white;
   font-family: inherit;
-	font-size: 1.6vh;
+  font-size: 1.6vh;
   padding: 0.5vh 1vh;
   margin: 0.5vh;
   transition: box-shadow 0.1s, background-color 0.1s;
   cursor: pointer;
-	width: 7.5vh;
-	height: 3vh;
-}
+  width: 7.5vh;
+  height: 3vh;
+}/**/
 
 /*Buttons for the navigation bar*/
 .homeBtn {
   width: calc(50.625vh/4);
+}
+.search.searchBarBG {
+  position: fixed;
+  width: calc(50.625vh*0.9);
+  height: 5vh;
+  top: 10vh;
+  border-radius: 1vh;
+  background-color: #bdbdbd;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.searchBtn {
-  width: calc(50.625vh/4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.search.searchBar {
+  margin: 0px;
+  width: calc(50.625vh*0.85 - 4vh);
+  height: 3vh;
+  border-radius: .75vh;
+  font-size: 3vh;
 }
 
-.listBtn {
-  width: calc(50.625vh/4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.search.searchButton {
+  margin: 0px;
+  width: 3vh;
+  height: 3vh;
+  margin-left: 1vh;
+  border-radius: .75vh;
 }
 
-.userBtn {
-  width: calc(50.625vh/4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.search.resultContainer {
+  position: fixed;
+	top: 18vh;
+  width: calc(50.625vh*0.9);
+  height: 62vh;
+  /*background-color: grey;*/
+	/*border: 1px solid grey;*/
+
+	display: flex;
+	flex-direction: column;
+}
+
+.search.result {
+	width: calc(50.625vh*0.9);
+	height: 10vh;
+	margin-bottom: 1vh;
+	background-color: lightgrey;
+	border-radius: 0.5vh;
+	outline: 1px black solid;
+	display: flex;
+}
+
+.search.result h3{
+	margin-left: 4vh;
+	font-size: 3vh;
+}
+
+.search.result.user{
+	margin-left: auto;
+	margin-right: 1vh;
+	outline: 0px;
+	width: 5vh;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+}
+
+.search.result img{
+	width: 5vh;
+	height: 5vh;
+	margin-left: auto;
+	padding-bottom: 2vh;
+}
+
+.user.profileInfo {
+	position: fixed;
+	width: calc(50.625vh*0.9);
+	top:13.5vh;
+	/* background-color: brown; */
+
+	display: flex;
+}
+
+.user.profileImage{
+	width: 10vh;
+	height: 10vh;
+
+	border: 1px solid black;
+}
+
+.user.movieImage{
+	width: 10vh;
+	height: 10vh;
+	/* display: flex; */
+	border: 1px solid black;
+	float: left;
+}
+
+.user.profileDescription {
+	border: solid black 1px;
+	height: 10vh;
+	margin-left: 2vh;
+	width: calc(50.625vh*0.9 - 12vh);
+	background-color: gray;
+}
+
+.user.topMoviesContainer {
+	position: fixed;
+	top: 30vh;
+	width: calc(50.625vh*0.9);
+	height: 47vh;
+	display: grid;
+	grid: 10vh auto auto auto /auto;
+	grid-gap: 2vh;
+	
+}
+
+.user.topMoviesList {
+	width: calc(50.625vh*0.8);
+	height: auto;
+	margin-left: calc(50.625vh*0.05);
+	background-color: gray;
+	border: 2px solid black;
+}
+
+.user.topMoviesTitle {
+	width: calc(50.625vh*0.9);
+	height: 10vh;
+	background-color: gray;
+	font-size: xx-large;
+	text-align: center;
+}
+
+.user.followStar {
+	float: right;
+	font-size: xx-large;
+	width: 10vh;
+	height: 10vh;
+}
+
+.user.filmInfo {
+	text-align: center;
+	/* float: LEFT; */
+}
+
+.user.movieRating {
+	float: right;
+	font-size: xx-large;
 }
