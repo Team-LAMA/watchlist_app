@@ -1,1 +1,6 @@
-movieListView();
+
+//homeView();
+//signInView();
+//signUpView();
+searchView();
+//userView();
