@@ -63,7 +63,7 @@
 
 .home.notificationList {
   position: fixed;
-	top: 10vh;
+  top: 10vh;
 }
 
 .home.followedList {
@@ -95,7 +95,9 @@
   margin-bottom: 0.5vh;
 }
 
+
 /*Used in more than one view*/
+
 .signUp {
   background-color: rgb(97, 76, 76);
 }
@@ -117,7 +119,10 @@
   cursor: pointer;
   width: 7.5vh;
   height: 3vh;
-}/**/
+}
+
+
+/**/
 
 /*Buttons for the navigation bar*/
 .homeBtn {
@@ -153,105 +158,101 @@
 
 .search.resultContainer {
   position: fixed;
-	top: 18vh;
+  top: 18vh;
   width: calc(50.625vh*0.9);
   height: 62vh;
   /*background-color: grey;*/
-	/*border: 1px solid grey;*/
-
-	display: flex;
-	flex-direction: column;
+  /*border: 1px solid grey;*/
+  display: flex;
+  flex-direction: column;
 }
 
 .search.result {
-	width: calc(50.625vh*0.9);
-	height: 10vh;
-	margin-bottom: 1vh;
-	background-color: lightgrey;
-	border-radius: 0.5vh;
-	outline: 1px black solid;
-	display: flex;
+  width: calc(50.625vh*0.9);
+  height: 10vh;
+  margin-bottom: 1vh;
+  background-color: lightgrey;
+  border-radius: 0.5vh;
+  outline: 1px black solid;
+  display: flex;
 }
 
-.search.result h3{
-	margin-left: 4vh;
-	font-size: 3vh;
+.search.result h3 {
+  margin-left: 4vh;
+  font-size: 3vh;
 }
 
-.search.result.user{
-	margin-left: auto;
-	margin-right: 1vh;
-	outline: 0px;
-	width: 5vh;
-	display: flex;
-	flex-direction: column-reverse;
-	align-items: center;
+.search.result.user {
+  margin-left: auto;
+  margin-right: 1vh;
+  outline: 0px;
+  width: 5vh;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
 }
 
-.search.result img{
-	width: 5vh;
-	height: 5vh;
-	margin-left: auto;
-	padding-bottom: 2vh;
+.search.result img {
+  width: 5vh;
+  height: 5vh;
+  margin-left: auto;
+  padding-bottom: 2vh;
 }
 
 .user.profileInfo {
-	position: fixed;
-	width: calc(50.625vh*0.9);
-	top:13.5vh;
-	/* background-color: brown; */
-
-	display: flex;
+  position: fixed;
+  width: calc(50.625vh*0.9);
+  top: 13.5vh;
+  /* background-color: brown; */
+  display: flex;
 }
 
-.user.profileImage{
-	width: 10vh;
-	height: 10vh;
-
-	border: 1px solid black;
+.user.profileImage {
+  width: 10vh;
+  height: 10vh;
+  border: 1px solid black;
 }
 
-.user.movieImage{
-	width: 10vh;
-	height: 10vh;
-	/* display: flex; */
-	border: 1px solid black;
-	float: left;
+.user.movieImage {
+  width: 10vh;
+  height: 10vh;
+  /* display: flex; */
+  border: 1px solid black;
+  float: left;
 }
 
 .user.profileDescription {
-	border: solid black 1px;
-	height: 10vh;
-	margin-left: 2vh;
-	width: calc(50.625vh*0.9 - 12vh);
-	background-color: gray;
+  border: solid black 1px;
+  height: 10vh;
+  margin-left: 2vh;
+  width: calc(50.625vh*0.9 - 12vh);
+  background-color: gray;
 }
 
 .user.topMoviesContainer {
-	position: fixed;
-	top: 30vh;
-	width: calc(50.625vh*0.9);
-	height: 47vh;
-	display: grid;
-	grid: 10vh auto auto auto /auto;
-	grid-gap: 2vh;
-	
+  position: fixed;
+  top: 30vh;
+  width: calc(50.625vh*0.9);
+  height: 47vh;
+  display: grid;
+  grid: 10vh auto auto auto /auto;
+  grid-gap: 2vh;
 }
 
 .user.topMoviesList {
-	width: calc(50.625vh*0.8);
-	height: auto;
-	margin-left: calc(50.625vh*0.05);
-	background-color: gray;
-	border: 2px solid black;
+  width: calc(50.625vh*0.8);
+  height: auto;
+  margin-left: calc(50.625vh*0.05);
+  background-color: gray;
+  border: 2px solid black;
 }
 
 .user.topMoviesTitle {
-	width: calc(50.625vh*0.9);
-	height: 10vh;
-	background-color: gray;
-	font-size: xx-large;
-	text-align: center;
+  width: calc(50.625vh*0.9);
+  height: 10vh;
+  background-color: gray;
+  font-size: xx-large;
+  text-align: center;
 }
 
 .user.followStar {
@@ -262,11 +263,132 @@
 }
 
 .user.filmInfo {
-	text-align: center;
-	/* float: LEFT; */
+  text-align: center;
+  /* float: LEFT; */
 }
 
 .user.movieRating {
-	float: right;
-	font-size: xx-large;
+  float: right;
+  font-size: xx-large;
+}
+
+.movieList.container {
+  position: fixed;
+  width: 50.625vh;
+  top: 9vh;
+	display: flex;
+  justify-content: center;
+}
+
+.movieList.title {
+  position: fixed;
+  width: calc(50.625vh*0.9);
+  height: 8vh;
+  background-color: lightgrey;
+  font-size: 2vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movieList.content {
+  position: fixed;
+  top: 19vh;
+  width: fit-content;
+  height: 58vh;
+  border: 1px black dashed;
+	
+	overflow-y: auto;
+}
+
+.movieList.box{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+}
+
+.movieList.element {
+  width: calc(50.625vh*0.9 - 20px);
+  height: 10vh;
+
+	background-color: grey;
+}
+
+.movieElement.container{
+	width: calc(50.625vh*0.9);
+	height: 10vh;
+	overflow: hidden;
+	margin-bottom: 1vh;
+
+	display: flex;
+	flex-direction: column;
+
+	background-color: lightgrey;
+
+	/*outline: red 1px dotted;*/
+}
+.movieElement.container.scroll{
+	width: calc(50.625vh*0.9 - 20px);
+}
+.movieElement.container.expanded{
+	height: calc(fit-content + 0.5vh);
+}
+
+.movieElement.minimal{
+	width: calc(50.625vh*0.9);
+	height: 10vh;
+
+	display: flex;
+}
+
+.movieElement.image{
+	position: relative;
+	top: 0.5vh;
+	left: 0.5vh;
+	min-width: 9vh;
+	height: 9vh;
+	margin-right: 1vh;
+}
+
+.movieElement.minimal.midSection{
+	flex-grow: 1;
+	/*background-color: red;*/
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.movieElement.movieTitle{
+	flex-grow: 1;
+
+	font-size: 2.5vh;
+	font-weight: bolder;
+
+	display: flex;
+	align-items: center;
+}
+.movieElement.releaseYear{
+	flex-grow: 1;
+
+	display: flex;
+	align-items: center;
+}
+
+.movieElement.score{
+	min-width: 7vh;
+	/*background-color: seagreen;*/
+	font-size: 2vh;
+	font-weight: bold;
+
+	display: flex;
+	align-items: center;
+	justify-content: right;
+}
+.movieElement.score.scroll{
+	margin-right: 20px;
 }
