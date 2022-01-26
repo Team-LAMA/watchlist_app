@@ -68,7 +68,11 @@
 
 .home.followedList {
   position: fixed;
-  top: 40vh;
+  top: 35vh;
+  width: calc(50.625vh * 0.9) ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .signUpView,
