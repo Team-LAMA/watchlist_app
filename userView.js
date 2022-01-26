@@ -1,38 +1,65 @@
 function userView(){
 	let html = "";
+	
 	html += /*html*/ `
 			<div class="user profileInfo">
 		`
-	
-	if(model.app.userID == model.loginInfo.userId){
-		html += /*html*/ `
-				<img class="user profileImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg"/>
-				<input type="file" />
-				<div class="user profileDescription">
-					NAME:
-					<input type="text" placeholder="Your name here" />
-					<hr />
-					<br />
-					DESCRIPTION: 
-					<input type="text" placeholder="Your description here" /> 
-				</div>
-	`
+
+	let curUser = null;
+	for(let i = 0; i < model.users.length; i++){
+		if(model.users[i].ID == model.loginInfo.userId){
+			curUser = model.users[i];
+		}
 	}
-	else {
+
+	let isFollowed = false;
+	for(let i = 0; i < curUser.followedUsers.length; i++){
+		if(curUser.followedUsers[i].ID == model.app.userID){
+			isFollowed = true;
+		}
+	}
+	
+	if(model.app.userID == model.loginInfo.userId){ //edit profile?
 		html += /*html*/ `
-			<img class="user profileImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg"/>
+				<img class="user profileImage" src="${model.users[model.loginInfo.userId].profilePicture}"/>
+				<input type="file"/>
+				<div class="user profileDescription">
+					NAME: 
+					<input onchange="editProfileName()" type="text" placeholder="${model.users[model.loginInfo.userId].profileName}" />
+					<hr />
+					DESCRIPTION:
+					<input onchange="editUserDescription()" type="text" placeholder="${model.users[model.loginInfo.userId].userDescription}" /> 
+				</div>
+		`
+	}
+	else  {//vise en annens profil
+		html += /*html*/ `
+			<img class="user profileImage" src="${model.users[model.app.userID].profilePicture}"/>
 			<div class="user profileDescription">
-				NAME: ${model.users.ID[0].profilename}
+				NAME: ${model.users[model.app.userID].profileName}
 				<br/>
 				<br/>
-				DESCRIPTION: interesser: Slangefilmer, Museskrekkfilm. alder: 
+				DESCRIPTION: ${model.users[model.app.userID].userDescription} 
+				<div class="user followStar" onclick="whiteStar()">
+		`
+		if (isFollowed){
+			html += /*html*/ `
 				<div class="user followStar">
-          <!-- Check whether model.loginInfo.userID has model.app.userID as a followed user-->
-					<img src="../img/64px-Empty_Star.svg.png">
-          <!--<img src="../img/64px-Full_Star_Yellow.svg.png"/>-->
+				<img src="../img/64px-Full_Star_Yellow.svg.png"/>
+				</div>
+			`;
+		}
+		else{
+			html += /*html*/ `
+				<div class="user followStar">
+				<img src="../img/64px-Empty_Star.svg.png"/>
+				</div>
+			`;
+		}
+		html += /*html*/`
 				</div>
 			</div>
-		`
+		`;
 	}
 
 	html += /*html*/ `</div>`;
@@ -106,7 +133,7 @@ function userView(){
         `}
 
 	html += generateNavbarHTML();
-html += generateLogoHTML();
+	html += generateLogoHTML();
 	document.getElementById('app').innerHTML = html;
 }
 

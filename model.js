@@ -2,14 +2,14 @@
 
 const model = {
 	app: {
-		page: "",				// The current page type
+		page: "signIn",				// The current page type
 		lastPage: "", 	// The last page type
-		userID: 1,			// User ID being viewed
-		listID: "",			// List ID being viewed
+		userID: null,			// User ID being viewed
+		listID: null,			// List ID being viewed
 	},
 
 	loginInfo: {
-		userId: 1,			// THe currently logged in UserID
+		userId: null,			// THe currently logged in UserID
 	},
 
 	inputs: {
@@ -225,8 +225,8 @@ const model = {
 			password: "Passord1",
 			eMail: "Terje@getacademy.no",
 			movieLists: [],
-			profileName: "Deg",
-			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
+			profileName: "Terje Kolderup",
+			profilePicture: "https://seek-team-prod.s3.fr-par.scw.cloud/users/5f5f11d414cde831943944.jpg",
 			userDescription: "Lærer ved GET Academy",
 			followedUsers: [],
 			// followedListIDs: [],
