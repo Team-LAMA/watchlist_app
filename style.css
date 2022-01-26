@@ -75,6 +75,7 @@
   align-items: center;
 }
 
+/*Sign In and Sign Up buttons and view*/
 .signUpView,
 .signInView {
   position: fixed;
@@ -118,6 +119,10 @@
   height: 3vh;
 }/**/
 
+/*Buttons for the navigation bar*/
+.homeBtn {
+  width: calc(50.625vh/4);
+}
 .search.searchBarBG {
   position: fixed;
   width: calc(50.625vh*0.9);

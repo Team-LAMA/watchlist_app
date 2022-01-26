@@ -1,6 +1,8 @@
+// HomeView
 function homeView(){
   let html = "";
   let userCheck = 0;
+	let user = null;
 
 	let curUser = {
     ID: null,
@@ -40,6 +42,7 @@ function homeView(){
   }
 
   html += /*html*/ `</div>`
+  //Added Navigationbar
   html += generateNavbarHTML();
   document.getElementById("app").innerHTML = html;
 }

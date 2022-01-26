@@ -1,3 +1,4 @@
+// Logo
 function generateLogoHTML(){
 	let html = "";
 

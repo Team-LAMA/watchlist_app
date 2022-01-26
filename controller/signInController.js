@@ -1,3 +1,4 @@
+// SingInController
 function signIn() {
   for (let i = 0; i < model.users.length; i++) {
     if (model.inputs.signIn.username === model.users[i].username) {
