@@ -9,7 +9,7 @@ const model = {
 	},
 
 	loginInfo: {
-		userId: 2,			// THe currently logged in UserID
+		userId: 1,			// THe currently logged in UserID
 	},
 
 	inputs: {
