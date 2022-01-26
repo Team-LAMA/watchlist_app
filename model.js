@@ -4,13 +4,12 @@ const model = {
 	app: {
 		page: "signIn",				// The current page type
 		lastPage: "", 	// The last page type
-		userID: 1,			// User ID being viewed
-		listID: 1,			// List ID being viewed
-		expandedIndex: null, // The index of the currently expanded element if any
+		userID: null,			// User ID being viewed
+		listID: null,			// List ID being viewed
 	},
 
 	loginInfo: {
-		userId: 1,			// THe currently logged in UserID
+		userId: 0,			// THe currently logged in UserID
 	},
 
 	inputs: {
@@ -310,6 +309,36 @@ const model = {
 					actors: ["Robert Downey Jr.", "Gwyneth Paltrow", "Terrence Howard", "Jeff Bridges", "Jon Favreau"],
 					description: "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
 				},
+				{
+					ID: 2,
+					title: "Iron Man",
+					image: "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_FMjpg_UX1000_.jpg",
+					year: 2008,
+					genres: ["Action", "Adventure", "Sci-Fi"],
+					directors: ["Jon Favreau"],
+					actors: ["Robert Downey Jr.", "Gwyneth Paltrow", "Terrence Howard", "Jeff Bridges", "Jon Favreau"],
+					description: "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+				},
+				{
+					ID: 2,
+					title: "Iron Man",
+					image: "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_FMjpg_UX1000_.jpg",
+					year: 2008,
+					genres: ["Action", "Adventure", "Sci-Fi"],
+					directors: ["Jon Favreau"],
+					actors: ["Robert Downey Jr.", "Gwyneth Paltrow", "Terrence Howard", "Jeff Bridges", "Jon Favreau"],
+					description: "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+				},
+				{
+					ID: 2,
+					title: "Iron Man",
+					image: "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_FMjpg_UX1000_.jpg",
+					year: 2008,
+					genres: ["Action", "Adventure", "Sci-Fi"],
+					directors: ["Jon Favreau"],
+					actors: ["Robert Downey Jr.", "Gwyneth Paltrow", "Terrence Howard", "Jeff Bridges", "Jon Favreau"],
+					description: "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+				},
 			],
 			personalComments: ["Hmm", "Hmmmmmmm", "Hmmmmmmmmmmmmmmmmmm"],
 			ratings: [1, 1, 1],
@@ -336,8 +365,8 @@ const model = {
 			password: "Passord1",
 			eMail: "Terje@getacademy.no",
 			movieLists: [],
-			profileName: "Deg",
-			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
+			profileName: "Terje Kolderup",
+			profilePicture: "https://seek-team-prod.s3.fr-par.scw.cloud/users/5f5f11d414cde831943944.jpg",
 			userDescription: "Lærer ved GET Academy",
 			followedUsers: [],
 			// followedListIDs: [],
