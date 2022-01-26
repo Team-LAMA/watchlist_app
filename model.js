@@ -2,14 +2,14 @@
 
 const model = {
 	app: {
-		page: "signIn",				// The current page type
+		page: "",				// The current page type
 		lastPage: "", 	// The last page type
 		userID: null,			// User ID being viewed
 		listID: null,			// List ID being viewed
 	},
 
 	loginInfo: {
-		userId: null,			// THe currently logged in UserID
+		userId: 0,			// THe currently logged in UserID
 	},
 
 	inputs: {
