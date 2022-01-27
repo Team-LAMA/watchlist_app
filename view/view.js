@@ -52,9 +52,7 @@ function updateView() {
 			if (app.listID == null) {
 				app.listID = curUser.movieLists[0].ID;
 			}
-			else {
-				movieListView();
-			}
+			movieListView();
 		}
 	}
 	else {
