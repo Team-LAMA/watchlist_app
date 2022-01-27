@@ -45,7 +45,7 @@ function userView(){
 		if (isFollowed){
 			html += /*html*/ `
 				<div class="user followStar">
-				<img src="../img/64px-Full_Star_Yellow.svg.png"/>
+				<img src="./img/64px-Full_Star_Yellow.svg.png"/>
 				</div>
 			`;
 		}

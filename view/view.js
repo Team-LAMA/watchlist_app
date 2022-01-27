@@ -21,7 +21,7 @@ function updateView() {
 	}
 
 	if (app.page == "") {
-		app.page = "home";
+		app.page = "signUp";
 		updateView();
 	}
 	else if (app.page == "home") {
@@ -58,9 +58,7 @@ function updateView() {
 			if (app.listID == null) {
 				app.listID = curUser.movieLists[0].ID;
 			}
-			else {
-				movieListView();
-			}
+			movieListView();
 		}
 	}
 	else {
