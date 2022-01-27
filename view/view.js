@@ -47,11 +47,20 @@ function updateView() {
 	}
 	else if (app.page == "list") {
 		if (model.loginInfo.userId == null) {
-			signInView();
+			if (app.listID == null) {
+				signInView();
+			}
+			else {
+				movieListView()
+			}
 		}
 		else {
-			app.listID = curUser.movieLists[0].ID;
-			movieListView();
+			if (app.listID == null) {
+				app.listID = curUser.movieLists[0].ID;
+			}
+			else {
+				movieListView();
+			}
 		}
 	}
 	else {
