@@ -15,9 +15,8 @@ const model = {
 	inputs: {
 		makeUser: { 		// Used to make a new user
 			username: "",
-			email: "",
 			password: "",
-			eMail: "",
+			email: "",
 		},
 
 		signIn: { 			// Used to log in
