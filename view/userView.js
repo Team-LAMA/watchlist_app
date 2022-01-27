@@ -52,7 +52,7 @@ function userView(){
 		else{
 			html += /*html*/ `
 				<div class="user followStar">
-				<img src="../img/64px-Empty_Star.svg.png"/>
+				<img src="./img/64px-Empty_Star.svg.png"/>
 				</div>
 			`;
 		}
@@ -102,7 +102,7 @@ function userView(){
         html += /*html*/ `
 			<div class="user topMoviesContainer">
 				<div class="user topMoviesTitle">
-					USERLIST: MY FAVOURITES
+					USERLIST: FAVOURITES
 				</div>
 				<div class="user topMoviesList">
 					<img class="user movieImage" src="${sortMovies()[0].image}">
