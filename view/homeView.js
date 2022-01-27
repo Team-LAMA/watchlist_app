@@ -22,18 +22,34 @@ function homeView(){
 
   html += generateLogoHTML();
 
-  html += /*html*/ `<div class="home notificationList"><h1>Notifications</h1>`;
-  for(let i = 0; i < model.movieLists.length; i++){
-    console.log(model.movieLists[i].lastChanged)
-  }
+  let notificationTimer
+  html += /*html*/ `
+    <div 
+      class="home notificationList">
+        <h1>Notification</h1>
+        `
+
+    for(let i = 0; i < model.movieLists.length; i++){
+      notificationTimer = model.movieLists[i].lastChanged;
+
+    html += /*html*/ `
+      <div
+        onclick="notificationUpdate(${notificationTimer}, ${curUser})"
+        class="notification">notification ${i + 1}
+      </div>
+      `
+    }
+
+  html += /*html*/ `</div>`;
 
   // print the username of the followed users
-  html += /*html*/ `</div>`
   html += /*html*/ `<div class="home followedList"><h1>Following</h1>`
   for(let i = 0; i < curUser.followedUsers.length; i++){
 		let followedUser = curUser.followedUsers[i];
     html += /*html*/ `
-			<div onclick="openMovieList(${followedUser.movieLists[0].ID})">
+			<div
+        onclick="openMovieList(${followedUser.movieLists[0].ID})"
+        class="followed">
 				${followedUser.username}
 			</div>
 		`;
@@ -43,11 +59,6 @@ function homeView(){
   //Added Navigationbar
   html += generateNavbarHTML();
   document.getElementById("app").innerHTML = html;
-}
-
-function openMovieList(input){
-  console.log(input)
-
 }
 // function insertionSort(inputArr) {
 //   let n = inputArr.length;
