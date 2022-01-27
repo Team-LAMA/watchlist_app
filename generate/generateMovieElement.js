@@ -14,7 +14,7 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 
 	// Chooses a class depending on whether a scrollbar should be pressent or not
 	html += /*html*/ `
-		<div class="movieElement container ${options.scroll ? 'scroll' : ''} ${options.expanded ? 'expanded' : ''} ${options.editable ? 'editable' : ''}" onclick="${onClick} index='${index}'">
+		<div class="movieElement container ${options.scroll ? 'scroll' : ''} ${options.expanded ? 'expanded' : ''} ${options.editable ? 'editable' : ''}" onclick="${onClick}" index='${index}'>
 	`
 
 	// Generate the "minimal" or collapsed view of the element

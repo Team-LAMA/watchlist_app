@@ -1,5 +1,4 @@
 function notificationUpdate(notificationTimer, curUser){
-  
 }
 
 function openMovieList(listID){
