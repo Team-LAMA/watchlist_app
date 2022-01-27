@@ -102,7 +102,7 @@ function userView(){
         html += /*html*/ `
 			<div class="user topMoviesContainer">
 				<div class="user topMoviesTitle">
-					USERLIST: MAMMA'S FAVOURITES
+					USERLIST: MY FAVOURITES
 				</div>
 				<div class="user topMoviesList">
 					<img class="user movieImage" src="${sortMovies()[0].image}">
