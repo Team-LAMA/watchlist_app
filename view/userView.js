@@ -34,12 +34,12 @@ function userView(){
 	}
 	else  {//vise en annens profil
 		html += /*html*/ `
-			<img class="user profileImage" src="${model.users[model.app.userID].profilePicture}"/>
+			<img class="user profileImage" src="${curUser.profilePicture}"/>
 			<div class="user profileDescription">
-				NAME: ${model.users[model.app.userID].profileName}
+				NAME: ${curUser.profileName}
 				<br/>
 				<br/>
-				DESCRIPTION: ${model.users[model.app.userID].userDescription} 
+				DESCRIPTION: ${curUser.userDescription} 
 				<div class="user followStar" onclick="whiteStar()">
 		`
 		if (isFollowed){

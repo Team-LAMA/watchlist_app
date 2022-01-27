@@ -22,6 +22,9 @@ function updateView(){
 	else if(app.page == "user"){
 		userView();
 	}
+	else if(app.page == "movieListView"){
+		movieListView();
+	}
 	else{
 		app.page = "";
 		updateView();

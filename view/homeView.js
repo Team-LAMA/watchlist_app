@@ -1,8 +1,6 @@
 // HomeView
 function homeView(){
   let html = "";
-  let userCheck = 0;
-	let user = null;
 
 	let curUser = {
     ID: null,
