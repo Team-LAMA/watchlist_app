@@ -8,6 +8,12 @@ const model = {
 
 	// TODO: make sure all pages can be opened to a "default" view even if no user or list id is set
 
+	idCounters: {
+		userId: 3,
+		listId: 3,
+		movieId: 3,
+	},
+
 	loginInfo: {
 		userId: 0,			// THe currently logged in UserID
 	},
