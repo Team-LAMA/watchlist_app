@@ -21,7 +21,7 @@ function updateView() {
 	}
 
 	if (app.page == "") {
-		app.page = "home";
+		app.page = "signUp";
 		updateView();
 	}
 	else if (app.page == "home") {
