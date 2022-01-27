@@ -290,6 +290,7 @@
   top: 9vh;
 	display: flex;
   justify-content: center;
+	height: 10vh;
 }
 
 .movieList.title {
@@ -318,20 +319,20 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-
+	width: calc(50.625vh*0.9 - 20px);
 	align-items: center;
 }
 
 .movieList.element {
   width: calc(50.625vh*0.9 - 20px);
   height: 10vh;
+	margin-bottom: 10vh;
 
 	background-color: grey;
 }
 
 .movieElement.container{
 	width: calc(50.625vh*0.9);
-	height: 10vh;
 	overflow: hidden;
 	margin-bottom: 1vh;
 
@@ -408,11 +409,29 @@
 
 .movieElement.detailBox{
 	width: calc(50.625vh*0.9);
-
 	display: flex;
+}
+.movieElement.detailBox.scroll{
+	width: calc(50.625vh*0.9 - 20px);
 }
 
 .movieElement.detailBox>div{
-	min-width: calc(50.625vh*0.9 / 2);
+	min-width: calc((50.625vh*0.9) / 2);
 	text-align: center;
 }
+.movieElement.detailBox.scroll>div{
+	width: calc((50.625vh*0.9) / 2 - 20px);
+}
+
+.movieElement.description.title{
+	width: calc(50.625vh*0.9);
+	text-align: center;
+}
+.movieElement.description.title.scroll{
+	width: calc(50.625vh*0.9 - 20px);
+}
+
+.movieElement.directors{
+	text-align: center;
+}
+

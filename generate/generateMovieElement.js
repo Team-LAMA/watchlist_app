@@ -51,8 +51,25 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 	}
 
 	html += /*html*/ `
-		<div class="movieElement detailBox">
+		<div class="movieElement detailBox ${options.scroll ? 'scroll' : ''}">
 	`
+
+	// Adding in the Genere(s) section
+	if (movieList.movies[index].genres.length > 0) {
+		html += /*html*/ `
+			<div>
+				<u>Genre${(movieList.movies[index].genres.length > 1) ? "s" : ""}</u>
+				<div>
+		`
+		html += movieList.movies[index].genres[0];
+		for (let i = 1; i < movieList.movies[index].genres.length; i++) {
+			html += ", " + movieList.movies[index].genres[i];
+		}
+		html += /*html*/ `
+				</div>
+			</div>
+		`
+	}
 
 	// Adding in the Director(s) section
 	if (movieList.movies[index].directors.length > 0) {
@@ -71,23 +88,6 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 		`
 	}
 
-	// Adding in the Actor(s) section
-	if (movieList.movies[index].actors.length > 0) {
-		html += /*html*/ `
-			<div>
-				<u>Actor${(movieList.movies[index].actors.length > 1) ? "s" : ""}</u>
-				<div>
-		`
-		html += movieList.movies[index].actors[0];
-		for (let i = 1; i < movieList.movies[index].actors.length; i++) {
-			html += ", " + movieList.movies[index].actors[i];
-		}
-		html += /*html*/ `
-				</div>
-			</div>
-		`
-	}
-
 	// closing detailBox
 	html += /*html*/ `
 		</div>
@@ -97,7 +97,30 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 		html += /*html*/ `
 			<hr/>
 			<div class="movieElement description">
-				${movieList.movies[index].description}
+				<div class="movieElement description title">
+					<u>
+						Description
+					</u>
+				</div>
+				<div>${movieList.movies[index].description}<div>
+			</div>
+		`
+	}
+
+	// Adding in the Actor(s) section
+	if (movieList.movies[index].actors.length > 0) {
+		html += /*html*/ `
+			<hr>
+			<div class="movieElement directors">
+				<u>Director${(movieList.movies[index].actors.length > 1) ? "s" : ""}</u>
+				<div>
+		`
+		html += movieList.movies[index].actors[0];
+		for (let i = 1; i < movieList.movies[index].actors.length; i++) {
+			html += ", " + movieList.movies[index].actors[i];
+		}
+		html += /*html*/ `
+				</div>
 			</div>
 		`
 	}
