@@ -1,10 +1,11 @@
 function movieListView() {
+	console.log("heihei");
 	html = "";
 
 	// Finding the correct list
 	let curMovieList = null;
-	for(let i = 0; i < model.movieLists.length; i++){
-		if(model.movieLists[i].ID == model.app.listID){
+	for (let i = 0; i < model.movieLists.length; i++) {
+		if (model.movieLists[i].ID == model.app.listID) {
 			curMovieList = model.movieLists[i];
 			console.log(curMovieList);
 		}
@@ -21,8 +22,8 @@ function movieListView() {
 				<div class="movieList box">
 	`
 	console.log(curMovieList.movies.length > 2);
-	for(let i = 0; i < curMovieList.movies.length; i++){
-		html += generateMovieElement(curMovieList, i, "console.log('test')",{scroll: (curMovieList.movies.length > 5), expanded: false});
+	for (let i = 0; i < curMovieList.movies.length; i++) {
+		html += generateMovieElement(curMovieList, i, "", { scroll: (curMovieList.movies.length > 5), expanded: true, editable: (i == 2 ? true : false) });
 	}
 
 	html += /*html*/ `

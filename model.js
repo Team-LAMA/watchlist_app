@@ -1,9 +1,10 @@
 const model = {
 	app: {
-		page: "",				// The current page type
+		page: "list",				// The current page type
 		lastPage: "", 	// The last page type
 		userID: null,			// User ID being viewed
 		listID: null,			// List ID being viewed
+		expandedIndex: null // the index of the currently expanded movieList element if there is any
 	},
 
 	// TODO: make sure all pages can be opened to a "default" view even if no user or list id is set
@@ -114,7 +115,7 @@ const model = {
 					image: "https://upload.wikimedia.org/wikipedia/en/3/3c/Snakesonatrain.jpg",
 					year: 2006,
 					genres: ["Horror", "Thriller"],
-					directors: ["Peter Mervis"],
+					directors: ["Peter Mervis", "some other guy"],
 					actors: ["A.J. Castro", "Julia Ruiz", "Giovanni Bejarano", "Al Galvez"],
 					description: "Snakes on a Train er en direkte-til-video action-thriller-skrekkfilm fra 2006 utgitt av The Asylum som en mockbuster 15. august 2006. Aspekter av filmen er inspirert av filmen Snakes on a Plane, som var planlagt for teaterutgivelse tre dager senere 18. august 2006.",
 				},
@@ -125,7 +126,7 @@ const model = {
 					year: 2006,
 					genres: ["Action", "Thriller"],
 					directors: ["David R. Ellis"],
-					actors: ["Samuel L. Jackson", "Julianna Margulies", "Nathan Phillips", "Rachel Blanchard"],
+					actors: ["Samuel L. Jackson"],
 					description: "Sean Jones blir fulgt av to FBI-agenter på et fly til Los Angeles. Han skal vitne mot en gangster. Til tross for streng sikkerhetskontroll, er en kasse med giftige slanger kommet med for å brukes til å kapre flyet før det når L.A.",
 				},
 				{
