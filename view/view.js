@@ -37,7 +37,13 @@ function updateView() {
 		searchView();
 	}
 	else if (app.page == "user") {
-		userView();
+		if (model.loginInfo.userId == null) {
+			signInView();
+		}
+		else {
+			model.loginInfo.userId = curUser.ID;
+			userView();
+		}
 	}
 	else if (app.page == "list") {
 		if (model.loginInfo.userId == null) {
