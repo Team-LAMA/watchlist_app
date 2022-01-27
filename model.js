@@ -4,19 +4,19 @@ const model = {
 		lastPage: "", 	// The last page type
 		userID: null,			// User ID being viewed
 		listID: null,			// List ID being viewed
-		expandedIndex: null // the index of the currently expanded movieList element if there is any
+		expandedIndex: null, // the index of the currently expanded movieList element if there is any
 	},
 
 	// TODO: make sure all pages can be opened to a "default" view even if no user or list id is set
+
+	loginInfo: {
+		userId: null,			// THe currently logged in UserID
+	},
 
 	idCounters: {
 		userId: 3,
 		listId: 3,
 		movieId: 3,
-	},
-
-	loginInfo: {
-		userId: 0,			// THe currently logged in UserID
 	},
 
 	inputs: {
@@ -225,7 +225,7 @@ const model = {
 		},
 		{
 			ID: 1,
-			name: "Dine Favoritter",
+			name: "Terje's Favoritter",
 			movies: [
 				{
 					ID: 2,
