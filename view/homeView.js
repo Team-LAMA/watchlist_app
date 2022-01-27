@@ -22,7 +22,8 @@ function homeView(){
 
   html += generateLogoHTML();
 
-  let notificationTimer
+  
+
   html += /*html*/ `
     <div 
       class="home notificationList">
@@ -30,17 +31,17 @@ function homeView(){
         `
 
     for(let i = 0; i < model.movieLists.length; i++){
-      notificationTimer = model.movieLists[i].lastChanged;
-
     html += /*html*/ `
       <div
-        onclick="notificationUpdate(${notificationTimer}, ${curUser})"
+        onclick="notificationUpdate(${curUser})"
         class="notification">notification ${i + 1}
       </div>
       `
     }
 
   html += /*html*/ `</div>`;
+
+
 
   // print the username of the followed users
   html += /*html*/ `<div class="home followedList"><h1>Following</h1>`
@@ -60,18 +61,3 @@ function homeView(){
   html += generateNavbarHTML();
   document.getElementById("app").innerHTML = html;
 }
-// function insertionSort(inputArr) {
-//   let n = inputArr.length;
-//       for (let i = 1; i < n; i++) {
-//           // Choosing the first element in our unsorted subarray
-//           let current = inputArr[i];
-//           // The last element of our sorted subarray
-//           let j = i-1; 
-//           while ((j > -1) && (current < inputArr[j])) {
-//               inputArr[j+1] = inputArr[j];
-//               j--;
-//           }
-//           inputArr[j+1] = current;
-//       }
-//   return inputArr;
-// }
