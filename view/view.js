@@ -1,44 +1,67 @@
 
 updateView();
-function updateView(){
+function updateView() {
 	let app = model.app;
 
-	if(app.page == ""){
+	let curUser = {
+		ID: null,
+		username: "",
+		password: "",
+		eMail: "",
+		movieLists: [],
+		profileName: "",
+		profilePicture: "",
+		userDescription: "",
+		followedUsers: [],
+	}
+	for (let i = 0; i < model.users.length; i++) {
+		if (model.users[i].ID == model.loginInfo.userId) {
+			curUser = model.users[i];
+		}
+	}
+
+	if (app.page == "") {
 		app.page = "home";
 		updateView();
 	}
-	else if(app.page == "home"){
+	else if (app.page == "home") {
 		homeView();
 	}
-	else if(app.page == "signIn"){
+	else if (app.page == "signIn") {
 		signInView();
 	}
-	else if(app.page == "signUp"){
+	else if (app.page == "signUp") {
 		signUpView();
 	}
-	else if(app.page == "search"){
+	else if (app.page == "search") {
 		searchView();
 	}
-	else if(app.page == "user"){
+	else if (app.page == "user") {
 		userView();
 	}
-	else if(app.page == "movieListView"){
-		movieListView();
+	else if (app.page == "list") {
+		if (app.userID == null && model.loginInfo.userId == null) {
+			signInView();
+		}
+		else {
+			app.listID = curUser.movieLists[0].ID;
+			movieListView();
+		}
 	}
-	else{
+	else {
 		app.page = "";
 		updateView();
 	}
 }
 
-function go(page){
+function go(page) {
 	let app = model.app;
 	history.pushState(null, null, `#${app.page}/${app.lastPage}/${app.userID}/${app.listID}`);
 	app.page = page;
 	updateView();
 }
 
-window.onpopstate = function() {
+window.onpopstate = function () {
 	let app = model.app;
 
 	const pageHash = location.hash.substring(1);
@@ -49,7 +72,7 @@ window.onpopstate = function() {
 	app.lastPage = parts[1];
 	app.userID = parseInt(parts[2]);
 	app.listID = parseInt(parts[3]);
-	
+
 	updateView();
 }
 

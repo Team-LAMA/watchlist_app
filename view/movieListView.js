@@ -10,6 +10,8 @@ function movieListView() {
 		}
 	}
 
+	console.log(curMovieList);
+
 	html += /*html*/ `
 		<div class="movieList container">
 			<div class="movieList title">

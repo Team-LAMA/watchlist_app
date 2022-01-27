@@ -6,6 +6,8 @@ const model = {
 		listID: null,			// List ID being viewed
 	},
 
+	// TODO: make sure all pages can be opened to a "default" view even if no user or list id is set
+
 	loginInfo: {
 		userId: 0,			// THe currently logged in UserID
 	},
