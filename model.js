@@ -1,22 +1,22 @@
 const model = {
 	app: {
-		page: "",
+		page: "list",
 		lastPage: "", 	// The last page type
 		userID: null,			// User ID being viewed
-		listID: null,			// List ID being viewed
-		expandedIndex: null // the index of the currently expanded movieList element if there is any
+		listID: 0,			// List ID being viewed
+		expandedIndex: 3, // the index of the currently expanded movieList element if there is any
 	},
 
 	// TODO: make sure all pages can be opened to a "default" view even if no user or list id is set
+
+	loginInfo: {
+		userId: 0,			// THe currently logged in UserID
+	},
 
 	idCounters: {
 		userId: 3,
 		listId: 3,
 		movieId: 3,
-	},
-
-	loginInfo: {
-		userId: 0,			// THe currently logged in UserID
 	},
 
 	inputs: {
@@ -225,38 +225,8 @@ const model = {
 		},
 		{
 			ID: 1,
-			name: "Dine Favoritter",
+			name: "Terje's Favoritter",
 			movies: [
-				{
-					ID: 2,
-					title: "Iron Man",
-					image: "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_FMjpg_UX1000_.jpg",
-					year: 2008,
-					genres: ["Action", "Adventure", "Sci-Fi"],
-					directors: ["Jon Favreau"],
-					actors: ["Robert Downey Jr.", "Gwyneth Paltrow", "Terrence Howard", "Jeff Bridges", "Jon Favreau"],
-					description: "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
-				},
-				{
-					ID: 0,
-					title: "Snakes on a plane",
-					image: "https://upload.wikimedia.org/wikipedia/en/4/41/SOAP_poster.jpg",
-					year: 2006,
-					genres: ["Action", "Thriller"],
-					directors: ["David R. Ellis"],
-					actors: ["Samuel L. Jackson", "Julianna Margulies", "Nathan Phillips", "Rachel Blanchard"],
-					description: "Sean Jones blir fulgt av to FBI-agenter på et fly til Los Angeles. Han skal vitne mot en gangster. Til tross for streng sikkerhetskontroll, er en kasse med giftige slanger kommet med for å brukes til å kapre flyet før det når L.A.",
-				},
-				{
-					ID: 1,
-					title: "Snakes on a Train",
-					image: "https://upload.wikimedia.org/wikipedia/en/3/3c/Snakesonatrain.jpg",
-					year: 2006,
-					genres: ["Horror", "Thriller"],
-					directors: ["Peter Mervis"],
-					actors: ["A.J. Castro", "Julia Ruiz", "Giovanni Bejarano", "Al Galvez"],
-					description: "Snakes on a Train er en direkte-til-video action-thriller-skrekkfilm fra 2006 utgitt av The Asylum som en mockbuster 15. august 2006. Aspekter av filmen er inspirert av filmen Snakes on a Plane, som var planlagt for teaterutgivelse tre dager senere 18. august 2006.",
-				},
 				{
 					ID: 2,
 					title: "Iron Man",
