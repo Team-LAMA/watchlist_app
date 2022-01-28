@@ -19,15 +19,14 @@ function movieListView() {
 				<h2>${curMovieList.name}<h2>
 			</div>
 			<div class="movieList content">
-				<div class="movieList box">
+				<div class="movieList box ${(curMovieList.movies.length > 5) ? 'scroll' : ''}">
 	`
 	console.log(curMovieList.movies.length > 2);
 	for (let i = 0; i < curMovieList.movies.length; i++) {
-		html += generateMovieElement(curMovieList, i, "", { scroll: (curMovieList.movies.length > 5), expanded: true, editable: (i == 2 ? true : false) });
+		html += generateMovieElement(curMovieList, i, "", { scroll: (curMovieList.movies.length > 5), expanded: (model.app.expandedIndex == i) ? true : false, editable: (i == 2 ? true : false) });
 	}
 
 	html += /*html*/ `
-				</div>
 			</div>
 		</div>
 	`

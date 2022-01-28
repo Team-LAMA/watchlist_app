@@ -70,32 +70,9 @@ function userView(){
 			<div class="user topMoviesTitle">
 				USERLIST: <input type="text" placeholder="MY FAVOURITES"/>
 			</div>
-			<div class="user topMoviesList">
-				<img class="user movieImage" src="${sortMovies()[0].image}"/>
-				<div class="user filmInfo">
-					TITLE: HOME ALONE ELNS<BR><BR> YEAR: 2007
-				</div>
-				<div class="user movieRating">
-					<input type="number" min="1" max="10" placeholder="X"/>/10
-				</div>
-			</div>
-			<div class="user topMoviesList">
-				<img class="user movieImage" src="${sortMovies()[1].image}"/>
-				<div class="user filmInfo">
-					TITLE: HOME ALONE ELNS
-					<br/>
-					<br/>
-					YEAR:2006
-				</div>
-				<div class="user movieRating">
-					<input type="number" min="1" max="10" placeholder="X"/>/10
-				</div>
-			</div>
-			<div class="user topMoviesList">
-				<img class="user movieImage" src="${sortMovies()[2].image}">
-				<div class="user filmInfo" >TITLE: HOME ALONE ELNS<BR><BR> YEAR:2005</div>
-				<div class="user movieRating"><input type="number" min="1" max="10" placeholder="X">/10</div>
-			</div>
+			${generateMovieElement(curUser.movieLists[0], 0, "model.app.expandedIndex = 0; model.app.listID = 0; go('list')")}
+			${generateMovieElement(curUser.movieLists[0], 0, "model.app.expandedIndex = 0; model.app.listID = 0; go('list')")}
+			${generateMovieElement(curUser.movieLists[0], 0, "model.app.expandedIndex = 0; model.app.listID = 0; go('list')")}
 		</div>
 	`}
     else {
@@ -104,31 +81,9 @@ function userView(){
 				<div class="user topMoviesTitle">
 					USERLIST: FAVOURITES
 				</div>
-				<div class="user topMoviesList">
-					<img class="user movieImage" src="${sortMovies()[0].image}">
-					<div class="user filmInfo" >
-						TITLE: HOME ALONE ELNS
-						<br/>
-						<br/>
-						YEAR: OSVOSV
-					</div>
-					<div class="user movieRating">10/10</div>
-				</div>
-				<div class="user topMoviesList">
-					<img class="user movieImage" src="${sortMovies()[1].image}">
-					<div class="user filmInfo">
-            TITLE: HOME ALONE ELNS
-            <br/>
-            <br/>
-            YEAR: OSVOSV
-          </div>
-					<div class="user movieRating">10/10</div>
-				</div>
-				<div class="user topMoviesList">
-					<img class="user movieImage" src="${sortMovies()[2].image}">
-					<div class="user filmInfo" >TITLE: HOME ALONE ELNS<BR><BR> YEAR: OSVOSV</div>
-					<div class="user movieRating">10/10</div>
-				</div>
+				${generateMovieElement(curUser.movieLists[0], 0, "")}
+				${generateMovieElement(curUser.movieLists[0], 1, "")}
+				${generateMovieElement(curUser.movieLists[0], 3, "")}
 			</div>
         `}
 
