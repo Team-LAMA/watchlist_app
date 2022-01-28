@@ -290,7 +290,6 @@
   top: 9vh;
 	display: flex;
   justify-content: center;
-	height: 10vh;
 }
 
 .movieList.title {
@@ -310,7 +309,7 @@
   top: 19vh;
   width: fit-content;
   height: 58vh;
-  border: 1px black dashed;
+  border: 1px grey solid;
 	
 	overflow-y: auto;
 }
@@ -319,8 +318,11 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	width: calc(50.625vh*0.9 - 20px);
+	width: calc(50.625vh*0.9);
 	align-items: center;
+}
+.movieList.box.scroll{
+	width: calc(50.625vh*0.9 - 19px);
 }
 
 .movieList.element {
@@ -334,14 +336,14 @@
 .movieElement.container{
 	width: calc(50.625vh*0.9);
 	overflow: hidden;
-	margin-bottom: 1vh;
-
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 1vh;
+	height: 10vh;
 
 	background-color: lightgrey;
 
-	/*outline: red 1px dotted;*/
+	outline: grey 1px solid;
 }
 .movieElement.container.scroll{
 	width: calc(50.625vh*0.9 - 20px);
@@ -349,6 +351,7 @@
 .movieElement.container.expanded{
 	/*box-sizing: border-box;*/
 	height: fit-content;
+	margin-bottom: 1vh;
 }
 
 .movieElement.minimal{
@@ -386,6 +389,7 @@
 	display: flex;
 	align-items: center;
 }
+
 .movieElement.releaseYear{
 	flex-grow: 1;
 
@@ -410,6 +414,7 @@
 .movieElement.detailBox{
 	width: calc(50.625vh*0.9);
 	display: flex;
+	justify-content: center;
 }
 .movieElement.detailBox.scroll{
 	width: calc(50.625vh*0.9 - 20px);
@@ -426,12 +431,20 @@
 .movieElement.description.title{
 	width: calc(50.625vh*0.9);
 	text-align: center;
+	text-decoration: underline;
 }
 .movieElement.description.title.scroll{
 	width: calc(50.625vh*0.9 - 20px);
 }
 
-.movieElement.directors{
-	text-align: center;
+.movieElement.description{
+	width: calc(50.625vh*0.9);
+}
+.movieElement.description.scroll{
+	width: calc(50.625vh*0.9 - 20px);
 }
 
+.movieElement.actors,
+.movieElement.personalComments{
+	text-align: center;
+}
