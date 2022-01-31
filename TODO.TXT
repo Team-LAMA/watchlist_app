@@ -30,3 +30,4 @@ Following på homeView feil navn. Skal ikke være username men profileName!!
 
 GÅ INN PÅ HOME, GÅ PÅ MAMSEN, på lista du ser prøv å gå tilbake på knappen, så kommer du ikke hjem, men til search.
 
+fant et bug til, husker ikke hva det var. husker du linn????
