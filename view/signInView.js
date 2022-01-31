@@ -9,7 +9,7 @@ function signInView() {
         <input onchange="updatePasswordSignIn(this)" type="password" placeholder="Password"/>
 				<div>
         	<button class="signUpBtn" onclick="go('signUp')">Sign Up</button>
-        	<button class="signInBtn" onclick="go('signIn')">Sign In</button>
+        	<button class="signInBtn" onclick="signIn()">Sign In</button>
 				</div>
     </div>
   `;

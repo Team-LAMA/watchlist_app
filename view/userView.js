@@ -7,7 +7,6 @@ function userView(){
 
 	let curViewedUser = null;
 	for(let i = 0; i < model.users.length; i++){
-		console.log(model.users[i], i);
 		if(model.users[i].ID == model.app.userID){
 			curViewedUser = model.users[i];
 		}
@@ -21,23 +20,25 @@ function userView(){
 	}
 
 	let isFollowed = false;
-	for(let i = 0; i < curSignedInUser.followedUsers.length; i++){
-		if(curSignedInUser.followedUsers[i].ID == model.app.userID){
-			isFollowed = true;
+	if(model.signedInInfo.userId){
+		for(let i = 0; i < curSignedInUser.followedUsers.length; i++){
+			if(curSignedInUser.followedUsers[i].ID == model.app.userID){
+				isFollowed = true;
+			}
 		}
 	}
 
 	
 	if(model.app.userID == model.signedInInfo.userId){ //edit profile?
 		html += /*html*/ `
-				<img class="user profileImage" src="${model.users[model.signedInInfo.userId].profilePicture}"/>
+				<img class="user profileImage" src="${curViewedUser.profilePicture}"/>
 				<input type="file"/>
 				<div class="user profileDescription">
 					NAME: 
-					<input onchange="editProfileName()" type="text" placeholder="${model.users[model.signedInInfo.userId].profileName}" />
+					<input onchange="editProfileName()" type="text" placeholder="${curViewedUser.profileName}" />
 					<hr />
 					DESCRIPTION:
-					<input onchange="editUserDescription()" type="text" placeholder="${model.users[model.signedInInfo.userId].userDescription}" /> 
+					<input onchange="editUserDescription()" type="text" placeholder="${curViewedUser.userDescription}" /> 
 				</div>
 		`
 	}
