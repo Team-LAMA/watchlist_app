@@ -1,16 +1,16 @@
 const model = {
 	app: {
-		page: "user",
+		page: "",
 		lastPage: "", 	// The last page type
 		userID: null,			// User ID being viewed
-		listID: 0,			// List ID being viewed
-		expandedIndex: 3, // the index of the currently expanded movieList element if there is any
+		listID: null,			// List ID being viewed
+		expandedIndex: null, // the index of the currently expanded movieList element if there is any
 	},
 
 	// TODO: make sure all pages can be opened to a "default" view even if no user or list id is set
 
-	loginInfo: {
-		userId: 0,			// THe currently logged in UserID
+	signedInInfo: {
+		userId: null,			// THe currently logged in UserID
 	},
 
 	idCounters: {
@@ -96,7 +96,7 @@ const model = {
 	movieLists: [			// A list over all the existing movieLists (DATA)
 		{
 			ID: 0,
-			name: "Mine Favoritter",
+			name: "Favos",
 			movies: [
 				{
 					ID: 2,
@@ -330,9 +330,9 @@ const model = {
 			password: "321",
 			eMail: "Team3@mail.no",
 			movieLists: [],
-			profileName: "Meg",
+			profileName: "Navn",
 			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
-			userDescription: "Lorem ipsum",
+			userDescription: "Beskrivelse",
 			followedUsers: [],
 			// followedListIDs: [],
 		},

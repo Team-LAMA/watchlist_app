@@ -1,6 +1,6 @@
 function notificationUpdate(notificationTimer, curUser){
 
-  //if(model.users.followedUsers == model.loginInfo.)
+  //if(model.users.followedUsers == model.signedInInfo.)
 }
 
 function openMovieList(listID){

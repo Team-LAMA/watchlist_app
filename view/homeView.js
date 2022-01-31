@@ -15,7 +15,7 @@ function homeView() {
 	}
 
 	for (let i = 0; i < model.users.length; i++) {
-		if (model.users[i].ID == model.loginInfo.userId) {
+		if (model.users[i].ID == model.signedInInfo.userId) {
 			curUser = model.users[i];
 		}
 	}

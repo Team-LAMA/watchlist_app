@@ -12,7 +12,7 @@ const model = {
 		movieId: null,
 	},
 
-	loginInfo: {
+	signedInInfo: {
 		userId: null,			// THe currently logged in UserID
 	},
 
