@@ -23,8 +23,9 @@ function movieListView() {
 	`
 	console.log(curMovieList.movies.length > 2);
 	for (let i = 0; i < curMovieList.movies.length; i++) {
-		html += generateMovieElement(curMovieList, i, "", { scroll: (curMovieList.movies.length > 5), expanded: (model.app.expandedIndex == i) ? true : false, editable: (i == 2 ? true : false) });
+		html += generateMovieElement(curMovieList, i, "", {expanded: (model.app.expandedIndex == i) ? true : false, editable: (i == 2 ? true : false) });
 	}
+	//(curMovieList.movies.length > 5)
 
 	html += /*html*/ `
 			</div>

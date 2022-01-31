@@ -1,6 +1,6 @@
 const model = {
 	app: {
-		page: "list",
+		page: "user",
 		lastPage: "", 	// The last page type
 		userID: null,			// User ID being viewed
 		listID: 0,			// List ID being viewed
