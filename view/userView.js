@@ -34,10 +34,10 @@ function userView(){
 				<img class="user profileImage" src="${curViewedUser.profilePicture}"/>
 				<input type="file"/> <!-- HJELP OSS ALEX  HER SKAL DET EN FUNKSJON-->
 				<div class="user profileDescription">
-					NAME: 
+					Name: 
 					<input onchange="editProfileName(this)" type="text" placeholder="${curViewedUser.profileName}" />
 					<hr />
-					DESCRIPTION:
+					Description:
 					<input onchange="editUserDescription(this)" type="text" placeholder="${curViewedUser.userDescription}" /> 
 				</div>
 		`
@@ -47,10 +47,10 @@ function userView(){
 		html += /*html*/ `
 			<img class="user profileImage" src="${curViewedUser.profilePicture}"/>
 			<div class="user profileDescription">
-				NAME: ${curViewedUser.profileName}
+				Name: ${curViewedUser.profileName}
 				<br/>
 				<br/>
-				DESCRIPTION: ${curViewedUser.userDescription}
+				Description: ${curViewedUser.userDescription}
 				<div class="user followStar" onclick="followStar()"> <!--Lage function og flytte stjernen riktig css-->
 		`
 		if (isFollowed){
@@ -102,11 +102,16 @@ function userView(){
 	html += generateLogoHTML();
 	document.getElementById('app').innerHTML = html;
 }
-
-function sortMovies(){
-	return [
-			{image: "https://i.pinimg.com/736x/aa/f7/05/aaf705e06726ce3881288ae4be3ac5fe.jpg"},
-			{image: "https://i.pinimg.com/736x/aa/f7/05/aaf705e06726ce3881288ae4be3ac5fe.jpg"}, 
-			{image: "https://i.pinimg.com/736x/aa/f7/05/aaf705e06726ce3881288ae4be3ac5fe.jpg"},
-	]
-}
+//
+//
+//
+//Hva er dette? Husker ikke hva den gjor
+//
+//
+// function sortMovies(){
+// 	return [
+// 			{image: "https://i.pinimg.com/736x/aa/f7/05/aaf705e06726ce3881288ae4be3ac5fe.jpg"},
+// 			{image: "https://i.pinimg.com/736x/aa/f7/05/aaf705e06726ce3881288ae4be3ac5fe.jpg"}, 
+// 			{image: "https://i.pinimg.com/736x/aa/f7/05/aaf705e06726ce3881288ae4be3ac5fe.jpg"},
+// 	]
+// }

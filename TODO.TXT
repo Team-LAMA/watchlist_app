@@ -13,8 +13,20 @@ FIKSE MASSE CSS.
 
 bug: når du skal se på egen profil (terje) så må app.listID være 1 eller IKKE "null" hvis ikke blir det blank side.
 
-LAGE FUNKSJONER TIL "editProfileName" + "editUserDescription"
-
 LAGE EN FUNKSJON TIL "profileImage" FOR Å LEGGE INN BILDE
 
 Hvor skal function til MovieList Title??
+
+Maa vi ikke lage en profil som er tom til naar man logger inn foerste gangen??????????
+
+BUG!!!!  signedInInfo:userId: 3,4,5, OSV FUNKER, MEN BURDE IKKE? BUG!!!!
+
+IGJEN FIKSE app.listID SHIT, HVA SKJER?
+
+UKE 6 = DEBUG alt mulig shit og gå løs med fluesmekkeren
+
+
+Following på homeView feil navn. Skal ikke være username men profileName!!
+
+GÅ INN PÅ HOME, GÅ PÅ MAMSEN, på lista du ser prøv å gå tilbake på knappen, så kommer du ikke hjem, men til search.
+
