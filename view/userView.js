@@ -30,14 +30,14 @@ function userView(){
 	
 	if(model.app.userID == model.signedInInfo.userId){ //edit profile?
 		html += /*html*/ `
-				<img class="user profileImage" src="${model.users[model.signedInInfo.userId].profilePicture}"/>
+				<img class="user profileImage" src="${curViewedUser.profilePicture}"/>
 				<input type="file"/>
 				<div class="user profileDescription">
 					NAME: 
-					<input onchange="editProfileName()" type="text" placeholder="${model.users[model.signedInInfo.userId].profileName}" />
+					<input onchange="editProfileName()" type="text" placeholder="${curViewedUser.profileName}" />
 					<hr />
 					DESCRIPTION:
-					<input onchange="editUserDescription()" type="text" placeholder="${model.users[model.signedInInfo.userId].userDescription}" /> 
+					<input onchange="editUserDescription()" type="text" placeholder="${curViewedUser.userDescription}" /> 
 				</div>
 		`
 	}
