@@ -17,4 +17,4 @@ LAGE FUNKSJONER TIL "editProfileName" + "editUserDescription"
 
 LAGE EN FUNKSJON TIL "profileImage" FOR Å LEGGE INN BILDE
 
-
+Hvor skal function til MovieList Title??
