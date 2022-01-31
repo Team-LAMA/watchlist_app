@@ -7,7 +7,6 @@ function userView(){
 
 	let curViewedUser = null;
 	for(let i = 0; i < model.users.length; i++){
-		console.log(model.users[i], i);
 		if(model.users[i].ID == model.app.userID){
 			curViewedUser = model.users[i];
 		}
@@ -21,9 +20,11 @@ function userView(){
 	}
 
 	let isFollowed = false;
-	for(let i = 0; i < curSignedInUser.followedUsers.length; i++){
-		if(curSignedInUser.followedUsers[i].ID == model.app.userID){
-			isFollowed = true;
+	if(model.signedInInfo.userId){
+		for(let i = 0; i < curSignedInUser.followedUsers.length; i++){
+			if(curSignedInUser.followedUsers[i].ID == model.app.userID){
+				isFollowed = true;
+			}
 		}
 	}
 
