@@ -38,7 +38,12 @@ function updateView() {
 	}
 	else if (app.page == "user") {
 		if (model.signedInInfo.userId == null) {
-			signInView();
+			if (app.userID == null) {
+				signInView();
+			}
+			else {
+				userView()
+			}
 		}
 		else {
 			model.signedInInfo.userId = curUser.ID;
