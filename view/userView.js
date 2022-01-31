@@ -5,41 +5,51 @@ function userView(){
 			<div class="user profileInfo">
 		`
 
-	let curUser = null;
+	let curViewedUser = null;
 	for(let i = 0; i < model.users.length; i++){
-		if(model.users[i].ID == model.loginInfo.userId){
-			curUser = model.users[i];
+		console.log(model.users[i], i);
+		if(model.users[i].ID == model.app.userID){
+			curViewedUser = model.users[i];
+		}
+	}
+
+	let curSignedInUser = null;
+	for(let i = 0; i < model.users.length; i++){
+		if(model.users[i].ID == model.signedInInfo.userId){
+			curSignedInUser = model.users[i];
 		}
 	}
 
 	let isFollowed = false;
-	for(let i = 0; i < curUser.followedUsers.length; i++){
-		if(curUser.followedUsers[i].ID == model.app.userID){
+	for(let i = 0; i < curSignedInUser.followedUsers.length; i++){
+		if(curSignedInUser.followedUsers[i].ID == model.app.userID){
 			isFollowed = true;
 		}
 	}
+
 	
-	if(model.app.userID == model.loginInfo.userId){ //edit profile?
+	if(model.app.userID == model.signedInInfo.userId){ //edit profile?
 		html += /*html*/ `
-				<img class="user profileImage" src="${model.users[model.loginInfo.userId].profilePicture}"/>
+				<img class="user profileImage" src="${model.users[model.signedInInfo.userId].profilePicture}"/>
 				<input type="file"/>
 				<div class="user profileDescription">
 					NAME: 
-					<input onchange="editProfileName()" type="text" placeholder="${model.users[model.loginInfo.userId].profileName}" />
+					<input onchange="editProfileName()" type="text" placeholder="${model.users[model.signedInInfo.userId].profileName}" />
 					<hr />
 					DESCRIPTION:
-					<input onchange="editUserDescription()" type="text" placeholder="${model.users[model.loginInfo.userId].userDescription}" /> 
+					<input onchange="editUserDescription()" type="text" placeholder="${model.users[model.signedInInfo.userId].userDescription}" /> 
 				</div>
 		`
 	}
 	else  {//vise en annens profil
+		console.log(curViewedUser);
 		html += /*html*/ `
-			<img class="user profileImage" src="${curUser.profilePicture}"/>
+			<img class="user profileImage" src="${curViewedUser.profilePicture}"/>
 			<div class="user profileDescription">
-				NAME: ${curUser.profileName}
+				NAME: ${curViewedUser.profileName}
 				<br/>
 				<br/>
-				DESCRIPTION: ${curUser.userDescription}
+				DESCRIPTION: ${curViewedUser.userDescription}
 				<div class="user followStar" onclick="followStar()"> <!--Lage function og flytte stjernen riktig css-->
 		`
 		if (isFollowed){
@@ -64,15 +74,15 @@ function userView(){
 
 	html += /*html*/ `</div>`;
 
-  if(model.app.userID == model.loginInfo.userId){
+  if(model.app.userID == model.signedInInfo.userId){
 	html += /*html*/ `
 		<div class="user topMoviesContainer">
 			<div class="user topMoviesTitle">
 				<input type="text" placeholder="${model.movieLists[model.app.listID].name}"/>
 			</div>
-			${(curUser.movieLists[0].movies[0]) ? generateMovieElement(curUser.movieLists[0], 0, "model.app.expandedIndex = 0; model.app.listID = 0; go('list')") : ""}
-			${(curUser.movieLists[0].movies[1]) ? generateMovieElement(curUser.movieLists[0], 1, "model.app.expandedIndex = 0; model.app.listID = 0; go('list')") : ""}
-			${(curUser.movieLists[0].movies[2]) ? generateMovieElement(curUser.movieLists[0], 2, "model.app.expandedIndex = 0; model.app.listID = 0; go('list')") : ""}
+			${(curViewedUser.movieLists[0].movies[0]) ? generateMovieElement(curViewedUser.movieLists[0], 0, "model.app.expandedIndex = 0; model.app.listID = 0; go('list')") : ""}
+			${(curViewedUser.movieLists[0].movies[1]) ? generateMovieElement(curViewedUser.movieLists[0], 1, "model.app.expandedIndex = 0; model.app.listID = 0; go('list')") : ""}
+			${(curViewedUser.movieLists[0].movies[2]) ? generateMovieElement(curViewedUser.movieLists[0], 2, "model.app.expandedIndex = 0; model.app.listID = 0; go('list')") : ""}
 		</div>
 	`}
     else {
@@ -81,9 +91,9 @@ function userView(){
 				<div class="user topMoviesTitle">
 					
 				</div>
-				${(curUser.movieLists[0].movies[0]) ? generateMovieElement(curUser.movieLists[0], 0, "") : ""}
-				${(curUser.movieLists[0].movies[1]) ? generateMovieElement(curUser.movieLists[0], 1, "") : ""}
-				${(curUser.movieLists[0].movies[2]) ? generateMovieElement(curUser.movieLists[0], 2, "") : ""}
+				${(curViewedUser.movieLists[0].movies[0]) ? generateMovieElement(curViewedUser.movieLists[0], 0, "") : ""}
+				${(curViewedUser.movieLists[0].movies[1]) ? generateMovieElement(curViewedUser.movieLists[0], 1, "") : ""}
+				${(curViewedUser.movieLists[0].movies[2]) ? generateMovieElement(curViewedUser.movieLists[0], 2, "") : ""}
 			</div>
         `}
 

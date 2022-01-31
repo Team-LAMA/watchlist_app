@@ -1,15 +1,15 @@
 const model = {
 	app: {
-		page: "user",
+		page: "",
 		lastPage: "", 	// The last page type
-		userID: 2,			// User ID being viewed
-		listID: 0,			// List ID being viewed
-		expandedIndex: 3, // the index of the currently expanded movieList element if there is any
+		userID: null,			// User ID being viewed
+		listID: null,			// List ID being viewed
+		expandedIndex: null, // the index of the currently expanded movieList element if there is any
 	},
 
 	// TODO: make sure all pages can be opened to a "default" view even if no user or list id is set
 
-	loginInfo: {
+	signedInInfo: {
 		userId: null,			// THe currently logged in UserID
 	},
 
