@@ -71,8 +71,8 @@ function userView(){
 				<input type="text" placeholder="${model.movieLists[model.app.listID].name}"/>
 			</div>
 			${(curUser.movieLists[0].movies[0]) ? generateMovieElement(curUser.movieLists[0], 0, "model.app.expandedIndex = 0; model.app.listID = 0; go('list')") : ""}
-			${(curUser.movieLists[0].movies[0]) ? generateMovieElement(curUser.movieLists[0], 1, "model.app.expandedIndex = 0; model.app.listID = 0; go('list')") : ""}
-			${(curUser.movieLists[0].movies[0]) ? generateMovieElement(curUser.movieLists[0], 2, "model.app.expandedIndex = 0; model.app.listID = 0; go('list')") : ""}
+			${(curUser.movieLists[0].movies[1]) ? generateMovieElement(curUser.movieLists[0], 1, "model.app.expandedIndex = 0; model.app.listID = 0; go('list')") : ""}
+			${(curUser.movieLists[0].movies[2]) ? generateMovieElement(curUser.movieLists[0], 2, "model.app.expandedIndex = 0; model.app.listID = 0; go('list')") : ""}
 		</div>
 	`}
     else {

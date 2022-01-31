@@ -2,7 +2,7 @@ const model = {
 	app: {
 		page: "user",
 		lastPage: "", 	// The last page type
-		userID: 0,			// User ID being viewed
+		userID: 2,			// User ID being viewed
 		listID: 0,			// List ID being viewed
 		expandedIndex: 3, // the index of the currently expanded movieList element if there is any
 	},
@@ -10,7 +10,7 @@ const model = {
 	// TODO: make sure all pages can be opened to a "default" view even if no user or list id is set
 
 	loginInfo: {
-		userId: 1,			// THe currently logged in UserID
+		userId: null,			// THe currently logged in UserID
 	},
 
 	idCounters: {
@@ -330,9 +330,9 @@ const model = {
 			password: "321",
 			eMail: "Team3@mail.no",
 			movieLists: [],
-			profileName: "Meg",
+			profileName: "Navn",
 			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
-			userDescription: "Lorem ipsum",
+			userDescription: "Beskrivelse",
 			followedUsers: [],
 			// followedListIDs: [],
 		},
