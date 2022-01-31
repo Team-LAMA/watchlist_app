@@ -1,6 +1,6 @@
 const model = {
 	app: {
-		page: "signIn",
+		page: "user",
 		lastPage: "", 	// The last page type
 		userID: 1,			// User ID being viewed
 		listID: null,			// List ID being viewed
@@ -15,7 +15,7 @@ const model = {
 
 	idCounters: {
 		userId: 3,
-		listId: 3,
+		listId: 3, 
 		movieId: 3,
 	},
 
