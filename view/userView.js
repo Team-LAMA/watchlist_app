@@ -35,7 +35,7 @@ function userView(){
 				<input type="file"/>
 				<div class="user profileDescription">
 					NAME: 
-					<input onchange="editProfileName()" type="text" placeholder="${curViewedUser.profileName}" />
+					<input onchange="editProfileName(this)" type="text" placeholder="${curViewedUser.profileName}" />
 					<hr />
 					DESCRIPTION:
 					<input onchange="editUserDescription()" type="text" placeholder="${curViewedUser.userDescription}" /> 
@@ -74,12 +74,12 @@ function userView(){
 	}
 
 	html += /*html*/ `</div>`;
-
+// Lista og listenavn
   if(model.app.userID == model.signedInInfo.userId){
 	html += /*html*/ `
 		<div class="user topMoviesContainer">
 			<div class="user topMoviesTitle">
-				<input type="text" placeholder="${model.movieLists[model.app.listID].name}"/>
+				<input type="text" onchange="" placeholder="${model.movieLists[model.app.listID].name}"/>
 			</div>
 			${(curViewedUser.movieLists[0].movies[0]) ? generateMovieElement(curViewedUser.movieLists[0], 0, "model.app.expandedIndex = 0; model.app.listID = 0; go('list')") : ""}
 			${(curViewedUser.movieLists[0].movies[1]) ? generateMovieElement(curViewedUser.movieLists[0], 1, "model.app.expandedIndex = 0; model.app.listID = 0; go('list')") : ""}
@@ -90,7 +90,7 @@ function userView(){
         html += /*html*/ `
 			<div class="user topMoviesContainer">
 				<div class="user topMoviesTitle">
-					
+				${model.movieLists[model.app.listID].name}
 				</div>
 				${(curViewedUser.movieLists[0].movies[0]) ? generateMovieElement(curViewedUser.movieLists[0], 0, "") : ""}
 				${(curViewedUser.movieLists[0].movies[1]) ? generateMovieElement(curViewedUser.movieLists[0], 1, "") : ""}

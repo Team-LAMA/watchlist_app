@@ -351,4 +351,9 @@ MigrationBackup/
 
 
 # Our own model so it keeps default values
-model.js
+
+# -----------------------------------------------------
+# MODEL VISES IKKE I LIVE SHARE HVIS DEN LIGGER HER!!!!!!!!!
+#------------------------------------------------------
+
+# model.js

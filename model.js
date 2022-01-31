@@ -3,14 +3,14 @@ const model = {
 		page: "user",
 		lastPage: "", 	// The last page type
 		userID: 1,			// User ID being viewed
-		listID: null,			// List ID being viewed
-		expandedIndex: null, // the index of the currently expanded movieList element if there is any
+		listID: 1,			// List ID being viewed
+		expandedIndex: 3, // the index of the currently expanded movieList element if there is any
 	},
 
 	// TODO: make sure all pages can be opened to a "default" view even if no user or list id is set
 
 	signedInInfo: {
-		userId: null,			// THe currently logged in UserID
+		userId: 1,			// THe currently logged in UserID
 	},
 
 	idCounters: {
@@ -96,7 +96,7 @@ const model = {
 	movieLists: [			// A list over all the existing movieLists (DATA)
 		{
 			ID: 0,
-			name: "Favos",
+			name: "Team 3's liste",
 			movies: [
 				{
 					ID: 2,
@@ -373,6 +373,7 @@ model.users[0].followedUsers.push(model.users[1]);
 model.users[0].followedUsers.push(model.users[2]);
 
 model.users[1].followedUsers.push(model.users[2]);
+model.users[1].followedUsers.push(model.users[0]);
 
 model.users[2].followedUsers.push(model.users[0]);
 model.users[2].followedUsers.push(model.users[1]);

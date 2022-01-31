@@ -1,0 +1,20 @@
+
+bug: du får ikke sett profilen til noen om ikke du er logget inn, du blir sendt rett til sign in.
+
+
+LAGE EN GENERELL CONTROLLER FIL TIL FEKS GO FUNCTION.
+
+legge til tilbakeknapp, (generate home?? spør linn).
+
+
+fikse follow star så den kommer riktig sted, ordne css.
+
+FIKSE MASSE CSS. 
+
+bug: når du skal se på egen profil (terje) så må app.listID være 1 eller IKKE "null" hvis ikke blir det blank side.
+
+LAGE FUNKSJONER TIL "editProfileName" + "editUserDescription"
+
+LAGE EN FUNKSJON TIL "profileImage" FOR Å LEGGE INN BILDE
+
+
