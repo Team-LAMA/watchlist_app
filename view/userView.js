@@ -39,8 +39,8 @@ function userView(){
 				NAME: ${curUser.profileName}
 				<br/>
 				<br/>
-				DESCRIPTION: ${curUser.userDescription} 
-				<div class="user followStar" onclick="whiteStar()">
+				DESCRIPTION: ${curUser.userDescription}
+				<div class="user followStar" onclick="followStar()"> <!--Lage function og flytte stjernen riktig css-->
 		`
 		if (isFollowed){
 			html += /*html*/ `
@@ -68,7 +68,7 @@ function userView(){
 	html += /*html*/ `
 		<div class="user topMoviesContainer">
 			<div class="user topMoviesTitle">
-				USERLIST: <input type="text" placeholder="MY FAVOURITES"/>
+				<input type="text" placeholder="${model.movieLists[model.app.listID].name}"/>
 			</div>
 			${generateMovieElement(curUser.movieLists[0], 0, "model.app.expandedIndex = 0; model.app.listID = 0; go('list')")}
 			${generateMovieElement(curUser.movieLists[0], 0, "model.app.expandedIndex = 0; model.app.listID = 0; go('list')")}
@@ -79,7 +79,7 @@ function userView(){
         html += /*html*/ `
 			<div class="user topMoviesContainer">
 				<div class="user topMoviesTitle">
-					USERLIST: FAVOURITES
+					
 				</div>
 				${generateMovieElement(curUser.movieLists[0], 0, "")}
 				${generateMovieElement(curUser.movieLists[0], 1, "")}

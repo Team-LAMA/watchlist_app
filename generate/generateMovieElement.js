@@ -20,7 +20,7 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 	// Generate movieElement minimal
 	html += /*html*/ `
 		<div class="movieElement minimal">
-			<img class="movieElement image" src="${movieList.movies[index].image}"/>
+			<img class="movieElement image" src="${(movieList.movies[index].image) ? movieList.movies[index].image : ""}"/>
 			<div class="movieElement minimal midSection"> 
 				<div class="movieElement movieTitle ${options.scroll ? 'scroll' : ''}">
 					<div style="text-align: center">${movieList.movies[index].title}</div>
