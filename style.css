@@ -424,7 +424,7 @@ body{
 .movieElement.releaseYear{
 	flex-grow: 1;
 
-	height: 1vh;
+	height: 1.1vh;
 
 	display: flex;
 	align-items: center;

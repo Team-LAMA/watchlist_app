@@ -38,7 +38,7 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 				`;
 
 	if (options.expanded && options.editable) {
-		html += /*html*/ `<input type="number" onchange="updateMovieYear(this)" value = ""/>`
+		html += /*html*/ `<input type="number" onchange="updateMovieYear(this)" value = "${movieList.movies[index].year}"/>`
 	}
 	else {
 		html += /*html*/ `<div>${movieList.movies[index].year}</div>`
