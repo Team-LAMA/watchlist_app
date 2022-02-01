@@ -251,6 +251,7 @@ body{
   border: solid black 1px;
   height: 10vh;
   margin-left: 4vw;
+  margin-right: 8vw;
   width: 100%;
   background-color: gray;
 }
