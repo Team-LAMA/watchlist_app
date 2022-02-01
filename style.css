@@ -1,3 +1,7 @@
+body{
+	font-family: 'Times New Roman', Times, serif;
+}
+
 #app {
   position: fixed;
   width: 100vw;
@@ -395,6 +399,7 @@
 
 .movieElement.movieTitle{
 	flex-grow: 1;
+	height: 5vh;
 
 	font-size: 2.5vh;
 	font-weight: bolder;
@@ -402,12 +407,33 @@
 	display: flex;
 	align-items: center;
 }
+.movieElement.movieTitle>textarea{
+	position: relative;
+	top: .2vh;
+	height: 5.7vh;
+	width: 50vw;
+
+	font-size: 2.5vh;
+	font-weight: bolder;
+	font-family: 'Times New Roman', Times, serif;
+	text-align: center;
+
+	resize: none;
+}
 
 .movieElement.releaseYear{
 	flex-grow: 1;
 
+	height: 1vh;
+
 	display: flex;
 	align-items: center;
+}
+.movieElement.releaseYear>input[type="number"]{
+	width: 15vw;
+
+	font-family: 'Times New Roman', Times, serif;
+	text-align: center;
 }
 
 .movieElement.score{
@@ -420,8 +446,11 @@
 	align-items: center;
 	justify-content: right;
 }
-.movieElement.score.scroll{
-	margin-right: 20px;
+.movieElement.score>div>div>input[type="number"]{
+	height:2.5vh;
+	width: 6vw;
+	font-size: 2vh;
+	font-weight: bold;
 }
 
 .movieElement.detailBox{
