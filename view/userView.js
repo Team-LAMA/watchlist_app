@@ -14,13 +14,12 @@ function userView() {
 
 	let curSignedInUser = null;
 	for (let i = 0; i < model.users.length; i++) {
-		if (model.users[i].ID == model.loginInfo.userId) {
+		if (model.users[i].ID == model.signedInInfo.userId) {
 			curSignedInUser = model.users[i];
 		}
 	}
 
 	let isFollowed = false;
-
 	if (model.signedInInfo.userId) {
 		for (let i = 0; i < curSignedInUser.followedUsers.length; i++) {
 			if (curSignedInUser.followedUsers[i].ID == model.app.userID) {
@@ -30,7 +29,7 @@ function userView() {
 	}
 
 
-	if (model.app.userID == model.loginInfo.userId) { //edit profile?
+	if (model.app.userID == model.signedInInfo.userId) { //edit profile?
 		html += /*html*/ `
 				<img class="user profileImage" src="${curViewedUser.profilePicture}"/>
 				<input type="file"/>
@@ -80,7 +79,7 @@ function userView() {
 		html += /*html*/ `
 		<div class="user topMoviesContainer">
 			<div class="user topMoviesTitle">
-				<input type="text" placeholder="${model.movieLists[model.app.listID].name}"/>
+				<input type="text" placeholder="${curViewedUser.movieLists[0].name}"/>
 			</div>
 			${(curViewedUser.movieLists[0].movies[0]) ? generateMovieElement(curViewedUser.movieLists[0], 0, "model.app.expandedIndex = 0; model.app.listID = 0; go('list')") : ""}
 			${(curViewedUser.movieLists[0].movies[1]) ? generateMovieElement(curViewedUser.movieLists[0], 1, "model.app.expandedIndex = 0; model.app.listID = 0; go('list')") : ""}
