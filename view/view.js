@@ -46,7 +46,9 @@ function updateView() {
 			}
 		}
 		else {
-			model.signedInInfo.userId = curUser.ID;
+			if (app.userID == null) {
+				app.userID = model.signedInInfo.userId;
+			}
 			userView();
 		}
 	}
