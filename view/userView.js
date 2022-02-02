@@ -91,7 +91,7 @@ function userView() {
 		html += /*html*/ `
 			<div class="user topMoviesContainer">
 				<div class="user topMoviesTitle">
-				${model.movieLists[model.app.listID].name}
+				${curViewedUser.name}
 				</div>
 				${(curViewedUser.movieLists[0].movies[0]) ? generateMovieElement(curViewedUser.movieLists[0], 0, "") : ""}
 				${(curViewedUser.movieLists[0].movies[1]) ? generateMovieElement(curViewedUser.movieLists[0], 1, "") : ""}
