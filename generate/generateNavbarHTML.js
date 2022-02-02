@@ -7,7 +7,7 @@ function generateNavbarHTML(){
 		<div class="navbar searchBtn" onclick="go('search')">Search</div>
 		<!--Missing function for listView-->
 		<div class="navbar listBtn" onclick="go('list')">List</div>
-		<div class="navbar userBtn" onclick="go('user')">Profile</div>
+		<div class="navbar userBtn" onclick="model.app.userID = null; model.app.listID = null; go('user')">Profile</div>
 	</div>`;
 
 	return html;
