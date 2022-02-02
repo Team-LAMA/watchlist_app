@@ -43,7 +43,7 @@ function userView() {
 		`
 	}
 	else {//vise en annens profil
-		console.log(curViewedUser);
+		// console.log(curViewedUser);
 		html += /*html*/ `
 			<img class="user profileImage" src="${curViewedUser.profilePicture}"/>
 			<div class="user profileDescription">
