@@ -20,7 +20,7 @@ function homeView() {
 		}
 	}
 
-	html += generateLogoHTML();
+	
 
 	let notificationTimer
 	html += /*html*/ `
@@ -58,6 +58,7 @@ function homeView() {
 
 	html += /*html*/ `</div>`
 	//Added Navigationbar
+	html += generateLogoHTML();
 	html += generateNavbarHTML();
 	document.getElementById("app").innerHTML = html;
 }

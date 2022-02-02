@@ -1,5 +1,6 @@
 body{
 	font-family: 'Times New Roman', Times, serif;
+	font-size: 1.7vh;
 }
 
 #app {
@@ -218,19 +219,24 @@ body{
   font-size: 3vh;
 }
 .search.result>img {
+	position: relative;
   width: 5vh;
   height: 5vh;
   margin-left: auto;
   padding-bottom: 2vh;
+	background-color: transparent;
 }
 .search.result.username {
   margin-left: auto;
   margin-right: 1vh;
+	margin-top: 1.5vh;
   outline: 0px;
   width: 5vh;
+	top: 1.5vh;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+	background-color: transparent;
 }
 /*End Search*/
 .user.profileInfo {
@@ -401,18 +407,26 @@ body{
 .movieElement.movieTitle{
 	flex-grow: 1;
 	height: 5vh;
-
+	width: 100%;
 	font-size: 2.5vh;
 	font-weight: bolder;
 
+	text-align: center;
 	display: flex;
 	align-items: center;
 }
+.movieElement.movieTitle>span{
+	width: 100%;
+}
 .movieElement.movieTitle>textarea{
 	position: relative;
-	top: .2vh;
-	height: 5.7vh;
-	width: 50vw;
+	top: .3vh;
+	height: 7vh;
+	padding: 0px 4vw;
+	width: 100%;
+	/*padding: 0px;*/
+	box-sizing: border-box;
+	overflow-x: hidden;
 
 	font-size: 2.5vh;
 	font-weight: bolder;
@@ -432,26 +446,44 @@ body{
 }
 .movieElement.releaseYear>input[type="number"]{
 	width: 15vw;
-
+	min-width: 3vh;
+	height: 1.5vh;
+	font-size: 1vh;
 	font-family: 'Times New Roman', Times, serif;
 	text-align: center;
 }
 
 .movieElement.score{
-	min-width: 7vh;
+	position: relative;
+	right: 0px;
+	min-width: calc(0.75vw + 3vh + 5vh + 0.5vh); /* Edge padding + width of outOf + width of score*/
+	max-width: 1vw;
 	/*background-color: seagreen;*/
-	font-size: 2vh;
+	font-size: 3vh;
 	font-weight: bold;
 
 	display: flex;
 	align-items: center;
 	justify-content: right;
 }
-.movieElement.score>div>div>input[type="number"]{
-	height:2.5vh;
-	width: 6vw;
+.movieElement.score.outOf{
+	max-width: 3vh;
+	min-width: 3vh;
+	margin-top: 1vh;
+	margin-right: 1vw;
+	/*background-color: aqua;*/
 	font-size: 2vh;
+	text-align: right;
+	
+}
+.movieElement.score>div>div>input[type="number"]{
+	height:3.5vh;
+	width: 5vh;
+	font-size: 3vh;
 	font-weight: bold;
+	text-align: right;
+	box-sizing: border-box;
+	overflow-x: hidden;
 }
 
 .movieElement.detailBox{
@@ -463,6 +495,12 @@ body{
 .movieElement.detailBox>div{
 	width: 45vw;
 	text-align: center;
+}
+
+.movieElement.detailBox>div>div>textarea{
+	resize:vertical;
+	width: 40vw;
+	height: 50vh
 }
 
 .movieElement.description.title{
