@@ -348,3 +348,12 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+
+# Our own model so it keeps default values
+
+# -----------------------------------------------------
+# MODEL VISES IKKE I LIVE SHARE HVIS DEN LIGGER HER!!!!!!!!!
+#------------------------------------------------------
+
+# model.js

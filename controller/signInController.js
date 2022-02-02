@@ -11,10 +11,9 @@ function signIn() {
   }
 } 
 
-function setUsername(element) {
-  model.inputs.signIn.username = element.value;
+function updateUsernameSignIn(element) {
+	model.inputs.signIn.username = element.value;
 }
-
-function setPassword(element) {
-  model.inputs.signIn.password = element.value;
+function updatePasswordSignIn(element) {
+	model.inputs.signIn.password = element.value;
 }

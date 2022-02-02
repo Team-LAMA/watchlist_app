@@ -15,7 +15,7 @@ function updateView() {
 		followedUsers: [],
 	}
 	for (let i = 0; i < model.users.length; i++) {
-		if (model.users[i].ID == model.loginInfo.userId) {
+		if (model.users[i].ID == model.signedInInfo.userId) {
 			curUser = model.users[i];
 		}
 	}
@@ -37,16 +37,23 @@ function updateView() {
 		searchView();
 	}
 	else if (app.page == "user") {
-		if (model.loginInfo.userId == null) {
-			signInView();
+		if (model.signedInInfo.userId == null) {
+			if (app.userID == null) {
+				signInView();
+			}
+			else {
+				userView()
+			}
 		}
 		else {
-			model.loginInfo.userId = curUser.ID;
+			if (app.userID == null) {
+				app.userID = model.signedInInfo.userId;
+			}
 			userView();
 		}
 	}
 	else if (app.page == "list") {
-		if (model.loginInfo.userId == null) {
+		if (model.signedInInfo.userId == null) {
 			if (app.listID == null) {
 				signInView();
 			}
