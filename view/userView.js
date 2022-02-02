@@ -77,6 +77,7 @@ function userView() {
 
 	// Lista og listenavn
   if(model.app.userID == model.signedInInfo.userId){
+	  
 		html += /*html*/ `
 			<div class="user topMoviesContainer">
 				<div class="user topMoviesTitle">
@@ -88,10 +89,11 @@ function userView() {
 			</div>
 		`}
 	else {
+		console.log(curViewedUser.movieLists[0])
 		html += /*html*/ `
 			<div class="user topMoviesContainer">
 				<div class="user topMoviesTitle">
-				${curViewedUser.name}
+					${curViewedUser.movieLists[0].name}
 				</div>
 				${(curViewedUser.movieLists[0].movies[0]) ? generateMovieElement(curViewedUser.movieLists[0], 0, "") : ""}
 				${(curViewedUser.movieLists[0].movies[1]) ? generateMovieElement(curViewedUser.movieLists[0], 1, "") : ""}
