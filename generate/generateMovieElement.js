@@ -94,7 +94,7 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 		`
 
 		if (options.expanded && options.editable) {
-			html += /*html*/ `<textarea></textarea>`
+			html += /*html*/ `<textarea>${movieList.movies[index].genres}</textarea>`
 		}
 		else{
 			html += movieList.movies[index].genres[0];

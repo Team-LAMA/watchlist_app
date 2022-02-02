@@ -1,8 +1,8 @@
 const model = {
 	app: {
-		page: "user",
+		page: "list",
 		lastPage: "", 	// The last page type
-		userID: 1,			// User ID being viewed
+		userID: null,			// User ID being viewed
 		listID: null,			// List ID being viewed
 		expandedIndex: 3, // the index of the currently expanded movieList element if there is any
 	},
@@ -372,6 +372,7 @@ model.users[2].movieLists.push(model.movieLists[2]);
 model.users[0].followedUsers.push(model.users[1]);
 model.users[0].followedUsers.push(model.users[2]);
 
+model.users[1].followedUsers.push(model.users[0]);
 model.users[1].followedUsers.push(model.users[2]);
 
 model.users[2].followedUsers.push(model.users[0]);

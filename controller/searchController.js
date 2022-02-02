@@ -1,59 +1,106 @@
 
 
-function getSearchResults(){
-	resultList = [
-		{
-			ID: 0,
-			username: "Team3",
-			password: "321",
-			eMail: "Team3@mail.no",
-			movieLists: [],
-			profileName: "Meg",
-			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
-			userDescription: "Lorem ipsum",
-			followedUsers: [],
-			// followedListIDs: [],
-		},
-		{
-			ID: 1,
-			username: "Terje",
-			password: "Passord1",
-			eMail: "Terje@getacademy.no",
-			movieLists: [],
-			profileName: "Deg",
-			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
-			userDescription: "Lærer ved GET Academy",
-			followedUsers: [],
-			// followedListIDs: [],
-		},
-		{
-			ID: 2,
-			username: "Mamsen0001",
-			password: "LOVE",
-			eMail: "mamsen0001@hotmail.com",
-			movieLists: [],
-			profileName: "Mamma",
-			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
-			userDescription: "Føler meg 20",
-			followedUsers: [],
-			// followedListIDs: [],
-		},
-	]
 
-	resultList[0].movieLists.push(model.movieLists[0]);
-	resultList[1].movieLists.push(model.movieLists[1]);
-	resultList[2].movieLists.push(model.movieLists[2]);
+function doSearch(){
+	console.log(getSearchResults(model.inputs.search.searchWord));
+}
 
-	resultList[0].followedUsers.push(model.users[1]);
-	resultList[0].followedUsers.push(model.users[2]);
 
-	resultList[1].followedUsers.push(model.users[2]);
+function updateSearchWord(element){
+	model.inputs.search.searchWord = element.value;
+}
 
-	resultList[2].followedUsers.push(model.users[0]);
-	resultList[2].followedUsers.push(model.users[1]);
+
+// Searches usernames
+function getSearchResults(searchWord = ""){
+	let resultList = [];
+	searchWord = searchWord.toLowerCase();
+
+	for(let i = 0; i < model.users.length; i++){
+		console.log("a", searchWord, "b", model.users[i].profileName.toLowerCase());
+		if(model.users[i].profileName.toLowerCase().search(searchWord) != -1
+			|| model.users[i].movieLists[0].name.toLowerCase().search(searchWord) != -1){
+			resultList.push(model.users[i]);
+		}
+	}
+
+
+	let html = "";
+
+	for (let i = 0; i < resultList.length; i++) {
+		let listID = resultList[i].ID;
+		html += /*html*/ `
+			<div onclick="openMovieList(${listID})" class="search result">
+				<h3>${resultList[i].movieLists[0].name}</h3>
+				<div class="search result username">
+					<img src="${resultList[i].profilePicture}">
+					<div>${resultList[i].profileName}</div>
+				</div>
+			</div>
+		`
+	}
+
+	document.getElementsByClassName("resultContainer")[0].innerHTML = html
 
 	return resultList;
 }
+
+
+
+//function getSearchResults(){
+//	resultList = [
+//		{
+//			ID: 0,
+//			username: "Team3",
+//			password: "321",
+//			eMail: "Team3@mail.no",
+//			movieLists: [],
+//			profileName: "Meg",
+//			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
+//			userDescription: "Lorem ipsum",
+//			followedUsers: [],
+//			// followedListIDs: [],
+//		},
+//		{
+//			ID: 1,
+//			username: "Terje",
+//			password: "Passord1",
+//			eMail: "Terje@getacademy.no",
+//			movieLists: [],
+//			profileName: "Deg",
+//			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
+//			userDescription: "Lærer ved GET Academy",
+//			followedUsers: [],
+//			// followedListIDs: [],
+//		},
+//		{
+//			ID: 2,
+//			username: "Mamsen0001",
+//			password: "LOVE",
+//			eMail: "mamsen0001@hotmail.com",
+//			movieLists: [],
+//			profileName: "Mamma",
+//			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
+//			userDescription: "Føler meg 20",
+//			followedUsers: [],
+//			// followedListIDs: [],
+//		},
+//	]
+
+//	resultList[0].movieLists.push(model.movieLists[0]);
+//	resultList[1].movieLists.push(model.movieLists[1]);
+//	resultList[2].movieLists.push(model.movieLists[2]);
+
+//	resultList[0].followedUsers.push(model.users[1]);
+//	resultList[0].followedUsers.push(model.users[2]);
+
+//	resultList[1].followedUsers.push(model.users[2]);
+
+//	resultList[2].followedUsers.push(model.users[0]);
+//	resultList[2].followedUsers.push(model.users[1]);
+
+//	return resultList;
+//}
 
 
 
