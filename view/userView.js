@@ -21,18 +21,12 @@ function userView() {
 
 	let isFollowed = false;
 	if (model.signedInInfo.userId >= 0) { // checks if a user is logged in
-		console.log("tudelu");
 		for (let i = 0; i < curSignedInUser.followedUsers.length; i++) { //goes through all followedUsers of the logged in user
-			console.log("heihei");
 			if (curSignedInUser.followedUsers[i].ID == curViewedUser.ID) { // Checks if the currently checked followed user is also the user we're watching
 				isFollowed = true;
 			}
 		}
 	}
-
-	console.log(curSignedInUser.followedUsers[0].ID);
-	console.log(curViewedUser.ID)
-	console.log(isFollowed);
 
 
 	if (model.app.userID == model.signedInInfo.userId) { //edit profile?
@@ -95,7 +89,6 @@ function userView() {
 			</div>
 		`}
 	else {
-		console.log(curViewedUser.movieLists[0])
 		html += /*html*/ `
 			<div class="user topMoviesContainer">
 				<div class="user topMoviesTitle">
