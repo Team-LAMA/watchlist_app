@@ -219,19 +219,24 @@ body{
   font-size: 3vh;
 }
 .search.result>img {
+	position: relative;
   width: 5vh;
   height: 5vh;
   margin-left: auto;
   padding-bottom: 2vh;
+	background-color: transparent;
 }
 .search.result.username {
   margin-left: auto;
   margin-right: 1vh;
+	margin-top: 1.5vh;
   outline: 0px;
   width: 5vh;
+	top: 1.5vh;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+	background-color: transparent;
 }
 /*End Search*/
 .user.profileInfo {
@@ -472,7 +477,7 @@ body{
 	
 }
 .movieElement.score>div>div>input[type="number"]{
-	height:3vh;
+	height:3.5vh;
 	width: 5vh;
 	font-size: 3vh;
 	font-weight: bold;
@@ -490,6 +495,12 @@ body{
 .movieElement.detailBox>div{
 	width: 45vw;
 	text-align: center;
+}
+
+.movieElement.detailBox>div>div>textarea{
+	resize:vertical;
+	width: 40vw;
+	height: 50vh
 }
 
 .movieElement.description.title{
