@@ -20,9 +20,11 @@ function homeView() {
 		}
 	}
 
-	
 
-	let notificationTimer
+
+
+	
+	let notificationTimer = [];
 	html += /*html*/ `
     <div 
       class="home notificationList">
@@ -30,18 +32,15 @@ function homeView() {
         `
 
 	for (let i = 0; i < model.movieLists.length; i++) {
-		notificationTimer = model.movieLists[i].lastChanged;
-
-		html += /*html*/ `
-      <div
-							onclick="notificationUpdate(${notificationTimer}, ${curUser})"
-							class="home notification">
-				notification ${i + 1}
-      </div>
-      `
+		notificationTimer.push(model.movieLists[i].lastChanged);
 	}
 
+	html += notificationUpdate(curUser.ID, notificationTimer)
 	html += /*html*/ `</div>`;
+
+
+
+
 
 	// print the username of the followed users
 	html += /*html*/ `<div class="home followedList"><h1>Following</h1>`

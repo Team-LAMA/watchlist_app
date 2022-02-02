@@ -1,6 +1,6 @@
 const model = {
 	app: {
-		page: "list",
+		page: "",
 		lastPage: "", 	// The last page type
 		userID: null,			// User ID being viewed
 		listID: null,			// List ID being viewed
@@ -10,7 +10,7 @@ const model = {
 	// TODO: make sure all pages can be opened to a "default" view even if no user or list id is set
 
 	signedInInfo: {
-		userId: 0,			// The currently logged in UserID
+		userId: 2,			// The currently logged in UserID
 	},
 
 	idCounters: {
@@ -221,7 +221,7 @@ const model = {
 			],
 			personalComments: ["SUPER BRA!!!", "Dårlig", "Liker ikke slanger"],
 			ratings: [10, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-			lastChanged: Date.now() - 86435489,
+			lastChanged: 2,
 		},
 		{
 			ID: 1,
@@ -250,7 +250,7 @@ const model = {
 			],
 			personalComments: ["Veldig tøff", "Litt tøff", "Ikke noe tøff, eller kanskje litt"],
 			ratings: [9, 6.3, 3, 0, 0, 0],
-			lastChanged: Date.now() - 96435489,
+			lastChanged: 96435489,
 		},
 		{
 			ID: 2,
@@ -319,7 +319,7 @@ const model = {
 			],
 			personalComments: ["Hmm", "Hmmmmmmm", "Hmmmmmmmmmmmmmmmmmm"],
 			ratings: [1, 1, 1],
-			lastChanged: Date.now() - 7200000,
+			lastChanged: 10,
 		},
 	],
 
