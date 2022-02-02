@@ -10,7 +10,7 @@ const model = {
 	// TODO: make sure all pages can be opened to a "default" view even if no user or list id is set
 
 	signedInInfo: {
-		userId: null,			// The currently logged in UserID
+		userId: 0,			// The currently logged in UserID
 	},
 
 	idCounters: {
@@ -372,7 +372,6 @@ model.users[2].movieLists.push(model.movieLists[2]);
 model.users[0].followedUsers.push(model.users[1]);
 model.users[0].followedUsers.push(model.users[2]);
 
-model.users[1].followedUsers.push(model.users[0]);
 model.users[1].followedUsers.push(model.users[2]);
 
 model.users[2].followedUsers.push(model.users[0]);

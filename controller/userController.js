@@ -13,3 +13,19 @@ function editUserDescription(element) {
   function editProfileImage(element) {
     //HJELP OSS ALEX VOL.2
   };
+
+  function toggleFollow() {
+    //userView();
+    
+    let curSignedInUser = null;
+	  for (let i = 0; i < model.users.length; i++) {
+      if (model.users[i].ID == model.signedInInfo.userId) {
+        curSignedInUser = model.users[i];
+      }
+    }
+
+    curSignedInUser.followedUsers.push('LISTA TIL DEN SOM BLIR SETT PÅ');
+    console.log('followstar??')
+    updateView();
+
+  }

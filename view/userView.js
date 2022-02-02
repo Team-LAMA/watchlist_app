@@ -20,13 +20,19 @@ function userView() {
 	}
 
 	let isFollowed = false;
-	if (model.signedInInfo.userId) {
-		for (let i = 0; i < curSignedInUser.followedUsers.length; i++) {
-			if (curSignedInUser.followedUsers[i].ID == model.app.userID) {
+	if (model.signedInInfo.userId >= 0) { // checks if a user is logged in
+		console.log("tudelu");
+		for (let i = 0; i < curSignedInUser.followedUsers.length; i++) { //goes through all followedUsers of the logged in user
+			console.log("heihei");
+			if (curSignedInUser.followedUsers[i].ID == curViewedUser.ID) { // Checks if the currently checked followed user is also the user we're watching
 				isFollowed = true;
 			}
 		}
 	}
+
+	console.log(curSignedInUser.followedUsers[0].ID);
+	console.log(curViewedUser.ID)
+	console.log(isFollowed);
 
 
 	if (model.app.userID == model.signedInInfo.userId) { //edit profile?
@@ -51,7 +57,7 @@ function userView() {
 				<br/>
 				<br/>
 				Description: ${curViewedUser.userDescription}
-				<div class="user followStar" onclick="followStar()"> <!--Lage function og flytte stjernen riktig css-->
+				<div class="user followStar" onclick="toggleFollow()">
 		`
 		if (isFollowed) {
 			html += /*html*/ `

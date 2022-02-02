@@ -239,6 +239,11 @@ body{
 	background-color: transparent;
 }
 /*End Search*/
+/*#############*/
+/*#           #*/
+/*#   USER    #*/
+/*#           #*/
+/*#############*/
 .user.profileInfo {
   position: fixed;
   width: 90vw;
@@ -275,8 +280,6 @@ body{
   float: left;
 }
 
-
-
 .user.topMoviesContainer {
   position: fixed;
   top: 30vh;
@@ -298,10 +301,10 @@ body{
 .user.followStar {
 	position: fixed;
 	right: 0vw;
-	margin-right: 8vw;
-	margin-top: -8.5vh;
+	margin-right: 5vw;
+	margin-top: -3vh;
 	width: 5vh;
-	font-size: xx-large;
+	/* font-size: xx-large; */
 }
 
 .user.filmInfo {
@@ -313,6 +316,8 @@ body{
   float: right;
   font-size: xx-large;
 }
+
+/*User ending*/
 
 .movieList.container {
   position: fixed;
