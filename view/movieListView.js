@@ -1,5 +1,4 @@
 function movieListView() {
-	console.log("heihei");
 	let html = "";
 
 	// Finding the correct list
@@ -35,6 +34,5 @@ function movieListView() {
 	
 	html += generateLogoHTML();
 	html += generateNavbarHTML();
-	console.log(html)
 	document.getElementById("app").innerHTML = html;
 }
