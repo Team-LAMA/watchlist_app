@@ -1,18 +1,25 @@
-function notificationUpdate(curUser, notificationTimer){
+function notificationUpdate(curUser, notificationList){
   let html = "";
+  let notificationTimer = [];
 
+    for(let k = 0; k < notificationList.length; k++){
+      notificationTimer.push(notificationList[k])
+      notificationTimer.sort(function(a, b){return b.lastChanged - a.lastChanged})
+    }
+    console.log(notificationTimer)
   for(let i = 0; i < model.users[curUser].followedUsers.length; i++){
     let followedUsers = model.users[curUser].followedUsers[i].ID;
-    
-    notificationTimer.sort(function(b, a){return b - a})
-    for(let n = 0; n < notificationTimer.length; n++){
-      if(model.movieLists[followedUsers].lastChanged == notificationTimer[n]){
-  
+
+    for(let j = 0; j < notificationList.length; j++){
+
+      if(model.movieLists[followedUsers].name == notificationList[j].name){
+          
         html += /*html*/ `
-          <div class="home notification" onclick="openMovieList()">
-            notification ${notificationTimer[n]}
+          <div class="home notification" onclick="openMovieList(${notificationList[j].ID})">
+            ${notificationList[j].name}
           </div>
         `
+        
       }
     }
   }
@@ -20,4 +27,3 @@ function notificationUpdate(curUser, notificationTimer){
 	return html;
   // model.users[curUser].notifications
 }
-
