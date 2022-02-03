@@ -256,6 +256,14 @@ body{
   min-width: 12vh;
   height: 12vh;
   border: 1px solid black;
+  margin-right: 5vw;
+}
+.user.ProfileImageButton {
+position: fixed;
+top: 23vh;
+width: 12.3vh;
+/* box-sizing: border-box; */
+/* width: fit-content; */
 }
 
 .user.profileDescription {

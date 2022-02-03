@@ -1,26 +1,10 @@
 
-
-FIKSE MASSE CSS. Noe spesifikt utenom utseende? (knapp til upload bilde,, home, input bokser på profilen, osv.)
-
-LAGE EN FUNKSJON TIL "profileImage" og " " FOR Å LEGGE INN BILDE (vente på lærerne)
-
-Hvor skal function til MovieList Title??
+Fikse bilde for movie element med link som paa profilbilde
 
 Maa vi ikke lage en profil som er tom til naar man logger inn foerste gangen??????????
 
-BUG!!!!  signedInInfo:userId: 3,4,5, OSV FUNKER, MEN BURDE IKKE? BUG!!!!
+Tilbake knapp bug!!!!!! (flere forskjellige feil)
 
-IGJEN FIKSE app.listID SHIT, HVA SKJER?
+Gjoere at man kan gaa fra searchResults til brukerenes profil og evt fra lista ogsaa
 
-UKE 6 = DEBUG alt mulig shit og gå løs med fluesmekkeren
-
-
-Following på homeView feil navn. Skal ikke være username men profileName!!
-
-GÅ INN PÅ HOME, GÅ PÅ MAMSEN, på lista du ser prøv å gå tilbake på knappen, så kommer du ikke hjem, men til search.
-
-pop up/alert med tekstfelt! window.promt?! (bytte ut img upload med vanlig button)
-
-vi kan sjekke ut evt en ekstra bruker etterpå
-
-Gjøre at man kan gå fra searchResults til brukerenes profil og evt fra lista også
+Lage at man kan soeke med aa trykke enter (nice to have?)

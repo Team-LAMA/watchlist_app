@@ -45,6 +45,8 @@ const model = {
 			image: "",
 			name: "",
 			description: "",
+			age: "",
+			favGenre: "",
 		},
 
 		editMovieList: {// Used to hold temporary information for when a movie list is being edited
@@ -101,6 +103,8 @@ const model = {
 			movieLists: [],
 			profileName: "",
 			profilePicture: "",
+			age: "",
+			favGenre: "",
 			userDescription: "",
 			followedUsers: [],
 			// followedListIDs: [],
