@@ -4,7 +4,7 @@ const model = {
 		lastPage: "", 	// The last page type
 		userID: 1,			// User ID being viewed
 		listID: null,			// List ID being viewed
-		expandedIndex: 3, // the index of the currently expanded movieList element if there is any
+		expandedIndex: null, // the index of the currently expanded movieList element if there is any
 		scrollOffset: null
 	},
 
@@ -221,8 +221,8 @@ const model = {
 				},
 			],
 			personalComments: ["SUPER BRA!!!", "Dårlig", "Liker ikke slanger", "SUPER BRA!!!", "Dårlig", "Liker ikke slanger", "SUPER BRA!!!", "Dårlig", "Liker ikke slanger"],
-			ratings: [10, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-			lastChanged: 2,
+			ratings: [10, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8],
+			lastChanged: Date.now() - 86435489,
 		},
 		{
 			ID: 1,
@@ -331,7 +331,7 @@ const model = {
 			password: "321",
 			eMail: "Team3@mail.no",
 			movieLists: [],
-			profileName: "Navn",
+			profileName: "LAMA",
 			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
 			userDescription: "Beskrivelse",
 			followedUsers: [],

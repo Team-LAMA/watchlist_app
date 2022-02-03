@@ -499,12 +499,14 @@ body{
 .movieElement.detailBox>div{
 	width: 45vw;
 	text-align: center;
+	font-size: 2vh;
 }
 
 .movieElement.detailBox>div>div>textarea{
 	resize:vertical;
 	width: 40vw;
-	height: 2vh
+	height: 2vh;
+	font-size: 1.75vh;
 }
 
 
@@ -522,6 +524,7 @@ body{
 	width: 85vw;
 	height: 10vh;
 	min-height: fit-content;
+	font-size: 1.75vh;
 }
 
 .movieElement.actors>textarea,

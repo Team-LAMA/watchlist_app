@@ -25,11 +25,21 @@ window.onpopstate = function () {
 }
 
 function findUserByID(ID){
-	let user;
+	let user = null;
 	for (let i = 0; i < model.users.length; i++) {
 		if (model.users[i].ID == ID) {
 			user = model.users[i];
 		}
 	}
 	return user;
+}
+
+function findMovieListByID(ID){
+	let movieList = null;
+	for (let i = 0; i < model.movieLists.length; i++) {
+		if (model.movieLists[i].ID == ID) {
+			movieList = model.movieLists[i];
+		}
+	}
+	return movieList;
 }
