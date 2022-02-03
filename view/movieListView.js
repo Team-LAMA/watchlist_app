@@ -21,8 +21,6 @@ function movieListView() {
 		}
 	}
 
-	console.log(isEditable);
-
 	html += /*html*/ `
 		<div class="movieList container">
 			<div class="movieList title">
@@ -36,14 +34,13 @@ function movieListView() {
 				<div class="movieList box">
 	`
 
-	console.log(document.getElementsByClassName("content"));
+	
 
 	for (let i = 0; i < curMovieList.movies.length; i++) {
 		html += generateMovieElement(curMovieList, i,
-						((model.app.expandedIndex == i) ? `model.app.expandedIndex = null; document.getElementsByClassName("movieList content")[0].scrollTop;` : `model.app.expandedIndex = ${i}`) + `; updateView()`,
+						"",
 						{expanded: (model.app.expandedIndex == i) ? true : false, editable: isEditable });
 	}
-	//(curMovieList.movies.length > 5)
 
 	html += /*html*/ `
 			</div>
@@ -54,4 +51,16 @@ function movieListView() {
 	html += generateLogoHTML();
 	html += generateNavbarHTML();
 	document.getElementById("app").innerHTML = html;
+
+	let movieElements = (document.getElementsByClassName('container'));
+
+	for(let i = 1; i < movieElements.length; i++){
+		movieElements[i].addEventListener("click", element => {
+			if(element.target.tagName !== "TEXTAREA" && element.target.tagName !== "INPUT"){
+				expandElement(i-1)
+			}
+		});
+	}
+
+	document.getElementsByClassName('movieList content')[0].scrollTop = model.app.scrollOffset;
 }
