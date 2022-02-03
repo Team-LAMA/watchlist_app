@@ -239,6 +239,11 @@ body{
 	background-color: transparent;
 }
 /*End Search*/
+/*#############*/
+/*#           #*/
+/*#   USER    #*/
+/*#           #*/
+/*#############*/
 .user.profileInfo {
   position: fixed;
   width: 90vw;
@@ -248,16 +253,14 @@ body{
 }
 
 .user.profileImage {
-  min-width: 10vh;
-  height: 10vh;
+  min-width: 12vh;
+  height: 12vh;
   border: 1px solid black;
 }
 
 .user.profileDescription {
   border: solid black 1px;
-  height: 10vh;
-  margin-left: 4vw;
-  margin-right: 8vw;
+  height: 20vh;
   width: 100%;
   background-color: gray;
 }
@@ -275,33 +278,56 @@ body{
   float: left;
 }
 
-
-
 .user.topMoviesContainer {
   position: fixed;
-  top: 30vh;
+  top: 40vh;
   max-width: 90vw;
   height: 47vh;
   display: grid;
-  grid: 10vh auto auto auto /auto;
-  grid-gap: 2vh;
+  grid: 8vh auto auto auto /auto;
+  grid-gap: 1vh;
 }
 
 .user.topMoviesTitle {
   width: 90vw;
-  height: 10vh;
+  height: 7vh;
   background-color: gray;
-  font-size: xx-large;
+  font-size: 35px;
   text-align: center;
 }
 
+.user.topMoviesTitle input[type="text"] {
+  height: 7vh; 
+  width: 90vw;
+  background-color: grey;
+  box-sizing: border-box;
+  font-size: 35px;
+  text-align: center;
+}
+
+.user.topMoviesTitle input[type="text"]::placeholder {
+  color:lightgray; 
+}
+
+.user.profileStar {
+  position: fixed;
+  margin-top: 12vh;
+  margin-left: 3vw;
+}
+.user.profileStar img {
+  width: 64px;
+  height: 64px;
+}
 .user.followStar {
 	position: fixed;
-	right: 0vw;
-	margin-right: 8vw;
-	margin-top: -8.5vh;
-	width: 5vh;
-	font-size: xx-large;
+  margin-top: 12vh;
+  margin-left: 3vw;
+	/* right: 0vw; */
+	/* margin-right: 5vw; */
+	/* margin-top: 12vh; */
+  /* margin-left: 3vw; */
+	/* width: 5vh; */
+	/* font-s;ze: xx-large; */
 }
 
 .user.filmInfo {
@@ -313,6 +339,8 @@ body{
   float: right;
   font-size: xx-large;
 }
+
+/*User ending*/
 
 .movieList.container {
   position: fixed;
