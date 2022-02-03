@@ -2,7 +2,7 @@ function userView() {
 	let html = "";
 
 	html += /*html*/ `
-			<div class="user profileInfo"> <!--79-->
+			<div class="user profileInfo">
 		`
 
 	let curViewedUser = null;
@@ -32,14 +32,23 @@ function userView() {
 	if (model.app.userID == model.signedInInfo.userId) { //edit profile?
 		html += /*html*/ `
 				<img class="user profileImage" src="${curViewedUser.profilePicture}"/>
+				<button class="user ProfileImageButton" onclick="editProfileImage()">Edit Picture</button>
+
 				
 				<div class="user profileDescription">
-					Name: 
+					<!--Name-->
 					<input onchange="editProfileName(this)" type="text" value="${curViewedUser.profileName}" placeholder="Profile name"/>
 					<br/>
-					Description:
+					<!--Age--> 
+					<input onchange="editAge(this)" type="numbers" value="${curViewedUser.age} years old" placeholder="Age" min="1" max="99"/>
+					<br/>
+					<!--Genre-->
+					<input onchange="editFavGenre(this)" type="text" value="${curViewedUser.favGenre}" placeholder="Your favorite genres" />
+					<br/>
+					<!--Description-->
 					<input onchange="editUserDescription(this)" type="text" value="${curViewedUser.userDescription}" placeholder="User description"/> 
 				</div>
+				<!--Star-->
 				<div class="user profileStar">
 						<img src="./img/18427.png"/>
 				</div>
@@ -49,12 +58,13 @@ function userView() {
 		// console.log(curViewedUser);
 		html += /*html*/ `
 			<img class="user profileImage" src="${curViewedUser.profilePicture}"/>
-			<div class="user profileDescription"> <!--75-->
-				Name: ${curViewedUser.profileName}
+			<div class="user profileDescription">
+				<!--Name--> ${curViewedUser.profileName}
 				<br/>
-				Description: ${curViewedUser.userDescription}
+				<!--Description--> ${curViewedUser.userDescription}
 			</div>
-			<div class="user followStar" onclick="toggleFollow()"> <!--74-->
+			<!--Star-->
+			<div class="user followStar" onclick="toggleFollow()">
 		`
 		if (isFollowed) {
 			html += /*html*/ `

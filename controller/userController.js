@@ -10,9 +10,25 @@ function editUserDescription(element) {
     model.users[model.signedInInfo.userId].userDescription = model.inputs.editProfile.description;
   };
 
-  function editProfileImage(element) {
-    //HJELP OSS ALEX VOL.2
+  function editAge(element) {
+    model.inputs.editProfile.age = element.value;
+    model.users[model.signedInInfo.userId].age = model.inputs.editProfile.age;
   };
+
+  function editFavGenre(element) {
+    model.inputs.editProfile.favGenre = element.value;
+    model.users[model.signedInInfo.userId].favGenre = model.inputs.editProfile.favGenre;
+  };
+
+  function editProfileImage() {
+    let imageVar = prompt("Please enter link to profile picture");
+    if (imageVar != null) {
+      model.inputs.editProfile.image =
+        imageVar;
+    }
+    model.users[model.signedInInfo.userId].profilePicture = model.inputs.editProfile.image;
+    updateView();
+  }
 
   function toggleFollow() {
     //userView();
