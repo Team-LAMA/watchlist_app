@@ -331,7 +331,7 @@ const model = {
 			password: "321",
 			eMail: "Team3@mail.no",
 			movieLists: [],
-			profileName: "Navn",
+			profileName: "LAMA",
 			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
 			userDescription: "Beskrivelse",
 			followedUsers: [],
