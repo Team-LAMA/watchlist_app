@@ -72,6 +72,9 @@ function updateView() {
 		app.page = "";
 		updateView();
 	}
+
+	window.scrollTo(0, model.app.scrollOffset);
+	model.app.scrollOffset = null;
 }
 
 //homeView();
