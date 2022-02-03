@@ -333,12 +333,17 @@ body{
   align-items: center;
   justify-content: center;
 }
+.movieList.title.plusBtn{
+	width: 7vh;
+	height: 7vh;
+	right: 6vw;
+}
 
 .movieList.content {
   position: fixed;
   top: 19vh;
   width: fit-content;
-  height: 58vh;
+  height: 69vh;
   border: 1px grey solid;
 	
 	overflow-y: auto;
@@ -420,8 +425,7 @@ body{
 }
 .movieElement.movieTitle>textarea{
 	position: relative;
-	top: .3vh;
-	height: 7vh;
+	height: 6vh;
 	padding: 0px 4vw;
 	width: 100%;
 	/*padding: 0px;*/
@@ -447,8 +451,8 @@ body{
 .movieElement.releaseYear>input[type="number"]{
 	width: 15vw;
 	min-width: 3vh;
-	height: 1.5vh;
-	font-size: 1vh;
+	height: 1.7vh;
+	font-size: 1.7vh;
 	font-family: 'Times New Roman', Times, serif;
 	text-align: center;
 }
@@ -500,20 +504,27 @@ body{
 .movieElement.detailBox>div>div>textarea{
 	resize:vertical;
 	width: 40vw;
-	height: 50vh
+	height: 2vh
 }
 
-.movieElement.description.title{
-	width: 90vw;
-	text-align: center;
-	text-decoration: underline;
-}
 
-.movieElement.description{
-	width: 90vw;
-}
 
+.movieElement.description,
 .movieElement.actors,
 .movieElement.personalComments{
+	width: 90vw;
 	text-align: center;
+}
+
+.movieElement.description>textarea,
+.movieElement.actors>textarea,
+.movieElement.personalComments>textarea{
+	width: 85vw;
+	height: 10vh;
+	min-height: fit-content;
+}
+
+.movieElement.actors>textarea,
+.movieElement.personalComments>textarea{
+	height: 5vh;
 }

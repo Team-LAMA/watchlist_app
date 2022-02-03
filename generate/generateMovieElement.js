@@ -8,8 +8,6 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 	* 	editable // Whether the element should be in edit mode or not	
 	* }
 	*/
-	//console.log(movieList.movies.length);
-	//console.log(options);
 	let html = "";
 
 	// Chooses a class depending on whether a scrollbar should be pressent or not
@@ -76,7 +74,7 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 	`
 
 	// Adding <hr> for genre/directors
-	if (movieList.movies[index].genres.length > 0 || movieList.movies[index].directors.length > 0) {
+	if (movieList.movies[index].genres || movieList.movies[index].directors) {
 		html += /*html*/ `<hr/>`
 	}
 
@@ -86,21 +84,18 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 	`
 
 	// Opening genre list + title
-	if (movieList.movies[index].genres.length > 0) {
+	if (movieList.movies[index].genres) {
 		html += /*html*/ `
 			<div>
-				<u>Genre${(movieList.movies[index].genres.length > 1) ? "s" : ""}</u>
+				<u>Genres</u>
 				<div>
 		`
 
 		if (options.expanded && options.editable) {
 			html += /*html*/ `<textarea>${movieList.movies[index].genres}</textarea>`
 		}
-		else{
-			html += movieList.movies[index].genres[0];
-			for (let i = 1; i < movieList.movies[index].genres.length; i++) {
-				html += ", " + movieList.movies[index].genres[i];
-			}
+		else {
+			html += movieList.movies[index].genres;
 		}
 
 		html += /*html*/ `
@@ -111,15 +106,17 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 	// Closing genre list + title
 
 	// Opening director list + title
-	if (movieList.movies[index].directors.length > 0) {
+	if (movieList.movies[index].directors) {
 		html += /*html*/ `
 			<div>
-				<u>Director${(movieList.movies[index].directors.length > 1) ? "s" : ""}</u>
+				<u>Directors</u>
 				<div>
 		`
-		html += movieList.movies[index].directors[0];
-		for (let i = 1; i < movieList.movies[index].directors.length; i++) {
-			html += ", " + movieList.movies[index].directors[i];
+		if (options.expanded && options.editable) {
+			html += /*html*/ `<textarea>${movieList.movies[index].directors}</textarea>`
+		}
+		else {
+			html += movieList.movies[index].directors;
 		}
 		html += /*html*/ `
 				</div>
@@ -136,27 +133,34 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 	// Opening  description + title
 	if (movieList.movies[index].description) {
 		html += /*html*/ `
-			<hr/>
-			<div class="movieElement description title">Description</div>
-			<div class="movieElement description">${movieList.movies[index].description}</div>
-		`
+			<div class="movieElement description">
+				<hr/>
+				<u>Description</u>
+			`
+		if (options.expanded && options.editable) {
+			html += /*html*/ `<textarea>${movieList.movies[index].description}</textarea>`
+		}
+		else {
+			html += `${movieList.movies[index].description}`
+		}
+		html += `</div>`
 	}
 	// Closing description + title
 
 	// Opening actors + title
-	if (movieList.movies[index].actors.length > 0) {
+	if (movieList.movies[index].actors) {
 		html += /*html*/ `
 			<hr>
 			<div class="movieElement actors">
-				<u>Actor${(movieList.movies[index].actors.length > 1) ? "s" : ""}</u>
-				<div>
+				<u>Actors</u>
 		`
-		html += movieList.movies[index].actors[0];
-		for (let i = 1; i < movieList.movies[index].actors.length; i++) {
-			html += ", " + movieList.movies[index].actors[i];
+		if (options.expanded && options.editable) {
+			html += /*html*/ `<textarea>${movieList.movies[index].actors}</textarea>`
+		}
+		else {
+			html += movieList.movies[index].actors;
 		}
 		html += /*html*/ `
-				</div>
 			</div>
 		`
 	}
@@ -168,7 +172,14 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 			<hr/>
 			<div class="movieElement personalComments">
 				<u>Personal Comments</u>
-				<div>${movieList.personalComments[index]}</div>
+				`
+		if (options.expanded && options.editable) {
+			html += /*html*/ `<textarea>${movieList.personalComments[index]}</textarea>`
+		}
+		else {
+			html += movieList.movies[index].actors;
+		}
+		html += /*html*/`
 			</div>
 		`
 	}

@@ -16,11 +16,20 @@ window.onpopstate = function () {
 	const pageHash = location.hash.substring(1);
 	const parts = pageHash.split('/');
 
-
 	app.page = parts[0];
 	app.lastPage = parts[1];
 	app.userID = parseInt(parts[2]);
 	app.listID = parseInt(parts[3]);
 
 	updateView();
+}
+
+function findUserByID(ID){
+	let user;
+	for (let i = 0; i < model.users.length; i++) {
+		if (model.users[i].ID == ID) {
+			user = model.users[i];
+		}
+	}
+	return user;
 }
