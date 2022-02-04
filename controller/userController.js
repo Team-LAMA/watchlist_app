@@ -21,7 +21,9 @@ function editUserDescription(element) {
   };
 
   function editProfileImage() {
-    let imageVar = prompt("Please enter link to profile picture");
+		let curUser = findUserByID(model.app.userID);
+		console.log(curUser);
+    let imageVar = prompt("Please enter link to profile picture", curUser.profilePicture);
     if (imageVar != null) {
       model.inputs.editProfile.image =
         imageVar;
