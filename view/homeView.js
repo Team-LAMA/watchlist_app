@@ -14,16 +14,15 @@ function homeView() {
 		followedUsers: [],
 	}
 
-	
 	for (let i = 0; i < model.users.length; i++) {
 		if (model.users[i].ID == model.signedInInfo.userId) {
 			curUser = model.users[i];
 		}
 	}
-	console.log("curent user", curUser)
-	///////////////////////////////////////
+
 	
-	let notificationList = [];
+
+	let notificationTimer
 	html += /*html*/ `
     <div 
       class="home notificationList">
@@ -31,14 +30,20 @@ function homeView() {
         `
 
 	for (let i = 0; i < model.movieLists.length; i++) {
-		notificationList.push(model.movieLists[i]);
+		notificationTimer = model.movieLists[i].lastChanged;
+
+		html += /*html*/ `
+      <div
+							onclick="notificationUpdate(${notificationTimer}, ${curUser})"
+							class="home notification">
+				notification ${i + 1}
+      </div>
+      `
 	}
-	
-	html += notificationUpdate(curUser.ID, notificationList);
+
 	html += /*html*/ `</div>`;
 
-	///////////////////////////////////////
-
+	// print the profile name of the followed users
 	html += /*html*/ `<div class="home followedList"><h1>Following</h1>`
 	for (let i = 0; i < curUser.followedUsers.length; i++) {
 		let followedUser = curUser.followedUsers[i];
@@ -46,15 +51,12 @@ function homeView() {
 			<div
 							onclick="openMovieList(${followedUser.movieLists[0].ID})"
 							class="home followed">
-				${followedUser.username}
+				${followedUser.profileName}
 			</div>
 		`;
 	}
 
 	html += /*html*/ `</div>`
-
-	///////////////////////////////////////
-
 	//Added Navigationbar
 	html += generateLogoHTML();
 	html += generateNavbarHTML();

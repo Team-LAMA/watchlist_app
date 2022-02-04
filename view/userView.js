@@ -20,9 +20,9 @@ function userView() {
 	}
 
 	let isFollowed = false;
-	if (model.signedInInfo.userId) {
-		for (let i = 0; i < curSignedInUser.followedUsers.length; i++) {
-			if (curSignedInUser.followedUsers[i].ID == model.app.userID) {
+	if (model.signedInInfo.userId >= 0) { // checks if a user is logged in
+		for (let i = 0; i < curSignedInUser.followedUsers.length; i++) { //goes through all followedUsers of the logged in user
+			if (curSignedInUser.followedUsers[i].ID == curViewedUser.ID) { // Checks if the currently checked followed user is also the user we're watching
 				isFollowed = true;
 			}
 		}
@@ -32,13 +32,25 @@ function userView() {
 	if (model.app.userID == model.signedInInfo.userId) { //edit profile?
 		html += /*html*/ `
 				<img class="user profileImage" src="${curViewedUser.profilePicture}"/>
-				<input type="file"/> <!-- HJELP OSS ALEX  HER SKAL DET EN FUNKSJON-->
+				<button class="user ProfileImageButton" onclick="editProfileImage()">Edit Picture</button>
+
+				
 				<div class="user profileDescription">
-					Name: 
-					<input onchange="editProfileName(this)" type="text" placeholder="${curViewedUser.profileName}" />
-					<hr />
-					Description:
-					<input onchange="editUserDescription(this)" type="text" placeholder="${curViewedUser.userDescription}" /> 
+					<!--Name-->
+					<input onchange="editProfileName(this)" type="text" value="${curViewedUser.profileName}" placeholder="Profile name"/>
+					<br/>
+					<!--Age--> 
+					<input onchange="editAge(this)" type="numbers" value="${curViewedUser.age} years old" placeholder="Age" min="1" max="99"/>
+					<br/>
+					<!--Genre-->
+					<input onchange="editFavGenre(this)" type="text" value="${curViewedUser.favGenre}" placeholder="Your favorite genres" />
+					<br/>
+					<!--Description-->
+					<input onchange="editUserDescription(this)" type="text" value="${curViewedUser.userDescription}" placeholder="User description"/> 
+				</div>
+				<!--Star-->
+				<div class="user profileStar">
+						<img src="./img/18427.png"/>
 				</div>
 		`
 	}
@@ -47,28 +59,30 @@ function userView() {
 		html += /*html*/ `
 			<img class="user profileImage" src="${curViewedUser.profilePicture}"/>
 			<div class="user profileDescription">
-				Name: ${curViewedUser.profileName}
+				<!--Name--> ${curViewedUser.profileName}
 				<br/>
-				<br/>
-				Description: ${curViewedUser.userDescription}
-				<div class="user followStar" onclick="followStar()"> <!--Lage function og flytte stjernen riktig css-->
+				<!--Description--> ${curViewedUser.userDescription}
+			</div>
+			<!--Star-->
+			<div class="user followStar" onclick="toggleFollow()">
 		`
 		if (isFollowed) {
 			html += /*html*/ `
-				<div class="user followStar">
-				<img src="./img/64px-Full_Star_Yellow.svg.png"/>
+				
+					<img src="./img/64px-Full_Star_Yellow.svg.png"/>
 				</div>
 			`;
 		}
+			
 		else {
 			html += /*html*/ `
-				<div class="user followStar">
-				<img src="./img/64px-Empty_Star.svg.png"/>
+				
+					<img src="./img/64px-Empty_Star.svg.png"/>
 				</div>
 			`;
 		}
 		html += /*html*/`
-				</div>
+				
 			</div>
 		`;
 	}
@@ -77,10 +91,11 @@ function userView() {
 
 	// Lista og listenavn
   if(model.app.userID == model.signedInInfo.userId){
+	  
 		html += /*html*/ `
 			<div class="user topMoviesContainer">
 				<div class="user topMoviesTitle">
-					<input type="text" onchange="updateMovieListName" placeholder="${curViewedUser.movieLists[0].name}"/>
+					<input type="text" onchange="updateMovieListName" value="${curViewedUser.movieLists[0].name}" placeholder="List name"/>
 				</div>
 				${(curViewedUser.movieLists[0].movies[0]) ? generateMovieElement(curViewedUser.movieLists[0], 0, "model.app.expandedIndex = 0; model.app.listID = 0; go('list')") : ""}
 				${(curViewedUser.movieLists[0].movies[1]) ? generateMovieElement(curViewedUser.movieLists[0], 1, "model.app.expandedIndex = 0; model.app.listID = 0; go('list')") : ""}
@@ -91,13 +106,15 @@ function userView() {
 		html += /*html*/ `
 			<div class="user topMoviesContainer">
 				<div class="user topMoviesTitle">
-				${curViewedUser.name}
+					${curViewedUser.movieLists[0].name}
 				</div>
 				${(curViewedUser.movieLists[0].movies[0]) ? generateMovieElement(curViewedUser.movieLists[0], 0, "") : ""}
 				${(curViewedUser.movieLists[0].movies[1]) ? generateMovieElement(curViewedUser.movieLists[0], 1, "") : ""}
 				${(curViewedUser.movieLists[0].movies[2]) ? generateMovieElement(curViewedUser.movieLists[0], 2, "") : ""}
 			</div>
         `}
+
+
 
 	html += generateNavbarHTML();
 	html += generateLogoHTML();
