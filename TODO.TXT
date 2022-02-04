@@ -1,33 +1,10 @@
 
-bug: du får ikke sett profilen til noen om ikke du er logget inn, du blir sendt rett til sign in.
-
-
-LAGE EN GENERELL CONTROLLER FIL TIL FEKS GO FUNCTION.
-
-legge til tilbakeknapp, (generate home?? spør linn).
-
-
-fikse follow star så den kommer riktig sted, ordne css.
-
-FIKSE MASSE CSS. 
-
-bug: når du skal se på egen profil (terje) så må app.listID være 1 eller IKKE "null" hvis ikke blir det blank side.
-
-LAGE EN FUNKSJON TIL "profileImage" FOR Å LEGGE INN BILDE
-
-Hvor skal function til MovieList Title??
+Fikse bilde for movie element med link som paa profilbilde
 
 Maa vi ikke lage en profil som er tom til naar man logger inn foerste gangen??????????
 
-BUG!!!!  signedInInfo:userId: 3,4,5, OSV FUNKER, MEN BURDE IKKE? BUG!!!!
+Tilbake knapp bug!!!!!! (flere forskjellige feil)
 
-IGJEN FIKSE app.listID SHIT, HVA SKJER?
+Gjoere at man kan gaa fra searchResults til brukerenes profil og evt fra lista ogsaa
 
-UKE 6 = DEBUG alt mulig shit og gå løs med fluesmekkeren
-
-
-Following på homeView feil navn. Skal ikke være username men profileName!!
-
-GÅ INN PÅ HOME, GÅ PÅ MAMSEN, på lista du ser prøv å gå tilbake på knappen, så kommer du ikke hjem, men til search.
-
-fant et bug til, husker ikke hva det var. husker du linn????
+Lage at man kan soeke med aa trykke enter (nice to have?)

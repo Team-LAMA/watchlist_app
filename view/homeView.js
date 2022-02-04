@@ -39,6 +39,7 @@ function homeView() {
 
 	///////////////////////////////////////
 
+	// print the profile name of the followed users
 	html += /*html*/ `<div class="home followedList"><h1>Following</h1>`
 	for (let i = 0; i < curUser.followedUsers.length; i++) {
 		let followedUser = curUser.followedUsers[i];
@@ -46,7 +47,7 @@ function homeView() {
 			<div
 							onclick="openMovieList(${followedUser.movieLists[0].ID})"
 							class="home followed">
-				${followedUser.username}
+				${followedUser.profileName}
 			</div>
 		`;
 	}

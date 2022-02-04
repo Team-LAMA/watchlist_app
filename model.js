@@ -49,6 +49,8 @@ const model = {
 			image: "",
 			name: "",
 			description: "",
+			age: "",
+			favGenre: "",
 		},
 
 		editMovieList: {// Used to hold temporary information for when a movie list is being edited
@@ -322,6 +324,25 @@ const model = {
 			ratings: [1, 1, 1],
 			lastChanged: 10,
 		},
+		{
+			ID: 3,
+			name: "",
+			movies: [
+				{
+					ID: null,
+					title: "",
+					image: "",
+					year: null,
+					genres: [],
+					directors: [],
+					actors: [],
+					description: "",
+				},
+			],
+			personalComments: [],
+			ratings: [],
+			lastChanged: Date.now(),
+		},
 	],
 
 	users: [					// A list over all the existing users (DATA)
@@ -333,6 +354,8 @@ const model = {
 			movieLists: [],
 			profileName: "LAMA",
 			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
+			age: "23",
+			favGenre: "Action, Romance, Snakes",
 			userDescription: "Beskrivelse",
 			followedUsers: [],
 			// followedListIDs: [],
@@ -345,6 +368,8 @@ const model = {
 			movieLists: [],
 			profileName: "Terje Kolderup",
 			profilePicture: "https://seek-team-prod.s3.fr-par.scw.cloud/users/5f5f11d414cde831943944.jpg",
+			age: "45",
+			favGenre: "Docu, Science",
 			userDescription: "Lærer ved GET Academy",
 			followedUsers: [],
 			// followedListIDs: [],
@@ -357,7 +382,23 @@ const model = {
 			movieLists: [],
 			profileName: "Mamma",
 			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
+			age: "15",
+			favGenre: "Romance, family",
 			userDescription: "Føler meg 20",
+			followedUsers: [],
+			// followedListIDs: [],
+		},
+		{
+			ID: 3,
+			username: "BRUKERNAVN",
+			password: "BRUKERPASSPRD",
+			eMail: "BRUKEREMAIL",
+			movieLists: [],
+			profileName: "ProfilNavn",
+			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
+			age: "ALDER",
+			favGenre: "FAVORITT SJANGER",
+			userDescription: "BRUKERBESKRIVELSE",
 			followedUsers: [],
 			// followedListIDs: [],
 		},
@@ -369,11 +410,11 @@ const model = {
 model.users[0].movieLists.push(model.movieLists[0]);
 model.users[1].movieLists.push(model.movieLists[1]);
 model.users[2].movieLists.push(model.movieLists[2]);
+model.users[3].movieLists.push(model.movieLists[3]);
 
 model.users[0].followedUsers.push(model.users[1]);
 model.users[0].followedUsers.push(model.users[2]);
 
-model.users[1].followedUsers.push(model.users[0]);
 model.users[1].followedUsers.push(model.users[2]);
 
 model.users[2].followedUsers.push(model.users[0]);
