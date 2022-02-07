@@ -40,17 +40,16 @@ function homeView() {
 	///////////////////////////////////////
 
 	// print the profile name of the followed users
-	html += /*html*/ `<div class="home followedList"><h1>Following</h1>`
-	for (let i = 0; i < curUser.followedUsers.length; i++) {
-		let followedUser = curUser.followedUsers[i];
-		html += /*html*/ `
-			<div
-							onclick="openMovieList(${followedUser.movieLists[0].ID})"
-							class="home followed">
-				${followedUser.profileName}
-			</div>
-		`;
-	}
+	html += /*html*/ `<div class="home followedList"><h1>Following</h1>`;
+		for (let i = 0; i < curUser.followedUsers.length; i++) {
+			let followedUser = curUser.followedUsers[i];
+			html += /*html*/ `
+				<div
+								onclick="openMovieList(${followedUser.movieLists[0].ID})"
+								class="home followed">
+					${followedUser.profileName}
+				</div>
+		`};
 
 	html += /*html*/ `</div>`
 

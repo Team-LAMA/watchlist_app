@@ -48,13 +48,35 @@ function makeUser() {
 		password: model.inputs.makeUser.password, // Sets the password from the input on signUpView
 		email: model.inputs.makeUser.email, // Sets the email from the input on signUpView
 		// The rest will be changed by the users input in the userView/Controller
-		movieLists: [],
+		movieLists:[{
+			ID: model.idCounters.listId,
+			name: "",
+			movies: [
+				{
+					ID: model.idCounters.movieId,
+					title: "",
+					image: "",
+					year: null,
+					genres: [],
+					directors: [],
+					actors: [],
+					description: "",
+				},
+			],
+			personalComments: [],
+			ratings: [],
+			lastChanged: Date.now(),
+		}],
 		profileName: "",
 		profilePicture: "",
+		age:"",
+		favGenre: "",
 		userDescription: "",
 		followedUsers: [],
 		//followedListIDs: [],  
 	}
+	model.idCounters.listId++;
+	model.idCounters.movieId++;
 	model.idCounters.userId++;
 	model.users.push(newUser);
 	// Clearing model.inputs.makeUser (Data Security)

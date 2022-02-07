@@ -1,9 +1,10 @@
 const model = {
 	app: {
-		page: "list",
+		page: "",
 		lastPage: "", 	// The last page type
-		userID: 1,			// User ID being viewed
-		listID: n,			// List ID being viewed
+		userID: null,			// User ID being viewed
+		listID: null,			// List ID being viewed
+
 		expandedIndex: null, // the index of the currently expanded movieList element if there is any
 		scrollOffset: null
 	},
@@ -15,9 +16,9 @@ const model = {
 	},
 
 	idCounters: {
-		userId: 3,
-		listId: 3,
-		movieId: 3,
+		userId: 4,
+		listId: 4,
+		movieId: 4,
 	},
 
 	inputs: {
