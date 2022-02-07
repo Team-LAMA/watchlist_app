@@ -6,7 +6,7 @@ function notificationUpdate(curUser, notificationList){
       notificationTimer.push(notificationList[k])
       notificationTimer.sort(function(a, b){return b.lastChanged - a.lastChanged})
     }
-    console.log(notificationTimer)
+    console.log(notificationTimer, "yo")
   for(let i = 0; i < model.users[curUser].followedUsers.length; i++){
     let followedUsers = model.users[curUser].followedUsers[i].ID;
 
@@ -19,7 +19,6 @@ function notificationUpdate(curUser, notificationList){
             ${notificationList[j].name}
           </div>
         `
-        
       }
     }
   }
