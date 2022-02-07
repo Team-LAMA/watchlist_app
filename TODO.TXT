@@ -10,3 +10,13 @@ Gjoere at man kan gaa fra searchResults til brukerenes profil og evt fra lista o
 Lage at man kan soeke med aa trykke enter (nice to have?)
 
 lage at nye brukere fra signup får en movielist.
+
++sette inn scroll til soek naar det blir mange brukere 
+
+notification paa Home trenger scroll
+
+following paa home trenger scroll
+
+userid sign in og app saa kan du gaa inn på en film paa lista og du blir tatt riktig.
+
+app userid 1 signin userid null: hele siden blir hvit.
