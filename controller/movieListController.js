@@ -112,3 +112,29 @@ function movieScoreSafety(element) {
 		element.value = 10;
 	}
 }
+
+function newMovieElement() {
+	let curUser = findUserByID(model.signedInInfo.userId);
+	console.log(curUser);
+	let curMovieList = curUser.movieLists[0];
+
+	model.app.expandedIndex = null;
+	
+	curMovieList.movies.push({
+		ID: model.idCounters.movieId,
+		title: "",
+		image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/300px-No_image_available.svg.png",
+		year: null,
+		genres: "",
+		directors: "",
+		actors: "",
+		description: "",
+	});
+
+	curMovieList.personalComments[curMovieList.movies.length - 1] = "";
+	curMovieList.ratings[curMovieList.movies.length - 1] = 2000; // to get this movie sorted above all the others
+
+	model.idCounters.movieId++;
+
+	updateView();
+}
