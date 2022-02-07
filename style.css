@@ -433,6 +433,16 @@ width: 12.3vh;
 	min-width: 9vh;
 	height: 9vh;
 	margin-right: 1vh;
+	border: black 1px solid;
+}
+
+.movieElement.movieImageButton{
+	position: relative;
+	top: 7.2vh;
+	left: -9.75vh;
+	height: 1.75vh;
+	min-width: 9.25vh;
+	min-width: 9.25vh;
 }
 
 .movieElement.minimal.midSection{
@@ -541,11 +551,9 @@ width: 12.3vh;
 .movieElement.detailBox>div>div>textarea{
 	resize:vertical;
 	width: 40vw;
-	height: 2vh;
+	height: 3vh;
 	font-size: 1.75vh;
 }
-
-
 
 .movieElement.description,
 .movieElement.actors,
@@ -561,6 +569,7 @@ width: 12.3vh;
 	height: 10vh;
 	min-height: fit-content;
 	font-size: 1.75vh;
+	resize: vertical;
 }
 
 .movieElement.actors>textarea,
