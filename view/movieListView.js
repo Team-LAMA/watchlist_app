@@ -15,9 +15,11 @@ function movieListView() {
 	let curUser = findUserByID(model.signedInInfo.userId);
 
 	let isEditable = false;
-	for (let i = 0; i < curUser.movieLists.length; i++) {
-		if (curUser.movieLists[i] == curMovieList) {
-			isEditable = true;
+	if (curUser) {
+		for (let i = 0; i < curUser.movieLists.length; i++) {
+			if (curUser.movieLists[i] == curMovieList) {
+				isEditable = true;
+			}
 		}
 	}
 
