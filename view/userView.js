@@ -32,7 +32,7 @@ function userView() {
 	if (model.app.userID == model.signedInInfo.userId) { //edit profile?
 		html += /*html*/ `
 				<img class="user profileImage" src="${curViewedUser.profilePicture}"/>
-				<button class="user ProfileImageButton" onclick="editProfileImage()">Edit Picture</button>
+				<button class="user profileImageBtn" onclick="editProfileImage()">Edit Picture</button>
 
 				
 				<div class="user profileDescription">

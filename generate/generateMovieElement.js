@@ -27,9 +27,17 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 	html += /*html*/ `
 		<div class="movieElement minimal">
 			<img class="movieElement image" src="${movieList.movies[index].image}"/>
-			<button class="movieElement movieImageButton" onclick="editMovieImage()">IMAGE</button>
-			<div class="movieElement minimal midSection"> 
-				<div class="movieElement movieTitle">
+	`
+	if (options.expanded && options.editable) {
+		html += /*html*/`
+			<div style="width: 0px;">
+			<button class="movieElement movieImageBtn" onclick="editMovieImage()">IMAGE</button>
+			</div>
+		`
+	}
+	html += /*html*/`
+		<div class="movieElement minimal midSection"> 
+			<div class="movieElement movieTitle">
 	`;
 
 	if (options.expanded && options.editable) {
