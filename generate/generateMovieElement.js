@@ -151,15 +151,15 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 	// Opening  description + title
 	if (movieList.movies[index].description) {
 		html += /*html*/ `
+			<hr/>
 			<div class="movieElement description">
-				<hr/>
 				<u>Description</u>
 			`
 		if (options.expanded && options.editable) {
 			html += /*html*/ `<textarea onchange="updateMovieDescription(this, ${movieList.ID}, ${index})">${movieList.movies[index].description}</textarea>`
 		}
 		else {
-			html += `${movieList.movies[index].description}`
+			html += `<span>${movieList.movies[index].description}<span>`
 		}
 		html += `</div>`
 	}

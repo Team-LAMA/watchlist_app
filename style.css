@@ -562,6 +562,8 @@ width: 12.3vh;
 .movieElement.personalComments{
 	width: 90vw;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
 }
 
 .movieElement.description>textarea,
