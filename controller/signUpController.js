@@ -21,6 +21,11 @@ function signUp() {
 	if (isUsernameUnique && isEmailUnique) {
 		makeUser();
 	}
+
+	//Assigns the new user id to the signed in user
+	for (let i = 0; i < model.users.length; i++){
+	model.signedInInfo.userId = model.users[i].ID;}
+
 	// Takes you back to the page you were on before signing up
 	model.app.page = model.app.lastPage;
 	updateView();

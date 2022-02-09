@@ -162,6 +162,9 @@ body{
 .signInBtn {
   background-color: rgb(177, 77, 77);
 }
+.failMessage {
+  color: red;
+}
 /*End SignIn & SignUp*/
 
 /*#############*/
