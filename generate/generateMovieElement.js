@@ -213,6 +213,7 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 
 	// Closing movieElement expanded
 	html += /*html*/ `
+			<div class="movieElement padder"></div>
 		</div>
 	`
 

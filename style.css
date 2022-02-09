@@ -584,3 +584,7 @@ width: 12.3vh;
 .movieElement.personalComments>textarea{
 	height: 5vh;
 }
+
+.movieElement.padder {
+	height: 2.5vw;
+}
