@@ -11,8 +11,14 @@ function signInView() {
         	<button class="signUpBtn" onclick="go('signUp')">Sign Up</button>
         	<button class="signInBtn" onclick="signIn()">Sign In</button>
 				</div>
-    </div>
-  `;
+	`;
+	if(model.signedInInfo.userId === -1){	
+		html +=	`<h4 class="failMessage">Wrong username or password</h4>`;
+		model.signedInInfo.userId = null;
+	}
+
+	html +=  `</div>
+	`;
 
 	html += generateNavbarHTML();
 	document.getElementById('app').innerHTML = html;
