@@ -32,7 +32,7 @@ function getSearchResults(searchWord = ""){
 		html += /*html*/ `
 			<div onclick="openMovieList(${listID})" class="search result">
 				<h3>${resultList[i].movieLists[0].name}</h3>
-				<div class="search result username"> <!--fikse så man kommer inn på profilen til folk-->
+				<div class="search result username" onclick="goToProfile(resultList[i].ID)"> <!--fikse så man kommer inn på profilen til folk-->
 					<img src="${resultList[i].profilePicture}">
 					<div>${resultList[i].profileName}</div>
 				</div>
@@ -45,6 +45,10 @@ function getSearchResults(searchWord = ""){
 	return resultList;
 }
 
+function goToProfile(ID){
+	model.app.userID = ID
+	go("user");
+}
 
 
 //function getSearchResults(){
