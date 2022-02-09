@@ -27,9 +27,17 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 	html += /*html*/ `
 		<div class="movieElement minimal">
 			<img class="movieElement image" src="${movieList.movies[index].image}"/>
-			<button class="movieElement movieImageButton" onclick="editMovieImage()">IMAGE</button>
-			<div class="movieElement minimal midSection"> 
-				<div class="movieElement movieTitle">
+	`
+	if (options.expanded && options.editable) {
+		html += /*html*/`
+			<div style="width: 0px;">
+			<button class="movieElement movieImageBtn" onclick="editMovieImage()">IMAGE</button>
+			</div>
+		`
+	}
+	html += /*html*/`
+		<div class="movieElement minimal midSection"> 
+			<div class="movieElement movieTitle">
 	`;
 
 	if (options.expanded && options.editable) {
@@ -151,15 +159,15 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 	// Opening  description + title
 	if (movieList.movies[index].description) {
 		html += /*html*/ `
+			<hr/>
 			<div class="movieElement description">
-				<hr/>
 				<u>Description</u>
 			`
 		if (options.expanded && options.editable) {
 			html += /*html*/ `<textarea onchange="updateMovieDescription(this, ${movieList.ID}, ${index})">${movieList.movies[index].description}</textarea>`
 		}
 		else {
-			html += `${movieList.movies[index].description}`
+			html += `<span>${movieList.movies[index].description}<span>`
 		}
 		html += `</div>`
 	}
@@ -205,6 +213,7 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 
 	// Closing movieElement expanded
 	html += /*html*/ `
+			<div class="movieElement padder"></div>
 		</div>
 	`
 

@@ -1,11 +1,11 @@
 const model = {
 	app: {
-		page: "user",
+		page: "list",
 		lastPage: "", 	// The last page type
-		userID: 2,			// User ID being viewed
+		userID: null,			// User ID being viewed
 		listID: null,			// List ID being viewed
 
-		expandedIndex: null, // the index of the currently expanded movieList element if there is any
+		expandedIndex: 0, // the index of the currently expanded movieList element if there is any
 		scrollOffset: null
 	},
 
