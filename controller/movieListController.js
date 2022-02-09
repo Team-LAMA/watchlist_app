@@ -1,28 +1,30 @@
 
 
-
+// Sort movieList depending on the movies' ratings
 function sortMovieList(movieList) {
 	let sortArr = [];
 
 	console.log("sorting")
 
-	for (let i = 0; i < movieList.movies.length; i++) {
-		let movie = movieList.movies[i];
-		let personalComment = null;
-		if (movieList.personalComments.length > i) {
-			personalComment = movieList.personalComments[i];
-		}
-		let rating = 1000;
-		if (movieList.ratings.length > i) {
-			if (movieList.ratings[i] === '') {
-				rating = 1000;
+	if (movieList) {
+		for (let i = 0; i < movieList.movies.length; i++) {
+			let movie = movieList.movies[i];
+			let personalComment = null;
+			if (movieList.personalComments.length > i) {
+				personalComment = movieList.personalComments[i];
 			}
-			else {
-				rating = movieList.ratings[i];
+			let rating = 1000;
+			if (movieList.ratings.length > i) {
+				if (movieList.ratings[i] === '') {
+					rating = 1000;
+				}
+				else {
+					rating = movieList.ratings[i];
+				}
 			}
-		}
 
-		sortArr.push({ movie: movie, personalComment: personalComment, rating: rating })
+			sortArr.push({ movie: movie, personalComment: personalComment, rating: rating })
+		}
 	}
 
 	sortArr.sort(function (a, b) {
@@ -119,7 +121,7 @@ function newMovieElement() {
 	let curMovieList = curUser.movieLists[0];
 
 	model.app.expandedIndex = null;
-	
+
 	curMovieList.movies.push({
 		ID: model.idCounters.movieId,
 		title: "",

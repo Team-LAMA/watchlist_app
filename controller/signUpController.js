@@ -48,25 +48,7 @@ function makeUser() {
 		password: model.inputs.makeUser.password, // Sets the password from the input on signUpView
 		email: model.inputs.makeUser.email, // Sets the email from the input on signUpView
 		// The rest will be changed by the users input in the userView/Controller
-		movieLists:[{
-			ID: model.idCounters.listId,
-			name: "",
-			movies: [
-				{
-					ID: model.idCounters.movieId,
-					title: "",
-					image: "",
-					year: null,
-					genres: [],
-					directors: [],
-					actors: [],
-					description: "",
-				},
-			],
-			personalComments: [],
-			ratings: [],
-			lastChanged: Date.now(),
-		}],
+		movieLists:[],
 		profileName: "",
 		profilePicture: "",
 		age:"",
@@ -75,6 +57,31 @@ function makeUser() {
 		followedUsers: [],
 		//followedListIDs: [],  
 	}
+
+	let newMovieList = {
+		ID: model.idCounters.listId,
+		name: newUser.username + "'s favourites",
+		movies: [
+			{
+				ID: model.idCounters.movieId,
+				title: "",
+				image: "",
+				year: null,
+				genres: [],
+				directors: [],
+				actors: [],
+				description: "",
+			},
+		],
+		personalComments: [],
+		ratings: [],
+		lastChanged: Date.now(),
+	}
+
+	model.movieLists.push(newMovieList);
+	newUser.movieLists.push(newMovieList);
+
+
 	model.idCounters.listId++;
 	model.idCounters.movieId++;
 	model.idCounters.userId++;
