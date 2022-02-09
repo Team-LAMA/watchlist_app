@@ -32,16 +32,26 @@ function getSearchResults(searchWord = ""){
 		html += /*html*/ `
 			<div onclick="openMovieList(${listID})" class="search result">
 				<h3>${resultList[i].movieLists[0].name}</h3>
-				<div class="search result username" onclick="goToProfile(resultList[i].ID)"> <!--fikse så man kommer inn på profilen til folk-->
+				<div class="search result username"> 
 					<img src="${resultList[i].profilePicture}">
 					<div>${resultList[i].profileName}</div>
 				</div>
 			</div>
 		`
 	}
-
+//onclick="goToProfile(${resultList[i].ID})
 	document.getElementsByClassName("resultContainer")[0].innerHTML = html
-
+	let searchResults = document.getElementsByClassName("search result");
+	for (let i= 0; i < searchResults.length; i++){
+		if (i%2==0){
+			console.log(searchResults[i])
+			searchResults[i].addEventListener("click", element => {
+				if (element.target != element.currentTarget && element.target.tagName !== "H3") {
+					goToProfile(resultList[parseInt(i/2)].ID);
+				}
+			})
+		}
+	}
 	return resultList;
 }
 
