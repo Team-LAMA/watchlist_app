@@ -12,7 +12,7 @@ const model = {
 	// TODO: make sure all pages can be opened to a "default" view even if no user or list id is set
 
 	signedInInfo: {
-		userId: 1,			// The currently logged in UserID
+		userId: 0,			// The currently logged in UserID
 	},
 
 	idCounters: {
@@ -323,11 +323,11 @@ const model = {
 			],
 			personalComments: ["Hmm", "Hmmmmmmm", "Hmmmmmmmmmmmmmmmmmm"],
 			ratings: [1, 1, 1],
-			lastChanged: 10,
+			lastChanged: 1,
 		},
 		{
 			ID: 3,
-			name: "",
+			name: "yo",
 			movies: [
 				{
 					ID: null,
@@ -342,7 +342,7 @@ const model = {
 			],
 			personalComments: [],
 			ratings: [],
-			lastChanged: Date.now(),
+			lastChanged: 100,
 		},
 	],
 
@@ -362,7 +362,7 @@ const model = {
 			// followedListIDs: [],
 		},
 		{
-			ID: 1,
+			ID: 2,
 			username: "Terje",
 			password: "Passord1",
 			eMail: "Terje@getacademy.no",
@@ -376,7 +376,7 @@ const model = {
 			// followedListIDs: [],
 		},
 		{
-			ID: 2,
+			ID: 1,
 			username: "Mamsen0001",
 			password: "LOVE",
 			eMail: "mamsen0001@hotmail.com",
@@ -415,6 +415,7 @@ model.users[3].movieLists.push(model.movieLists[3]);
 
 model.users[0].followedUsers.push(model.users[1]);
 model.users[0].followedUsers.push(model.users[2]);
+model.users[0].followedUsers.push(model.users[3]);
 
 model.users[1].followedUsers.push(model.users[2]);
 
