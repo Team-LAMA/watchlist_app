@@ -6,7 +6,6 @@ function notificationUpdate(curUser, notificationList){
       notificationTimer.push(notificationList[k])
       notificationTimer.sort(function(a, b){return b.lastChanged - a.lastChanged})
     }
-    console.log(notificationTimer)
     
 	if(!(model.signedInInfo.userId >= 0) && !(model.app.userID >= 0)){
     for(let i = 0; i < model.users[curUser].followedUsers.length; i++){
@@ -36,6 +35,8 @@ function notificationUpdate(curUser, notificationList){
           `
   }
   
+	console.log(notificationTimer)
+
 	return html;
   // model.users[curUser].notifications
 }

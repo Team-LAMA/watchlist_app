@@ -108,9 +108,9 @@ function userView() {
 				<div class="user topMoviesTitle">
 					${curViewedUser.movieLists[0].name}
 				</div>
-				${(curViewedUser.movieLists[0].movies[0]) ? generateMovieElement(curViewedUser.movieLists[0], 0, "") : ""}
-				${(curViewedUser.movieLists[0].movies[1]) ? generateMovieElement(curViewedUser.movieLists[0], 1, "") : ""}
-				${(curViewedUser.movieLists[0].movies[2]) ? generateMovieElement(curViewedUser.movieLists[0], 2, "") : ""}
+				${(curViewedUser.movieLists[0].movies[0]) ? generateMovieElement(curViewedUser.movieLists[0], 0, `model.app.expandedIndex = 0; model.app.listID = ${curViewedUser.movieLists[0].ID}; go('list')`) : ""}
+				${(curViewedUser.movieLists[0].movies[1]) ? generateMovieElement(curViewedUser.movieLists[0], 1, `model.app.expandedIndex = 1; model.app.listID = ${curViewedUser.movieLists[0].ID}; go('list')`) : ""}
+				${(curViewedUser.movieLists[0].movies[2]) ? generateMovieElement(curViewedUser.movieLists[0], 2, `model.app.expandedIndex = 2; model.app.listID = ${curViewedUser.movieLists[0].ID}; go('list')`) : ""}
 			</div>
         `}
 
