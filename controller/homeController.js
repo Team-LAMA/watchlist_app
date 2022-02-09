@@ -20,8 +20,12 @@ function notificationUpdate(curUser, notificationList){
               ${notificationList[j].name}
             </div>
           `
-          
         }
+        html += /*html*/ `
+          <div class="home notification" onclick="openMovieList(${notificationList[j].ID})">
+            ${notificationList[j].name}
+          </div>
+        `
       }
     }
   }
