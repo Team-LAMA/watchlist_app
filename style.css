@@ -79,6 +79,10 @@ body{
   justify-content: center;
   align-items: center;
 }
+
+.navbar.icon{
+	height: 6vh;
+}
 /*End NavBar*/
 
 
