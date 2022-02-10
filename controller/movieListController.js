@@ -59,6 +59,19 @@ function expandElement(index) {
 	updateView()
 }
 
+function updateMovieImage(index){
+	let curUser = findUserByID(model.signedInInfo.userId);
+	let curMovieList = curUser.movieLists[0];
+	let curMovie = curMovieList.movies[index];
+	console.log(curMovieList,curMovie);
+	let newImage = prompt("Please enter link to movie image", curMovie.image);
+
+	if(newImage){
+		curMovie.image = newImage;
+		updateView();
+	}	
+}
+
 function updateMovieTitle(element, movieListID, movieIndex) {
 	let movieList = findMovieListByID(movieListID);
 	movieList.movies[movieIndex].title = element.value;
@@ -140,3 +153,4 @@ function newMovieElement() {
 
 	updateView();
 }
+
