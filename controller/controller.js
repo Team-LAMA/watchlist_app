@@ -43,3 +43,17 @@ function findMovieListByID(ID){
 	}
 	return movieList;
 }
+
+function findUserByMovieListID(ID) {
+	for(let i = 0; i < model.users.length; i++) {
+		let curUser = model.users[i];
+		for(let j = 0; j < curUser.movieLists.length; j++) {
+			let curMovieList = curUser.movieLists[j];
+			if(curMovieList.ID == ID) {
+				return curUser;
+			}
+		}
+	}
+	console.warn("ID", ID, "is not a valid movieList ID or that movieList is not connected to a user.");
+	return null;
+}

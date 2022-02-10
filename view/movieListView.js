@@ -1,6 +1,8 @@
 function movieListView() {
+	let curViewedUser = findUserByMovieListID(model.app.listID);
 	let html = "";
 
+	console.log("curViewedUser", curViewedUser);
 	console.log("listID", model.app.listID);
 
 	// TODO: replace with function to generate a sorted list
@@ -23,7 +25,7 @@ function movieListView() {
 		<div class="movieList container">
 			<div class="movieList title">
 				<div>
-					<img src="${model.users[1].profilePicture}" class="movieList profileImage" onclick="goToProfile()">
+					<img class="movieList profileImage" onclick="goToProfile(${curViewedUser.ID})" src="${curViewedUser.profilePicture}">
 				</div>
 				<h2>${curMovieList.name}</h2>
 				${(isEditable) ?
