@@ -1,35 +1,28 @@
-function notificationUpdate(curUser, notificationList){
+function notificationUpdate(curUser){
   let html = "";
-  let notificationTimer = [];
-
-    for(let k = 0; k < notificationList.length; k++){
-      notificationTimer.push(notificationList[k])
-      notificationTimer.sort(function(a, b){return b.lastChanged - a.lastChanged})
-    }
-    
-	if(!(model.signedInInfo.userId >= 0) && !(model.app.userID >= 0)){
-    for(let i = 0; i < model.users[curUser].followedUsers.length; i++){
-      let followedUsers = model.users[curUser].followedUsers[i].ID;
-
-      for(let j = 0; j < notificationList.length; j++){
-
-        if(model.movieLists[followedUsers].name == notificationList[j].name){
-            
-          html += /*html*/ `
-            <div class="home notification" onclick="openMovieList(${notificationList[j].ID})">
-              ${notificationList[j].name}
-            </div>
-          `
-        }
-        html += /*html*/ `
-          <div class="home notification" onclick="openMovieList(${notificationList[j].ID})">
-            ${notificationList[j].name}
-          </div>
-        `
-      }
+  let notificationList = [];
+  
+  console.log(curUser)
+  if(curUser){
+    for (let i = 0; i < curUser.followedUsers.length; i++) {
+      notificationList.push(curUser.followedUsers[i].movieLists[0]);
     }
   }
-  else{
+
+  notificationList.sort(function(a, b){return b.lastChanged - a.lastChanged})
+  for(let i = 0; i < notificationList.length; i++){ 
+    if(model.signedInInfo.userId >= 0){  
+      console.log("a", model.signedInInfo.userId);
+        html += /*html*/ `
+          <div class="home notification" onclick="openMovieList(${notificationList[i].ID})">
+            ${notificationList[i].name}
+          </div>
+        `
+    }
+  }
+  console.log(notificationList.lenght == 0);
+  if(notificationList.length == 0){
+    console.log("k");
     html += /*html*/ `
             <div class="home notification" >
               <h2 onclick="signInView()">YOURE NOT SIGNED IN, CLICK HERE TO SIGN IN OR SIGN UP</h2>
@@ -39,8 +32,7 @@ function notificationUpdate(curUser, notificationList){
           `
   }
   
-	console.log(notificationTimer)
-
+  console.log(notificationList)
 	return html;
   // model.users[curUser].notifications
 }

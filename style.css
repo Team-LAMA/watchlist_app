@@ -26,7 +26,7 @@ body{
   align-items: center;
 }
 
-#backButton{
+#backBtn{
 	position: fixed;
 	top: 1vh;
 	left: 1vh;
@@ -78,6 +78,10 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.navbar.icon{
+	height: 6vh;
 }
 /*End NavBar*/
 
@@ -162,6 +166,9 @@ body{
 .signInBtn {
   background-color: rgb(177, 77, 77);
 }
+.failMessage {
+  color: red;
+}
 /*End SignIn & SignUp*/
 
 /*#############*/
@@ -189,7 +196,7 @@ body{
   font-size: 3vh;
 }
 
-.search.searchButton {
+.search.searchBtn {
   width: 3.5vh;
   height: 3.5vh;
   margin-left: 1vh;
@@ -260,7 +267,7 @@ body{
   border: 1px solid black;
   margin-right: 5vw;
 }
-.user.ProfileImageButton {
+.user.profileImageBtn {
 position: fixed;
 top: 23vh;
 width: 12.3vh;
@@ -445,13 +452,16 @@ width: 12.3vh;
 	border: black 1px solid;
 }
 
-.movieElement.movieImageButton{
+.movieElement.movieImageBtn{
 	position: relative;
-	top: 7.2vh;
-	left: -9.75vh;
+	top: 7.9vh;
+	left: -9.7vh;
 	height: 1.75vh;
+	margin: 0px;
+	padding: 0px;
+	max-width: 9.25vh;
 	min-width: 9.25vh;
-	min-width: 9.25vh;
+	font-size: 1vh;
 }
 
 .movieElement.minimal.midSection{
@@ -569,6 +579,9 @@ width: 12.3vh;
 .movieElement.personalComments{
 	width: 90vw;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .movieElement.description>textarea,
@@ -584,4 +597,8 @@ width: 12.3vh;
 .movieElement.actors>textarea,
 .movieElement.personalComments>textarea{
 	height: 5vh;
+}
+
+.movieElement.padder {
+	height: 2.5vw;
 }
