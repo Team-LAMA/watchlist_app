@@ -191,7 +191,6 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 	}
 	// Closing actors + title
 
-	
 	// Opening personal comment
 	if (movieList.personalComments[index] || options.editable) {
 		html += /*html*/ `
