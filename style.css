@@ -1,5 +1,5 @@
 body{
-	font-family: 'Times New Roman', Times, serif;
+	font-family: Arial, Helvetica, sans-serif, Times, serif;
 	font-size: 1.7vh;
 }
 
@@ -96,7 +96,7 @@ body{
   top: 15vh;
   height: 27vh;
   gap: 1vh;
-  width: calc(50.625vh * 0.9) ;
+  width: 90vw ;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -106,16 +106,22 @@ body{
 .home.notification {
   display: flex;
   justify-content: space-between;
-  width: 80vw;
-  background-color: #bdbdbd;
+  background-color: rgb(46, 159, 252);
   gap: 10vw;
+  min-width: 90vw;
 }
 
 .notification.list {
-  margin: 1.6vh;
+  margin: 0;
+  margin-left: 4vw;
   display: flex;
   align-items: center;
-  font-size: 18px;
+  font-size: 3vh;
+}
+
+.notification.name {
+  font-size: 10px;
+  margin-right: 2vw;
 }
 
 .notification.name > div{
@@ -123,38 +129,59 @@ body{
   flex-direction: column;
 }
 
-.notification.name {
-  font-size: 10px;
-  margin: 0;
-  margin-top: 0.4vh;
-  margin-right: 1vh;
-}
 
 .notification.name > h1{
   display: flex;
   justify-content: right;
-  font-size: 1.4vh;
+  font-size: 2vh;
   font-weight: bolder;
 }
 
 .home.followedList {
   position: fixed;
-  top: 47vh;
+  top: 50vh;
   height: 43vh;
-  width: calc(50.625vh * 0.9) ;
+  width: 90vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1vh;
+  min-width: 80vw;
   overflow-y: auto; 
 }
 
 .home.followed {
   display: flex;
   justify-content: center;
-  padding: 1.5vh;
-  width: 80vw;
-  background-color: #bdbdbd;
+  align-items: center;
+  min-height: 7vh;
+  min-width: 80vw;
+  background-color: rgb(46, 159, 252);
+  font-size: 3vh;
+}
+
+.home.signin{
+  position: fixed;
+  top: 54vh;
+}
+
+.signinPromt{
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: center;
+  font-size: 3vh;
+}
+.signinPromt > button{
+  background-color: rgb(46, 159, 252);
+  color: #000000;
+  font-size: 3vh;
+  border: 0.5vw black solid;
+  font-size: 3vh;
+  padding: 0.7vh;
+  max-width: 20vw;
+  text-align: center;
+  border-radius: 0.5vh;
 }
 /*End Home*/
 
