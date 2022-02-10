@@ -15,7 +15,7 @@ function notificationUpdate(curUser){
             <p class="notification list">${notificationList[i].name}</p>
             <div class="notificationname">
               <h1 class="notification name">User</h1>
-              <p class="notification name">${model.users[i+1].profileName}</p>
+              <p class="notification name">${model.users[i].profileName}</p>
             </div>
           </div>
         `
