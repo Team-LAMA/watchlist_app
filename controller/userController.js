@@ -22,14 +22,12 @@ function editFavGenre(element) {
 
 function editProfileImage() {
 	let curUser = findUserByID(model.app.userID);
-	console.log(curUser);
-	let imageVar = prompt("Please enter link to profile picture", curUser.profilePicture);
-	if (imageVar != null) {
-		model.inputs.editProfile.image =
-			imageVar;
+	let newImage = prompt("Please enter link to profile picture", curUser.profilePicture);
+
+	if (newImage) {
+		curUser.profilePicture = newImage
+		updateView();
 	}
-	model.users[model.signedInInfo.userId].profilePicture = model.inputs.editProfile.image;
-	updateView();
 }
 
 function toggleFollow() {
