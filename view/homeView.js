@@ -19,9 +19,11 @@ function homeView() {
 	///////////////////////////////////////
 	
 	html += /*html*/ `
+		<h1 style="
+		position: fixed;
+		top: 7vh;">Notifications</h1>
     <div 
       class="home notificationList">
-        <h1>Notification</h1>
         `
 
 	
@@ -32,7 +34,9 @@ function homeView() {
 	///////////////////////////////////////
 
 	// print the profile name of the followed users
-	html += /*html*/ `<div class="home followedList"><h1>Following</h1>`;
+	html += /*html*/ `
+	<h1 style="position: fixed;top: 39vh;">Following</h1>
+	<div class="home followedList">`;
 	if(curUser){
 		for (let i = 0; i < curUser.followedUsers.length; i++) {
 			let followedUser = curUser.followedUsers[i];
