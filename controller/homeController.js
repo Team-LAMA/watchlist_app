@@ -10,7 +10,7 @@ function notificationUpdate(curUser){
   }
   console.log(notificationList.ID);
   notificationList.sort(function(a, b){return b.lastChanged - a.lastChanged})
-  if(model.signedInInfo.userId >= 0){ 
+  if(model.signedInInfo.userId > 0 || model.signedInInfo.userId === 0){ 
   for(let i = 0; i < notificationList.length; i++){  
       console.log("a", model.signedInInfo.userId);
         html += /*html*/ `
