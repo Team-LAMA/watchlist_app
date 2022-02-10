@@ -93,7 +93,7 @@ body{
 /*############*/
 .home.notificationList {
   position: fixed;
-  top: 15vh;
+  top: 17vh;
   height: 27vh;
   gap: 1vh;
   width: 90vw ;
@@ -139,8 +139,8 @@ body{
 
 .home.followedList {
   position: fixed;
-  top: 50vh;
-  height: 43vh;
+  top: 54vh;
+  height: 36vh;
   width: 90vw;
   display: flex;
   flex-direction: column;
