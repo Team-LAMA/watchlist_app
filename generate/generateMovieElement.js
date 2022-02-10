@@ -31,7 +31,7 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 	if (options.expanded && options.editable) {
 		html += /*html*/`
 			<div style="width: 0px;">
-			<button class="movieElement movieImageBtn" onclick="editMovieImage()">IMAGE</button>
+			<button onclick="updateMovieImage(${index})" class="movieElement movieImageBtn" onclick="editMovieImage()">IMAGE</button>
 			</div>
 		`
 	}

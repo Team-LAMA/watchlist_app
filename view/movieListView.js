@@ -59,7 +59,7 @@ function movieListView() {
 	for (let i = 1; i < movieElements.length; i++) {
 		movieElements[i].addEventListener("click", element => {
 			if (model.app.page == "list") {
-				if (element.target.tagName !== "TEXTAREA" && element.target.tagName !== "INPUT") {
+				if (element.target.tagName !== "TEXTAREA" && element.target.tagName !== "INPUT" && element.target.tagName !== "BUTTON") {
 					expandElement(i - 1);
 				}
 			}
