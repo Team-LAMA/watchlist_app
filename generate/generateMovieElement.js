@@ -110,7 +110,7 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 	`
 
 	// Opening genre list + title
-	if (movieList.movies[index].genres) {
+	if (movieList.movies[index].genres || options.editable) {
 		html += /*html*/ `
 			<div>
 				<u>Genres</u>
@@ -132,7 +132,7 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 	// Closing genre list + title
 
 	// Opening director list + title
-	if (movieList.movies[index].directors) {
+	if (movieList.movies[index].directors || options.editable) {
 		html += /*html*/ `
 			<div>
 				<u>Directors</u>
@@ -157,7 +157,7 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 	`
 
 	// Opening  description + title
-	if (movieList.movies[index].description) {
+	if (movieList.movies[index].description || options.editable) {
 		html += /*html*/ `
 			<hr/>
 			<div class="movieElement description">
@@ -174,7 +174,7 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 	// Closing description + title
 
 	// Opening actors + title
-	if (movieList.movies[index].actors) {
+	if (movieList.movies[index].actors || options.editable) {
 		html += /*html*/ `
 			<hr>
 			<div class="movieElement actors">
@@ -193,7 +193,7 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 	// Closing actors + title
 
 	// Opening personal comment
-	if (movieList.personalComments[index]) {
+	if (movieList.personalComments[index] || options.editable) {
 		html += /*html*/ `
 			<hr/>
 			<div class="movieElement personalComments">
