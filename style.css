@@ -106,28 +106,19 @@ body{
 .home.notification {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(46, 159, 252);
-  gap: 8vh;
-  min-width: 90vw;
-  min-height: 9vh;
+  width: 80vw;
+  background-color: #bdbdbd;
+  gap: 10vw;
 }
 
 .notification.list {
-  margin: 0;
-  margin-left: 20px;
+  margin: 1.6vh;
   display: flex;
   align-items: center;
-  font-size: 3vh;
+  font-size: 18px;
 }
 
-.notification.name {
-  font-size: 10px;
-  margin-right: 10px;
-  max-width: fit-content;
-  min-width: 10vw;
-}
-
-.notificationName{
+.notification.name > div{
   display: flex;
   flex-direction: column;
 }
@@ -156,30 +147,9 @@ body{
 .home.followed {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 7vh;
-  min-width: 80vw;
-  background-color: rgb(46, 159, 252);
-  font-size: 3vh;
-}
-
-.signinPromt{
-  display: flex;
-  flex-direction: column;
-  align-content: flex-start;
-  align-items: center;
-  font-size: 3vw;
-}
-.signinPromt > button{
-  background-color: rgb(46, 159, 252);
-  color: #000000;
-  font-size: 3vh;
-  border: 0.5vw black solid;
-  font-size: 3vw;
-  padding: 0.7vh;
-  max-width: 20vw;
-  text-align: center;
-  border-radius: 0.5vh;
+  padding: 1.5vh;
+  width: 80vw;
+  background-color: #bdbdbd;
 }
 /*End Home*/
 
