@@ -19,9 +19,7 @@ function homeView() {
 	///////////////////////////////////////
 	
 	html += /*html*/ `
-		<h1 style="
-		position: fixed;
-		top: 7vh;">Notifications</h1>
+		<h1 style="position: fixed;top: 6vh;font-size: 5vh">Notifications</h1>
     <div 
       class="home notificationList">
         `
@@ -35,7 +33,7 @@ function homeView() {
 
 	// print the profile name of the followed users
 	html += /*html*/ `
-	<h1 style="position: fixed;top: 39vh;">Following</h1>
+	<h1 style="position: fixed;top: 43vh;font-size: 5vh">Following</h1>
 	<div class="home followedList">`;
 	if(curUser){
 		for (let i = 0; i < curUser.followedUsers.length; i++) {
@@ -47,9 +45,18 @@ function homeView() {
 					${followedUser.profileName}
 				</div>
 		`};
+		html += /*html*/ `</div>`
+	}
+	else {
+		html += /*html*/ `
+		<div class="signinPromt">
+			<h1 class="signinPromt">you are not following anyone yet</h1>
+				<button class="signinPromt" onclick="signInView()">Sign in</button>
+			<h1 class="signinPromt">Too continue</h1>
+		</div>
+			`;
 	}
 
-	html += /*html*/ `</div>`
 
 	///////////////////////////////////////
 
