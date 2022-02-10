@@ -4,7 +4,6 @@
 function sortMovieList(movieList) {
 	let sortArr = [];
 
-	console.log("sorting")
 
 	if (movieList) {
 		for (let i = 0; i < movieList.movies.length; i++) {
@@ -129,7 +128,6 @@ function movieScoreSafety(element) {
 
 function newMovieElement() {
 	let curUser = findUserByID(model.signedInInfo.userId);
-	console.log(curUser);
 	let curMovieList = curUser.movieLists[0];
 
 	model.app.expandedIndex = null;

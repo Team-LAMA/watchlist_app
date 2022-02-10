@@ -2,9 +2,6 @@ function movieListView() {
 	let curViewedUser = findUserByMovieListID(model.app.listID);
 	let html = "";
 
-	console.log("curViewedUser", curViewedUser);
-	console.log("listID", model.app.listID);
-
 	// TODO: replace with function to generate a sorted list
 	// Finding the correct list
 	let curMovieList = findMovieListByID(model.app.listID)
@@ -23,10 +20,8 @@ function movieListView() {
 
 	html += /*html*/ `
 		<div class="movieList container">
-			<div class="movieList title">
-				<div>
-					<img class="movieList profileImage" onclick="goToProfile(${curViewedUser.ID})" src="${curViewedUser.profilePicture}">
-				</div>
+			<img class="movieList profileImage" onclick="goToProfile(${curViewedUser.ID})" src="${curViewedUser.profilePicture}">
+			<div class="movieList title">				
 				<h2>${curMovieList.name}</h2>
 				${(isEditable) ?
 			'<svg class="movieList title plusBtn" onclick="newMovieElement()" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>'

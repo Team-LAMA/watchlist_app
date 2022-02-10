@@ -79,7 +79,6 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 						value="${(!movieList.ratings[index]) ? "" : movieList.ratings[index]}"/>`
 	}
 	else {
-		console.log(movieList.ratings[index]);
 		html += /*html*/ `${(movieList.ratings[index] !== '') ? movieList.ratings[index] : "<div style='font-weight: normal'>-</div>"}`
 	}
 

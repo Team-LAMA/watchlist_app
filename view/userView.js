@@ -21,8 +21,6 @@ function userView() {
 
 	let isFollowed = false;
 	if (model.signedInInfo.userId > 0 || model.signedInInfo.userId === 0){ // checks if a user is logged in
-		console.log('ett eller annet',model.signedInInfo.userId);
-		console.log(null >= 0);
 		for (let i = 0; i < curSignedInUser.followedUsers.length; i++) { //goes through all followedUsers of the logged in user
 			if (curSignedInUser.followedUsers[i].ID == curViewedUser.ID) { // Checks if the currently checked followed user is also the user we're watching
 				isFollowed = true;
@@ -57,7 +55,6 @@ function userView() {
 		`
 	}
 	else {//vise en annens profil
-		// console.log(curViewedUser);
 		html += /*html*/ `
 			<img class="user profileImage" src="${curViewedUser.profilePicture}"/>
 			<div class="user profileDescription">

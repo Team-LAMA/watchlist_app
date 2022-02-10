@@ -2,7 +2,6 @@
 
 
 function doSearch(){
-	console.log(getSearchResults(model.inputs.search.searchWord));
 }
 
 
@@ -17,7 +16,6 @@ function getSearchResults(searchWord = ""){
 	searchWord = searchWord.toLowerCase();
 
 	for(let i = 0; i < model.users.length; i++){
-		console.log("a", searchWord, "b", model.users[i].profileName.toLowerCase());
 		if(model.users[i].profileName.toLowerCase().search(searchWord) != -1
 			|| model.users[i].movieLists[0].name.toLowerCase().search(searchWord) != -1){
 			resultList.push(model.users[i]);
@@ -44,7 +42,6 @@ function getSearchResults(searchWord = ""){
 	let searchResults = document.getElementsByClassName("search result");
 	for (let i= 0; i < searchResults.length; i++){
 		if (i%2==0){
-			console.log(searchResults[i])
 			searchResults[i].addEventListener("click", element => {
 				if (element.target != element.currentTarget && element.target.tagName !== "H3") {
 					goToProfile(resultList[parseInt(i/2)].ID);
