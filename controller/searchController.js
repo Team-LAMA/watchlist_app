@@ -2,6 +2,7 @@
 
 
 function doSearch(){
+	getSearchResults(model.inputs.search.searchWord)
 }
 
 
