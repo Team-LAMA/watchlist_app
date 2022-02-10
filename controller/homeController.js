@@ -27,13 +27,7 @@ function notificationUpdate(curUser){
   console.log(notificationList.lenght == 0);
   if(notificationList.length == 0){
     console.log("k");
-    html += /*html*/ `
-            <div class="home notification" >
-              <h2 onclick="signInView()">YOURE NOT SIGNED IN, CLICK HERE TO SIGN IN OR SIGN UP</h2>
-              You no follow any1
-              you ar luser
-            </div>
-          `
+    html += /*html*/ ``;
   }
   
   console.log(notificationList)
