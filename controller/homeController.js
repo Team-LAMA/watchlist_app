@@ -13,9 +13,9 @@ function notificationUpdate(curUser){
         html += /*html*/ `
           <div class="home notification" onclick="openMovieList(${notificationList[i].ID})">
             <p class="notification list">${notificationList[i].name}</p>
-            <div class="notification name">
+            <div class="notificationname">
               <h1 class="notification name">User</h1>
-              <p class="notification name">${model.users[i].profileName}</p>
+              <p class="notification name">${model.users[i+1].profileName}</p>
             </div>
           </div>
         `
