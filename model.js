@@ -12,7 +12,7 @@ const model = {
 	// TODO: make sure all pages can be opened to a "default" view even if no user or list id is set
 
 	signedInInfo: {
-		userId: 0,			// The currently logged in UserID
+		userId: null,			// The currently logged in UserID
 	},
 
 	idCounters: {
