@@ -75,7 +75,7 @@ function makeUser() {
 		email: model.inputs.makeUser.email.toLowerCase(), // Sets the email from the input on signUpView
 		// The rest will be changed by the users input in the userView/Controller
 		movieLists:[],
-		profileName: "",
+		profileName: model.inputs.makeUser.username, //Sets the username as the default profileName
 		profilePicture: "",
 		age:"",
 		favGenre: "",
