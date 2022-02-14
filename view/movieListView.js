@@ -5,9 +5,8 @@ function movieListView() {
 	// TODO: replace with function to generate a sorted list
 	// Finding the correct list
 	let curMovieList = findMovieListByID(model.app.listID)
-	
-
 	let curUser = findUserByID(model.signedInInfo.userId);
+  let unratedOffset = 0;
 
 	let isEditable = false;
 	if (curUser) {
@@ -19,7 +18,7 @@ function movieListView() {
 	}
 
   if(isEditable){
-    let unratedOffset = sortMovieList(curMovieList, true);
+    unratedOffset = sortMovieList(curMovieList, true);
     console.log(unratedOffset);
     if(model.app.expandedIndex != null){
       model.app.expandedIndex += unratedOffset;
@@ -82,7 +81,7 @@ function movieListView() {
 		movieElements[i].addEventListener("click", element => {
 			if (model.app.page == "list") {
 				if (element.target.tagName !== "TEXTAREA" && element.target.tagName !== "INPUT" && element.target.tagName !== "BUTTON") {
-					expandElement(i - 1);
+					expandElement(i - 1, unratedOffset);
 				}
 			}
 		});

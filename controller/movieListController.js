@@ -62,12 +62,12 @@ function updateListName(element, listID) {
   updateView();
 }
 
-function expandElement(index) {
+function expandElement(index, unratedOffset) {
 	if (index == model.app.expandedIndex) {
 		model.app.expandedIndex = null;
 	}
 	else {
-		model.app.expandedIndex = index;
+		model.app.expandedIndex = index - unratedOffset;
 	}
 	model.app.scrollOffset = document.getElementsByClassName('content')[0].scrollTop;
 	updateView()
@@ -166,3 +166,16 @@ function newMovieElement() {
 	updateView();
 }
 
+function deleteMovie(movieListID, movieIndex){
+  let curMovieList = findMovieListByID(movieListID);
+  let curMovie = curMovieList.movies[movieIndex];
+  let deleteConfirmation = prompt(`Are you sure you want to delete this movie?\n\nTo delete type "${curMovie.title}"`);
+
+  if (deleteConfirmation == curMovie.title){
+    curMovieList.movies.splice(movieIndex, 1);
+    curMovieList.ratings.splice(movieIndex, 1);
+    curMovieList.personalComments.splice(movieIndex, 1);
+    model.app.expandedIndex = null;
+    updateView();
+  }
+}

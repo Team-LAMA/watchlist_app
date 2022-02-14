@@ -213,7 +213,9 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 
 	// Closing movieElement expanded
 	html += /*html*/ `
-			<div class="movieElement padder"></div>
+      <button class="movieElement deleteBtn" onclick="deleteMovie(${movieList.ID}, ${index})">
+        Delete Entry
+      </button>
 		</div>
 	`
 

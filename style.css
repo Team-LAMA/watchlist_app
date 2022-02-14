@@ -677,6 +677,8 @@ width: 12.3vh;
 	height: 5vh;
 }
 
-.movieElement.padder {
-	height: 2.5vw;
+.movieElement.deleteBtn{
+  width: 85vw;
+  margin: 2.5vw;
+  color: red;
 }

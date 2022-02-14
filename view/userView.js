@@ -71,6 +71,8 @@ function userView() {
         <div class="user profileStar">
           <img src="./img/18427.png"/>
         </div>
+        <!--SignOut-->
+				<button class="user signOutBtn" onclick="signOut()">Sign Out</button>
       `;
     }
     else {
