@@ -442,15 +442,25 @@ width: 12.3vh;
   justify-content: center;
 }
 .movieList.title.plusBtn{
+  position: fixed;
 	width: 7vh;
 	height: 7vh;
 	right: 6vw;
+  top: 9.5vh;
+}
+.movieList.title>input{
+  width: 40vw;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
 }
 
 .movieList.profileImage{
+  position: fixed;
 	width: 7vh;
 	height: 7vh;
-	/* left: 6vw; */
+	left: 6vw;
+  top: 9.5vh;
 }
 
 .movieList.content {
