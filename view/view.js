@@ -14,6 +14,9 @@ function updateView() {
 		userDescription: "",
 		followedUsers: [],
 	}
+
+  model.app.editBio = false;
+
 	for (let i = 0; i < model.users.length; i++) {
 		if (model.users[i].ID == model.signedInInfo.userId) {
 			curUser = model.users[i];
