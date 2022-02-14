@@ -12,7 +12,7 @@ const model = {
 	// TODO: make sure all pages can be opened to a "default" view even if no user or list id is set
 
 	signedInInfo: {
-		userId: 0,			// The currently logged in UserID
+		userId: null,			// The currently logged in UserID
 	},
 
 	idCounters: {
@@ -351,7 +351,7 @@ const model = {
 			ID: 0,
 			username: "Team3",
 			password: "321",
-			eMail: "Team3@mail.no",
+			eMail: "team3@mail.no",
 			movieLists: [],
 			profileName: "LAMA",
 			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
@@ -365,7 +365,7 @@ const model = {
 			ID: 1,
 			username: "Terje",
 			password: "Passord1",
-			eMail: "Terje@getacademy.no",
+			eMail: "terje@getacademy.no",
 			movieLists: [],
 			profileName: "Terje Kolderup",
 			profilePicture: "https://seek-team-prod.s3.fr-par.scw.cloud/users/5f5f11d414cde831943944.jpg",
@@ -393,7 +393,7 @@ const model = {
 			ID: 3,
 			username: "BRUKERNAVN",
 			password: "BRUKERPASSPRD",
-			eMail: "BRUKEREMAIL",
+			eMail: "brukeremail",
 			movieLists: [],
 			profileName: "ProfilNavn",
 			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
