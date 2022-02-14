@@ -1,9 +1,8 @@
 
 
 // Sort movieList depending on the movies' ratings
-function sortMovieList(movieList) {
+function sortMovieList(movieList, unratedOnTop) {
 	let sortArr = [];
-
 
 	if (movieList) {
 		for (let i = 0; i < movieList.movies.length; i++) {
@@ -12,10 +11,20 @@ function sortMovieList(movieList) {
 			if (movieList.personalComments.length > i) {
 				personalComment = movieList.personalComments[i];
 			}
-			let rating = 1000;
+      if(unratedOnTop){
+			  let rating = 1000;
+      }
+      else {
+        let rating = -1
+      }
 			if (movieList.ratings.length > i) {
 				if (movieList.ratings[i] === '') {
-					rating = 1000;
+          if (unratedOnTop) {
+					  rating = 1000;
+          }
+          else {
+            rating = -1;
+          }
 				}
 				else {
 					rating = movieList.ratings[i];
@@ -31,7 +40,7 @@ function sortMovieList(movieList) {
 	});
 
 	for (let i = 0; i < sortArr.length; i++) {
-		if (sortArr[i].rating > 10) {
+		if (sortArr[i].rating > 10 || sortArr[i].rating < 0) {
 			sortArr[i].rating = '';
 		}
 	}
@@ -45,7 +54,11 @@ function sortMovieList(movieList) {
 	return movieList;
 }
 
-
+function updateListName(element, listID) {
+  curMovieList = findMovieListByID(listID);
+  curMovieList.name = element.value;
+  updateView();
+}
 
 function expandElement(index) {
 	if (index == model.app.expandedIndex) {
