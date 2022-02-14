@@ -317,7 +317,7 @@ body{
 /*#############*/
 .user.profileInfo {
   position: fixed;
-  width: 90vw;
+  width: 75vw;
   top: 13.5vh;
   /*background-color: brown;*/
   display: flex;
@@ -335,6 +335,12 @@ top: 23vh;
 width: 12.3vh;
 /* box-sizing: border-box; */
 /* width: fit-content; */
+}
+
+.user.signOutBtn {
+  color: black;
+  background-color: red;
+  width: 15vw; /*css later*/
 }
 
 .user.profileDescription {

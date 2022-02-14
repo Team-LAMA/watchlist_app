@@ -48,6 +48,8 @@ function userView() {
 					<!--Description-->
 					<input onchange="editUserDescription(this)" type="text" value="${curViewedUser.userDescription}" placeholder="User description"/> 
 				</div>
+				<!--SignOut-->
+				<button class="user signOutBtn" onclick="signOut()">Sign Out</button>
 				<!--Star-->
 				<div class="user profileStar">
 						<img src="./img/18427.png"/>

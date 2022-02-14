@@ -73,3 +73,9 @@ function toggleFollow() {
 
 	updateView();
 }
+
+function signOut() {
+	model.signedInInfo.userId = null
+	model.app.page = model.app.lastPage;
+	updateView();
+}
