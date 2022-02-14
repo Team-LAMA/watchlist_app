@@ -12,11 +12,8 @@ function notificationUpdate(curUser){
   for(let i = 0; i < notificationList.length; i++){  
         html += /*html*/ `
           <div class="home notification" onclick="openMovieList(${notificationList[i].ID})">
-            <p class="notification list">${notificationList[i].name}</p>
-            <div class="notificationname">
-              <h1 class="notification name">User</h1>
-              <p class="notification name">${model.users[notificationList[i].ID].profileName}</p>
-            </div>
+            <h1 class="notification list">${notificationList[i].name}</h1>
+            <img class="home profilePic" src="${model.users[notificationList[i].ID].profilePicture}">
           </div>
         `
     }
