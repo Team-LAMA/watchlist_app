@@ -3,6 +3,7 @@
 // Sort movieList depending on the movies' ratings
 function sortMovieList(movieList, unratedOnTop = false) {
 	let sortArr = [];
+  let numUnrated = 0;
 
 	if (movieList) {
 		for (let i = 0; i < movieList.movies.length; i++) {
@@ -42,6 +43,7 @@ function sortMovieList(movieList, unratedOnTop = false) {
 	for (let i = 0; i < sortArr.length; i++) {
 		if (sortArr[i].rating > 10 || sortArr[i].rating < 0) {
 			sortArr[i].rating = '';
+      numUnrated++;
 		}
 	}
 
@@ -51,7 +53,7 @@ function sortMovieList(movieList, unratedOnTop = false) {
 		movieList.ratings[i] = sortArr[i].rating;
 	}
 
-	return movieList;
+  return numUnrated;
 }
 
 function updateListName(element, listID) {
