@@ -73,3 +73,13 @@ function toggleFollow() {
 
 	updateView();
 }
+
+function toggleEditProfile() {
+  if (model.app.editBio){
+    model.app.editBio = false;
+  }
+  else {
+    model.app.editBio = true;
+  }
+  userView();
+}

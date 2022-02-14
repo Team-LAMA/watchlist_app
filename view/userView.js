@@ -29,7 +29,7 @@ function userView() {
 	}
 
 
-	if (model.app.userID == model.signedInInfo.userId) { //edit profile?
+	if (model.app.userID == model.signedInInfo.userId && model.app.editBio) { //edit profile?
 		html += /*html*/ `
 				<img class="user profileImage" src="${curViewedUser.profilePicture}"/>
 				<button class="user profileImageBtn" onclick="editProfileImage()">Edit Picture</button>
@@ -62,26 +62,36 @@ function userView() {
 				<br/>
 				<!--Description--> ${curViewedUser.userDescription}
 			</div>
-			<!--Star-->
-			<div class="user followStar" onclick="toggleFollow()">
-		`
-		if (isFollowed) {
-			html += /*html*/ `
-				
-					<img src="./img/64px-Full_Star_Yellow.svg.png"/>
-				</div>
-			`;
-		}
-			
-		else {
-			html += /*html*/ `
-				
-					<img src="./img/64px-Empty_Star.svg.png"/>
-				</div>
-			`;
-		}
+			<!--Star-->`
+    
+    if(model.app.userID == model.signedInInfo.userId){
+      html += /*html*/ `
+        <div class="user profileStar">
+          <img src="./img/18427.png"/>
+        </div>
+      `;
+    }
+    else {
+      html += /*html*/ `
+        <div class="user followStar" onclick="toggleFollow()">
+      `
+      if (isFollowed) {
+        html += /*html*/ `
+          
+            <img src="./img/64px-Full_Star_Yellow.svg.png"/>
+          </div>
+        `;
+      }
+        
+      else {
+        html += /*html*/ `
+          
+            <img src="./img/64px-Empty_Star.svg.png"/>
+          </div>
+        `;
+      }
+    }
 		html += /*html*/`
-				
 			</div>
 		`;
 	}
@@ -102,8 +112,16 @@ function userView() {
   `
 
 
-
 	html += generateNavbarHTML();
 	html += generateLogoHTML();
 	document.getElementById('app').innerHTML = html;
+
+  document.getElementsByClassName("user profileDescription")[0].addEventListener("click", element => {
+    console.log("test");
+    if (model.app.page == "user"){
+      if (element.target.tagName !== "TEXTAREA" && element.target.tagName !== "INPUT" && element.target.tagName !== "BUTTON"){
+        toggleEditProfile();
+      }
+    }
+  });
 }
