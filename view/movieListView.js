@@ -47,8 +47,9 @@ function movieListView() {
 				<div class="movieList box">
 	`
 
-
-
+  if (isEditable){
+    sortMovieList(curMovieList, true);
+  }
 	for (let i = 0; i < curMovieList.movies.length; i++) {
 		html += generateMovieElement(curMovieList, i,
 			"",

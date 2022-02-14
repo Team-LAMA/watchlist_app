@@ -89,6 +89,7 @@ function userView() {
 	html += /*html*/ `</div>`;
 
 	// Lista og listenavn
+  sortMovieList(curViewedUser.movieLists[0])
   html += /*html*/ `
     <div class="user topMoviesContainer">
       <div class="user topMoviesTitle">

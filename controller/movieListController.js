@@ -1,7 +1,7 @@
 
 
 // Sort movieList depending on the movies' ratings
-function sortMovieList(movieList, unratedOnTop) {
+function sortMovieList(movieList, unratedOnTop = false) {
 	let sortArr = [];
 
 	if (movieList) {
@@ -12,10 +12,10 @@ function sortMovieList(movieList, unratedOnTop) {
 				personalComment = movieList.personalComments[i];
 			}
       if(unratedOnTop){
-			  let rating = 1000;
+			  rating = 1000;
       }
       else {
-        let rating = -1
+        rating = -1
       }
 			if (movieList.ratings.length > i) {
 				if (movieList.ratings[i] === '') {
