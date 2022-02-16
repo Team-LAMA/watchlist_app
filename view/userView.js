@@ -40,13 +40,13 @@ function userView() {
 					<input onchange="editProfileName(this)" type="text" value="${curViewedUser.profileName}" placeholder="Profile name"/>
 					<br/>
 					<!--Age--> 
-					<input onchange="editAge(this)" type="numbers" value="${curViewedUser.age} years old" placeholder="Age" min="1" max="99"/>
+					<input onchange="editAge(this)" type="numbers" value="${curViewedUser.age}" placeholder="Age" min="1" max="99"/>
 					<br/>
 					<!--Genre-->
 					<input onchange="editFavGenre(this)" type="text" value="${curViewedUser.favGenre}" placeholder="Your favorite genres" />
 					<br/>
 					<!--Description-->
-					<input onchange="editUserDescription(this)" type="text" value="${curViewedUser.userDescription}" placeholder="User description"/> 
+					<input onchange="editUserDescription(this)" type="text" value="${curViewedUser.userDescription}" placeholder="Bio"/> 
 				</div>
 				<!--SignOut-->
 				<button class="user signOutBtn" onclick="signOut()">Sign Out</button>
@@ -62,7 +62,10 @@ function userView() {
 			<div class="user profileDescription">
 				<!--Name--> ${curViewedUser.profileName}
 				<br/>
-				<!--Description--> ${curViewedUser.userDescription}
+				<!--Description--> <!-- Endre så den ikke synes hvis den er tom-->
+				${(curViewedUser.age)? curViewedUser.age + "<br/>" : ''}
+				${(curViewedUser.favGenre) ? curViewedUser.favGenre + "<br/>" : ''} 
+				${(curViewedUser.userDescription) ? curViewedUser.userDescription + "<br/>" : ''}
 			</div>
 			<!--Star-->`
     

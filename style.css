@@ -340,7 +340,7 @@ width: 12.3vh;
 .user.signOutBtn {
   color: black;
   background-color: red;
-  width: 15vw; /*css later*/
+  width: 15vw; /*css*/
 }
 
 .user.profileDescription {
