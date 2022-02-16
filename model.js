@@ -255,7 +255,7 @@ const model = {
 			],
 			personalComments: ["Veldig tøff", "Litt tøff", "Ikke noe tøff", "eller kanskje litt"],
 			ratings: [9, 6.3, 3, 0, 0, 0],
-			lastChanged: 96435489,
+			lastChanged: Date.now(),
 		},
 		{
 			ID: 2,
@@ -324,7 +324,7 @@ const model = {
 			],
 			personalComments: ["Hmm", "Hmmmmmmm", "Hmmmmmmmmmmmmmmmmmm"],
 			ratings: [1, 1, 1],
-			lastChanged: 10,
+			lastChanged: Date.now() - 32000000000,
 		},
 		{
 			ID: 3,
@@ -343,7 +343,7 @@ const model = {
 			],
 			personalComments: [],
 			ratings: [],
-			lastChanged: Date.now(),
+			lastChanged: Date.now() - 32000000000,
 		},
 	],
 

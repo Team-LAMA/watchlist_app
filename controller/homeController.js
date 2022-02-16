@@ -14,8 +14,10 @@ function notificationUpdate(curUser){
         html += /*html*/ `
           <div class="home notification" onclick="openMovieList(${notificationList[i].ID})">
             <h1 class="notification list">${notificationList[i].name}</h1>
-            <img class="home profilePic" src="${model.users[notificationList[i].ID].profilePicture}">
-          </div>
+            <img class="home profilePic" src="${model.users[notificationList[i].ID].profilePicture}">`
+            console.log("a", notificationList[i].lastChanged);
+            html += notificationTimer(notificationList[i].lastChanged);
+           html += `</div>
         `
     }
   }
@@ -27,28 +29,49 @@ function notificationUpdate(curUser){
   // model.users[curUser].notifications
 }
 
-function notificationTimer(){
+function notificationTimer(list){
+  let html = "";
   let newDate = new Date();
-  newDate.setTime(model.movieLists[0].lastChanged)
-
-    console.log(newDate.getTime());
-  if(newDate.getFullYear() > 0){
-    console.log(newDate.getTime() - newDate.getFullYear());
-  }
-  else if(newDate.getMonth() > 0){
-    console.log(newDate.getMonth());
-  }
-  else if(newDate.getDay() > 0){
-    console.log(newDate.getDay());
-  }
-  else if(newDate.getHours() > 0){
-    console.log(newDate.getHours());
-  }
-  else if(newDate.getMinutes() > 0){
-    console.log(newDate.getMinutes());
-  }
-  else if(newDate.getSeconds() > 0){
-    console.log(newDate.getSeconds());
-  }
   
+  console.log("list", list);
+
+  newDate.setTime(list)
+
+    console.log("getTime", newDate.getTime());
+
+  if(newDate.getFullYear() < new Date().getFullYear()){
+    html = new Date().getFullYear() - newDate.getFullYear();
+    html += " Years ago";
+  }
+  else if(newDate.getMonth() < new Date().getMonth()){
+    html = new Date().getMonth() - newDate.getMonth();
+    html += " Months ago";
+  }
+  else if(newDate.getDate() < new Date().getDate()){
+    // Using getDate instead of getDay, because getDay only returns the weekday
+    //   (a number between 0 and 6) so the if has a pass-through 4 times a month,
+    //   while getDate return the day of the month (number between 1 and 31).
+    // minus 1 because getDate is the only one to start counting at 1
+    html = new Date().getDate() - newDate.getDate() - 1;
+    if(html == 1) {html += " Day ago";}
+    else {html += " Days ago";}
+  }
+  else if(newDate.getHours() < new Date().getHours()){
+    html = new Date().getHours() - newDate.getHours();
+    html += " Hours ago";
+  }
+  else if(newDate.getMinutes() < new Date().getMinutes()){
+    html = new Date().getMilliseconds() - newDate.getMinutes();
+    html += " Minutes ago";
+  }
+  else{
+    html = new Date().getSeconds() - newDate.getSeconds();
+    html += " Seconds ago";
+  }
+  return html;
+}
+
+function testNotificationTimer() {
+
+  if(n){}
 }
