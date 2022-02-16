@@ -104,6 +104,7 @@ body{
   flex-direction: column;
   align-items: center;
   overflow-y: auto; 
+  overflow-x: hidden;
 }
 
 .home.notification {
@@ -114,6 +115,7 @@ body{
   min-width: 90vw;
   min-height: 5vh;
   align-items: center;
+  max-width: 90vw;;
 }
 
 .notification.list {
@@ -211,6 +213,9 @@ body{
   height: 2vh;
   font-size: 2vh;
   margin-bottom: 0.5vh;
+  background-color: #eceff1;
+  border: black 1px solid;
+  border-radius: 0.5vh;
 }
 
 .signInBtn,
@@ -234,7 +239,7 @@ body{
   background-color: #c5cae9;
 }
 .failMessage {
-  color: red;
+  color: #f44336;
 }
 /*End SignIn & SignUp*/
 
@@ -269,7 +274,7 @@ body{
   height: 3.5vh;
   margin-left: 1vh;
   border-radius: .75vh;
-  background-color: #e1bee7;
+  background-color: #f3e5f5;
 }
 
 .search.resultContainer {
@@ -434,6 +439,12 @@ width: 12.3vh;
 
 /*User ending*/
 
+/*#############*/
+/*#           #*/
+/*# MOVIELIST #*/
+/*#           #*/
+/*#############*/
+
 .movieList.container {
   position: fixed;
   width: 90vw;
@@ -446,7 +457,7 @@ width: 12.3vh;
   position: fixed;
   width: 90vw;
   height: 8vh;
-  background-color: lightgrey;
+  background-color: #9fa8da;
   font-size: 2vh;
 
   display: flex;
@@ -465,6 +476,8 @@ width: 12.3vh;
   font-size: 1.5em;
   font-weight: bold;
   text-align: center;
+  background-color: #eceff1;
+  border: grey 1px solid;
 }
 
 .movieList.profileImage{
@@ -503,8 +516,6 @@ width: 12.3vh;
   width: 90vw;
   height: 10vh;
 	margin-bottom: 10vh;
-
-	background-color: grey;
 }
 
 .movieElement.container{
@@ -515,10 +526,11 @@ width: 12.3vh;
 	margin-bottom: 1vh;
 	height: 10vh;
 
-	background-color: lightgrey;
+	background-color: #c5cae9;
 
 	outline: grey 1px solid;
 }
+
 .movieElement.container.expanded{
 	/*box-sizing: border-box;*/
 	height: fit-content;
@@ -530,6 +542,14 @@ width: 12.3vh;
 	height: 10vh;
 
 	display: flex;
+}
+
+.movieElement > input,
+.movieElement > textarea,
+.movieElement.detailBox>div>div>textarea,
+.movieElement.score>div>div>input {
+  background-color: #eceff1;
+  border: grey 1px solid;
 }
 
 .movieElement.image{
@@ -552,11 +572,11 @@ width: 12.3vh;
 	max-width: 9.25vh;
 	min-width: 9.25vh;
 	font-size: 1vh;
+  background-color: #f3e5f5;
 }
 
 .movieElement.minimal.midSection{
 	flex-grow: 1;
-	/*background-color: red;*/
 
 	display: flex;
 	flex-direction: column;
@@ -617,7 +637,6 @@ width: 12.3vh;
 	right: 0px;
 	min-width: calc(0.75vw + 3vh + 5vh + 0.5vh); /* Edge padding + width of outOf + width of score*/
 	max-width: 1vw;
-	/*background-color: seagreen;*/
 	font-size: 3vh;
 	font-weight: bold;
 
@@ -630,7 +649,6 @@ width: 12.3vh;
 	min-width: 3vh;
 	margin-top: 1vh;
 	margin-right: 1vw;
-	/*background-color: aqua;*/
 	font-size: 2vh;
 	text-align: right;
 	
@@ -692,5 +710,6 @@ width: 12.3vh;
 .movieElement.deleteBtn{
   width: 85vw;
   margin: 2.5vw;
-  color: red;
+  color: #f44336;
+  background-color: #f3e5f5;
 }
