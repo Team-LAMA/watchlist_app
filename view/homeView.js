@@ -42,7 +42,8 @@ function homeView() {
 				<div
 								onclick="openMovieList(${followedUser.movieLists[0].ID})"
 								class="home followed">
-					${followedUser.profileName}
+					<h1>${followedUser.profileName}</h1>
+					<img class="home profilePic" src="${followedUser.profilePicture}">
 				</div>
 		`};
 		html += /*html*/ `</div>`

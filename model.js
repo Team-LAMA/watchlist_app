@@ -1,6 +1,6 @@
 const model = {
 	app: {
-		page: "list",
+		page: "home",
 		lastPage: "", 	// The last page type
 		userID: 2,			// User ID being viewed
 		listID: 1,			// List ID being viewed
@@ -226,7 +226,7 @@ const model = {
 			],
 			personalComments: ["SUPER BRA!!!", "Dårlig", "Liker ikke slanger", "SUPER BRA!!!", "Dårlig", "Liker ikke slanger", "SUPER BRA!!!", "Dårlig", "Liker ikke slanger"],
 			ratings: [10, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8],
-			lastChanged: Date.now() - 86435489,
+			lastChanged: Date.now(),
 		},
 		{
 			ID: 1,
