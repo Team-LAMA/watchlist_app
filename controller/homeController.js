@@ -1,7 +1,8 @@
 function notificationUpdate(curUser){
+  notificationTimer()
   let html = "";
   let notificationList = [];
-  
+
   if(curUser){
     for (let i = 0; i < curUser.followedUsers.length; i++) {
       notificationList.push(curUser.followedUsers[i].movieLists[0]);
@@ -24,4 +25,30 @@ function notificationUpdate(curUser){
   console.log(notificationList);
 	return html;
   // model.users[curUser].notifications
+}
+
+function notificationTimer(){
+  let newDate = new Date();
+  newDate.setTime(model.movieLists[0].lastChanged)
+
+    console.log(newDate.getTime());
+  if(newDate.getFullYear() > 0){
+    console.log(newDate.getTime() - newDate.getFullYear());
+  }
+  else if(newDate.getMonth() > 0){
+    console.log(newDate.getMonth());
+  }
+  else if(newDate.getDay() > 0){
+    console.log(newDate.getDay());
+  }
+  else if(newDate.getHours() > 0){
+    console.log(newDate.getHours());
+  }
+  else if(newDate.getMinutes() > 0){
+    console.log(newDate.getMinutes());
+  }
+  else if(newDate.getSeconds() > 0){
+    console.log(newDate.getSeconds());
+  }
+  
 }
