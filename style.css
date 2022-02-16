@@ -379,6 +379,8 @@ body{
   box-sizing: border-box;
   display: flex;
   align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 /*For div around logoutBtn*/
