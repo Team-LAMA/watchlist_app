@@ -59,7 +59,7 @@ function userView() {
       <span class="user nameSpan">
         <span><input class="user profileInfo name" value="${curViewedUser.profileName}" onchange="editProfileName(this)"></span>
         <div>
-          <button class="user logoutBtn" onclick="signOut()">Log out</button>
+          <button class="user signoutBtn" onclick="signOut()">Sign out</button>
         </div>
       </span>
     `
@@ -72,7 +72,7 @@ function userView() {
         <span>
           <span class="user profileInfo name">${curViewedUser.profileName}</span>
         </span>
-        ${(curSignedInUser == curViewedUser) ? '<div><button class="user logoutBtn" >Log out</button></div>' : ''}
+        ${(curSignedInUser == curViewedUser) ? '<div><button class="user signoutBtn" >Log out</button></div>' : ''}
       </span>
     `
     html += /*html*/ `<span>${curViewedUser.age ? curViewedUser.age : ""}</span>`

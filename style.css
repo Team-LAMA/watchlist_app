@@ -387,8 +387,8 @@ body{
   height: 3vh;
 }
 
-.user.logoutBtn{
-  width:10vh;
+.user.signoutBtn{
+  width: 20vw;
   height: 3vh;
 }
 
