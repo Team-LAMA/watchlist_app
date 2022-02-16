@@ -198,13 +198,14 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .signIn.container>input,
 .signUp.container>input {
-  width: calc(50.625vh/3);
-  height: calc(50.625vh/30);
-  font-size: calc(50.625vh/30);
+  width: 16vh;
+  height: 2vh;
+  font-size: 2vh;
   margin-bottom: 0.5vh;
 }
 

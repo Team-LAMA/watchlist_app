@@ -13,12 +13,11 @@ function signInView() {
 				</div>
 	`;
 	if(model.signedInInfo.userId === -1){	
-		html +=	`<h4 class="failMessage">Wrong username or password</h4>`;
+		html +=	/*html*/ `<h4 class="failMessage">Wrong username or password</h4>`;
 		model.signedInInfo.userId = null;
 	}
 
-	html +=  `</div>
-	`;
+	html += /*html*/ `</div>`;
 
 	html += generateNavbarHTML();
 	document.getElementById('app').innerHTML = html;
