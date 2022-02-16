@@ -212,13 +212,17 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 	// Closing personal comment
 
 	// Closing movieElement expanded
-	html += /*html*/ `
-			<div class="movieElement padder"></div>
-		</div>
-	`
+  if(options.editable){
+    html += /*html*/ `
+        <button class="movieElement deleteBtn" onclick="deleteMovie(${movieList.ID}, ${index})">
+          Delete Entry
+        </button>
+    `
+  }
 
 	// Closing movieElement container scroll? expanded? editable?
 	html += /*html*/ `
+      </div>
 		</div>
 	`
 

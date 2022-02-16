@@ -1,6 +1,7 @@
 body{
 	font-family: Arial, Helvetica, sans-serif, Times, serif;
 	font-size: 1.7vh;
+  background-color: #eceff1;
 }
 
 #app {
@@ -19,11 +20,12 @@ body{
   height: 7vh;
   top: 0px;
   left: 0px;
-	background-color: lightgrey;
+	background-color: #b2ebf2;
   font-size: 2vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: black 1px solid;
 }
 
 #backBtn{
@@ -41,7 +43,8 @@ body{
   width: 100vw;
   height: 10vh;
 	bottom: 0vh;
-  background-color: rgb(46, 159, 252);
+  background-color: #b2ebf2;
+  border-top: black 1px solid;
   font-size: 3vh;
   display: flex;
   justify-content: center;
@@ -101,43 +104,33 @@ body{
   flex-direction: column;
   align-items: center;
   overflow-y: auto; 
+  overflow-x: hidden;
 }
 
 .home.notification {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(46, 159, 252);
+  background-color: #c5cae9;
   gap: 8vh;
   min-width: 90vw;
-  min-height: 9vh;
+  min-height: 5vh;
+  align-items: center;
+  max-width: 90vw;;
 }
 
 .notification.list {
-  margin: 0;
-  margin-left: 20px;
+  font-size: small;
+  margin: 4vw;
   display: flex;
   align-items: center;
-  font-size: 3vh;
 }
 
 .notification.name {
-  font-size: 10px;
-  margin-right: 10px;
+  margin: 2vw;
   max-width: fit-content;
-  min-width: 10vw;
-}
-
-.notificationName{
   display: flex;
-  flex-direction: column;
-}
-
-
-.notification.name > h1{
-  display: flex;
-  justify-content: right;
-  font-size: 2vh;
-  font-weight: bolder;
+  align-items: center;
+  font-size: 4vw;
 }
 
 .home.followedList {
@@ -150,7 +143,7 @@ body{
   align-items: center;
   gap: 1vh;
   min-width: 80vw;
-  overflow-y: auto; 
+  overflow-y: auto;
 }
 
 .home.followed {
@@ -159,8 +152,21 @@ body{
   align-items: center;
   min-height: 7vh;
   min-width: 80vw;
-  background-color: rgb(46, 159, 252);
+  background-color: #c5cae9;
   font-size: 3vh;
+  justify-content: space-between;
+}
+
+.home.followed > h1 {
+  font-size: small;
+  margin: 4vw;
+}
+
+.home.profilePic{
+  min-width: 6vh;
+  height: 6vh;
+  border: 1px solid black;
+  margin: 2vh;
 }
 
 .signinPromt{
@@ -171,7 +177,7 @@ body{
   font-size: 3vw;
 }
 .signinPromt > button{
-  background-color: rgb(46, 159, 252);
+  background-color: #c5cae9;
   color: #000000;
   font-size: 3vh;
   border: 0.5vw black solid;
@@ -198,21 +204,25 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .signIn.container>input,
 .signUp.container>input {
-  width: calc(50.625vh/3);
-  height: calc(50.625vh/30);
-  font-size: calc(50.625vh/30);
+  width: 16vh;
+  height: 2vh;
+  font-size: 2vh;
   margin-bottom: 0.5vh;
+  background-color: #eceff1;
+  border: black 1px solid;
+  border-radius: 0.5vh;
 }
 
 .signInBtn,
 .signUpBtn {
   border: none;
   border-radius: 0.5vh;
-  color: white;
+  color: black;
   font-family: inherit;
   font-size: 1.5vh;
   padding: 0.5vh 1vh;
@@ -223,13 +233,13 @@ body{
   height: 3vh;
 }
 .signUpBtn {
-  background-color: rgb(97, 76, 76);
+  background-color: #9fa8da;
 }
 .signInBtn {
-  background-color: rgb(177, 77, 77);
+  background-color: #c5cae9;
 }
 .failMessage {
-  color: red;
+  color: #f44336;
 }
 /*End SignIn & SignUp*/
 
@@ -244,7 +254,7 @@ body{
   height: 5vh;
   top: 10vh;
   border-radius: 1vh;
-  background-color: #bdbdbd;
+  background-color: #9fa8da;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -256,6 +266,7 @@ body{
   height: 3vh;
   border-radius: .75vh;
   font-size: 3vh;
+  background-color: #eceff1;
 }
 
 .search.searchBtn {
@@ -263,6 +274,7 @@ body{
   height: 3.5vh;
   margin-left: 1vh;
   border-radius: .75vh;
+  background-color: #f3e5f5;
 }
 
 .search.resultContainer {
@@ -280,7 +292,7 @@ body{
   width: 90vw;
   height: 10vh;
   margin-bottom: 1vh;
-  background-color: lightgrey;
+  background-color: #c5cae9;
   border-radius: 0.5vh;
   outline: 1px black solid;
   display: flex;
@@ -317,7 +329,7 @@ body{
 /*#############*/
 .user.profileInfo {
   position: fixed;
-  width: 90vw;
+  width: 75vw;
   top: 13.5vh;
   /*background-color: brown;*/
   display: flex;
@@ -335,6 +347,12 @@ top: 23vh;
 width: 12.3vh;
 /* box-sizing: border-box; */
 /* width: fit-content; */
+}
+
+.user.signOutBtn {
+  color: black;
+  background-color: red;
+  width: 15vw; /*css*/
 }
 
 .user.profileDescription {
@@ -421,6 +439,12 @@ width: 12.3vh;
 
 /*User ending*/
 
+/*#############*/
+/*#           #*/
+/*# MOVIELIST #*/
+/*#           #*/
+/*#############*/
+
 .movieList.container {
   position: fixed;
   width: 90vw;
@@ -433,24 +457,41 @@ width: 12.3vh;
   position: fixed;
   width: 90vw;
   height: 8vh;
-  background-color: lightgrey;
+  background-color: #9fa8da;
   font-size: 2vh;
 
   display: flex;
   /* text-align: center; */
   /* align-items: center; */
-  justify-content: center;
+  justify-content: space-between;
 }
-.movieList.title.plusBtn{
+.movieList.plusBtn{
 	width: 7vh;
 	height: 7vh;
-	right: 6vw;
+  margin-top: 0.5vh;
+  margin-left: 0.5vh;
+}
+.movieList.title>input{
+  width: 40vw;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  background-color: #eceff1;
+  border: grey 1px solid;
 }
 
 .movieList.profileImage{
-	width: 7vh;
+  width: 7vh;
 	height: 7vh;
-	/* left: 6vw; */
+  margin-top: 0.5vh;
+  margin-left: 0.5vh;
+}
+
+.movieList.followStar{
+  width: 7vh;
+	height: 7vh;
+  margin-top: 0.5vh;
+  margin-right: 0.5vh;
 }
 
 .movieList.content {
@@ -475,8 +516,6 @@ width: 12.3vh;
   width: 90vw;
   height: 10vh;
 	margin-bottom: 10vh;
-
-	background-color: grey;
 }
 
 .movieElement.container{
@@ -487,10 +526,11 @@ width: 12.3vh;
 	margin-bottom: 1vh;
 	height: 10vh;
 
-	background-color: lightgrey;
+	background-color: #c5cae9;
 
 	outline: grey 1px solid;
 }
+
 .movieElement.container.expanded{
 	/*box-sizing: border-box;*/
 	height: fit-content;
@@ -502,6 +542,14 @@ width: 12.3vh;
 	height: 10vh;
 
 	display: flex;
+}
+
+.movieElement > input,
+.movieElement > textarea,
+.movieElement.detailBox>div>div>textarea,
+.movieElement.score>div>div>input {
+  background-color: #eceff1;
+  border: grey 1px solid;
 }
 
 .movieElement.image{
@@ -524,11 +572,11 @@ width: 12.3vh;
 	max-width: 9.25vh;
 	min-width: 9.25vh;
 	font-size: 1vh;
+  background-color: #f3e5f5;
 }
 
 .movieElement.minimal.midSection{
 	flex-grow: 1;
-	/*background-color: red;*/
 
 	display: flex;
 	flex-direction: column;
@@ -589,7 +637,6 @@ width: 12.3vh;
 	right: 0px;
 	min-width: calc(0.75vw + 3vh + 5vh + 0.5vh); /* Edge padding + width of outOf + width of score*/
 	max-width: 1vw;
-	/*background-color: seagreen;*/
 	font-size: 3vh;
 	font-weight: bold;
 
@@ -602,7 +649,6 @@ width: 12.3vh;
 	min-width: 3vh;
 	margin-top: 1vh;
 	margin-right: 1vw;
-	/*background-color: aqua;*/
 	font-size: 2vh;
 	text-align: right;
 	
@@ -661,6 +707,9 @@ width: 12.3vh;
 	height: 5vh;
 }
 
-.movieElement.padder {
-	height: 2.5vw;
+.movieElement.deleteBtn{
+  width: 85vw;
+  margin: 2.5vw;
+  color: #f44336;
+  background-color: #f3e5f5;
 }

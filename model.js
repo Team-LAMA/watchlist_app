@@ -6,7 +6,8 @@ const model = {
 		listID: null,			// List ID being viewed
 
 		expandedIndex: null, // the index of the currently expanded movieList element if there is any
-		scrollOffset: null
+		scrollOffset: null,
+    editBio: false
 	},
 
 	// TODO: make sure all pages can be opened to a "default" view even if no user or list id is set
@@ -225,7 +226,7 @@ const model = {
 			],
 			personalComments: ["SUPER BRA!!!", "Dårlig", "Liker ikke slanger", "SUPER BRA!!!", "Dårlig", "Liker ikke slanger", "SUPER BRA!!!", "Dårlig", "Liker ikke slanger"],
 			ratings: [10, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8],
-			lastChanged: Date.now() - 86435489,
+			lastChanged: Date.now(),
 		},
 		{
 			ID: 1,
@@ -254,7 +255,7 @@ const model = {
 			],
 			personalComments: ["Veldig tøff", "Litt tøff", "Ikke noe tøff", "eller kanskje litt"],
 			ratings: [9, 6.3, 3, 0, 0, 0],
-			lastChanged: 96435489,
+			lastChanged: Date.now(),
 		},
 		{
 			ID: 2,
@@ -323,7 +324,7 @@ const model = {
 			],
 			personalComments: ["Hmm", "Hmmmmmmm", "Hmmmmmmmmmmmmmmmmmm"],
 			ratings: [1, 1, 1],
-			lastChanged: 10,
+			lastChanged: Date.now() - 32000000000,
 		},
 		{
 			ID: 3,
@@ -342,7 +343,7 @@ const model = {
 			],
 			personalComments: [],
 			ratings: [],
-			lastChanged: Date.now(),
+			lastChanged: Date.now() - 32000000000,
 		},
 	],
 
@@ -351,7 +352,7 @@ const model = {
 			ID: 0,
 			username: "Team3",
 			password: "321",
-			eMail: "Team3@mail.no",
+			eMail: "team3@mail.no",
 			movieLists: [],
 			profileName: "LAMA",
 			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
@@ -365,7 +366,7 @@ const model = {
 			ID: 1,
 			username: "Terje",
 			password: "Passord1",
-			eMail: "Terje@getacademy.no",
+			eMail: "terje@getacademy.no",
 			movieLists: [],
 			profileName: "Terje Kolderup",
 			profilePicture: "https://seek-team-prod.s3.fr-par.scw.cloud/users/5f5f11d414cde831943944.jpg",
@@ -393,7 +394,7 @@ const model = {
 			ID: 3,
 			username: "BRUKERNAVN",
 			password: "BRUKERPASSPRD",
-			eMail: "BRUKEREMAIL",
+			eMail: "brukeremail",
 			movieLists: [],
 			profileName: "ProfilNavn",
 			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",

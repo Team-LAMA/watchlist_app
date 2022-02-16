@@ -1,9 +1,9 @@
 
 
 // Sort movieList depending on the movies' ratings
-function sortMovieList(movieList) {
+function sortMovieList(movieList, unratedOnTop = false) {
 	let sortArr = [];
-
+  let numUnrated = 0;
 
 	if (movieList) {
 		for (let i = 0; i < movieList.movies.length; i++) {
@@ -12,10 +12,20 @@ function sortMovieList(movieList) {
 			if (movieList.personalComments.length > i) {
 				personalComment = movieList.personalComments[i];
 			}
-			let rating = 1000;
+      if(unratedOnTop){
+			  rating = 1000;
+      }
+      else {
+        rating = -1
+      }
 			if (movieList.ratings.length > i) {
 				if (movieList.ratings[i] === '') {
-					rating = 1000;
+          if (unratedOnTop) {
+					  rating = 1000;
+          }
+          else {
+            rating = -1;
+          }
 				}
 				else {
 					rating = movieList.ratings[i];
@@ -31,8 +41,9 @@ function sortMovieList(movieList) {
 	});
 
 	for (let i = 0; i < sortArr.length; i++) {
-		if (sortArr[i].rating > 10) {
+		if (sortArr[i].rating > 10 || sortArr[i].rating < 0) {
 			sortArr[i].rating = '';
+      numUnrated++;
 		}
 	}
 
@@ -42,17 +53,21 @@ function sortMovieList(movieList) {
 		movieList.ratings[i] = sortArr[i].rating;
 	}
 
-	return movieList;
+  return numUnrated;
 }
 
+function updateListName(element, listID) {
+  curMovieList = findMovieListByID(listID);
+  curMovieList.name = element.value;
+  updateView();
+}
 
-
-function expandElement(index) {
+function expandElement(index, unratedOffset) {
 	if (index == model.app.expandedIndex) {
 		model.app.expandedIndex = null;
 	}
 	else {
-		model.app.expandedIndex = index;
+		model.app.expandedIndex = index - unratedOffset;
 	}
 	model.app.scrollOffset = document.getElementsByClassName('content')[0].scrollTop;
 	updateView()
@@ -151,3 +166,16 @@ function newMovieElement() {
 	updateView();
 }
 
+function deleteMovie(movieListID, movieIndex){
+  let curMovieList = findMovieListByID(movieListID);
+  let curMovie = curMovieList.movies[movieIndex];
+  let deleteConfirmation = prompt(`Are you sure you want to delete this movie?\n\nTo delete type "${curMovie.title}"`);
+
+  if (deleteConfirmation == curMovie.title){
+    curMovieList.movies.splice(movieIndex, 1);
+    curMovieList.ratings.splice(movieIndex, 1);
+    curMovieList.personalComments.splice(movieIndex, 1);
+    model.app.expandedIndex = null;
+    updateView();
+  }
+}
