@@ -24,6 +24,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px black solid;
 }
 
 #backBtn{
@@ -45,6 +46,7 @@ body{
   font-size: 3vh;
   display: flex;
   justify-content: center;
+  border-top: 1px black solid;
 }
 
 /*##############*/
@@ -318,10 +320,85 @@ body{
 /*#############*/
 .user.profileInfo {
   position: fixed;
-  width: 75vw;
+  width: 90vw;
+  height: 20vh;
   top: 13.5vh;
-  /*background-color: brown;*/
+  background-color: brown;
   display: flex;
+}
+
+.user.profileInfo.left{
+  width: 12vh;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user.profileImage {
+  height: 12vh;
+  width: 12vh;
+  border: 1px solid black;
+}
+
+.user.profileStar{
+  width: 8vh;
+  height: 8vh;
+}
+.user.profileInfo.right{
+  position: fixed;
+  left: calc(5vw + 12vh + 3vw);
+  width: calc(90vw - 12vh - 3vw);
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+}
+
+.user.nameSpan{
+  width: calc(90vw - 12vh - 3vw);
+  display: flex;
+  justify-content: space-between;
+}
+
+.user.profileInfo.name{
+  height: 3vh;
+  width: calc(70vw - 12vh - 3vw);
+  font-weight: bold;
+  font-size: 3vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+/*For div around logoutBtn*/
+.user.profileInfo.name>div{
+  width:10vw;
+  height: 3vh;
+}
+
+.user.logoutBtn{
+  width:10vh;
+  height: 3vh;
+}
+
+
+/*.user.profileInfo {
+  position: fixed;
+  width: 90vw;
+  top: 13.5vh;
+  background-color: brown;
+  display: flex;
+}
+
+.user.profileStar {
+  position: fixed;
+  margin-top: 12vh;
+  margin-left: 3vw;
+}
+
+.user.profileInfo.left{
+  width: 12vh;
+  background-color: blue;
 }
 
 .user.profileImage {
@@ -336,33 +413,33 @@ top: 23vh;
 width: 12.3vh;
 /* box-sizing: border-box; */
 /* width: fit-content; */
-}
+/*}*/
 
-.user.signOutBtn {
+/*.user.signOutBtn {
   color: black;
   background-color: red;
   width: 15vw; /*css*/
-}
+/*}*/
 
-.user.profileDescription {
+/*.user.profileDescription {
   border: solid black 1px;
   height: 20vh;
   width: 100%;
   background-color: gray;
-}
+}*/
 
-.user.profileDescription.content{
+/*.user.profileDescription.content{
 	margin-left: 0vw;
 	width: 80%;
 	background-color: transparent;
-}
+}*/
 
-.user.movieImage {
+/*.user.movieImage {
   width: 10vh;
   height: 10vh;
   border: 1px solid black;
   float: left;
-}
+}*/
 
 .user.topMoviesContainer {
   position: fixed;
@@ -395,15 +472,8 @@ width: 12.3vh;
   color:lightgray; 
 }
 
-.user.profileStar {
-  position: fixed;
-  margin-top: 12vh;
-  margin-left: 3vw;
-}
-.user.profileStar img {
-  width: 64px;
-  height: 64px;
-}
+
+
 .user.followStar {
 	position: fixed;
   margin-top: 12vh;
