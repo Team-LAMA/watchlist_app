@@ -446,14 +446,13 @@ width: 12.3vh;
   display: flex;
   /* text-align: center; */
   /* align-items: center; */
-  justify-content: center;
+  justify-content: space-between;
 }
-.movieList.title.plusBtn{
-  position: fixed;
+.movieList.plusBtn{
 	width: 7vh;
 	height: 7vh;
-	right: 6vw;
-  top: 9.5vh;
+  margin-top: 0.5vh;
+  margin-left: 0.5vh;
 }
 .movieList.title>input{
   width: 40vw;
@@ -463,11 +462,17 @@ width: 12.3vh;
 }
 
 .movieList.profileImage{
-  position: fixed;
-	width: 7vh;
+  width: 7vh;
 	height: 7vh;
-	left: 6vw;
-  top: 9.5vh;
+  margin-top: 0.5vh;
+  margin-left: 0.5vh;
+}
+
+.movieList.followStar{
+  width: 7vh;
+	height: 7vh;
+  margin-top: 0.5vh;
+  margin-right: 0.5vh;
 }
 
 .movieList.content {

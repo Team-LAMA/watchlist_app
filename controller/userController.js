@@ -33,26 +33,15 @@ function editProfileImage() {
 function toggleFollow() {
   //userView();
 
-  let curViewedUser = null;
-  for (let i = 0; i < model.users.length; i++) {
-    if (model.users[i].ID == model.app.userID) {
-      curViewedUser = model.users[i];
-    }
-  }
-
-  let curSignedInUser = null;
-  for (let i = 0; i < model.users.length; i++) {
-    if (model.users[i].ID == model.signedInInfo.userId) {
-      curSignedInUser = model.users[i];
-    }
-  }
+  let curViewedUser = findUserByMovieListID(model.app.listID);
+  let curSignedInUser = findUserByID(model.signedInInfo.userId);
 
   // Finding out whether or not the logged in user is following the viewed user
   let isFollowing = false;
   let followedIndex = null;
-  if (model.signedInInfo.userId > 0 || model.signedInInfo.userId === 0) { // checks if a user is logged in
+  if (curSignedInUser && curViewedUser) { // checks if a user is logged in
     for (let i = 0; i < curSignedInUser.followedUsers.length; i++) { //goes through all followedUsers of the logged in user
-      if (curSignedInUser.followedUsers[i].ID == curViewedUser.ID) { // Checks if the currently checked followed user is also the user we're watching
+      if (curSignedInUser.followedUsers[i] == curViewedUser) { // Checks if the currently checked followed user is also the user we're watching
         isFollowing = true;
         followedIndex = i;
       }
