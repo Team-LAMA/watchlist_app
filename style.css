@@ -1,6 +1,7 @@
 body{
 	font-family: Arial, Helvetica, sans-serif, Times, serif;
 	font-size: 1.7vh;
+  background-color: #eceff1;
 }
 
 #app {
@@ -19,11 +20,12 @@ body{
   height: 7vh;
   top: 0px;
   left: 0px;
-	background-color: lightgrey;
+	background-color: #b2ebf2;
   font-size: 2vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: black 1px solid;
 }
 
 #backBtn{
@@ -41,7 +43,8 @@ body{
   width: 100vw;
   height: 10vh;
 	bottom: 0vh;
-  background-color: rgb(46, 159, 252);
+  background-color: #b2ebf2;
+  border-top: black 1px solid;
   font-size: 3vh;
   display: flex;
   justify-content: center;
@@ -106,7 +109,7 @@ body{
 .home.notification {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(46, 159, 252);
+  background-color: #c5cae9;
   gap: 8vh;
   min-width: 90vw;
   min-height: 5vh;
@@ -147,7 +150,7 @@ body{
   align-items: center;
   min-height: 7vh;
   min-width: 80vw;
-  background-color: rgb(46, 159, 252);
+  background-color: #c5cae9;
   font-size: 3vh;
   justify-content: space-between;
 }
@@ -172,7 +175,7 @@ body{
   font-size: 3vw;
 }
 .signinPromt > button{
-  background-color: rgb(46, 159, 252);
+  background-color: #c5cae9;
   color: #000000;
   font-size: 3vh;
   border: 0.5vw black solid;
@@ -214,7 +217,7 @@ body{
 .signUpBtn {
   border: none;
   border-radius: 0.5vh;
-  color: white;
+  color: black;
   font-family: inherit;
   font-size: 1.5vh;
   padding: 0.5vh 1vh;
@@ -225,10 +228,10 @@ body{
   height: 3vh;
 }
 .signUpBtn {
-  background-color: rgb(97, 76, 76);
+  background-color: #9fa8da;
 }
 .signInBtn {
-  background-color: rgb(177, 77, 77);
+  background-color: #c5cae9;
 }
 .failMessage {
   color: red;
@@ -246,7 +249,7 @@ body{
   height: 5vh;
   top: 10vh;
   border-radius: 1vh;
-  background-color: #bdbdbd;
+  background-color: #9fa8da;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -258,6 +261,7 @@ body{
   height: 3vh;
   border-radius: .75vh;
   font-size: 3vh;
+  background-color: #eceff1;
 }
 
 .search.searchBtn {
@@ -265,6 +269,7 @@ body{
   height: 3.5vh;
   margin-left: 1vh;
   border-radius: .75vh;
+  background-color: #e1bee7;
 }
 
 .search.resultContainer {
@@ -282,7 +287,7 @@ body{
   width: 90vw;
   height: 10vh;
   margin-bottom: 1vh;
-  background-color: lightgrey;
+  background-color: #c5cae9;
   border-radius: 0.5vh;
   outline: 1px black solid;
   display: flex;
