@@ -1,10 +1,10 @@
 const model = {
 	app: {
-		page: "user",
+		page: "list",
 		lastPage: "", 	// The last page type
 		userID: null,			// User ID being viewed
 		listID: null,			// List ID being viewed
-
+		
 		expandedIndex: null, // the index of the currently expanded movieList element if there is any
 		scrollOffset: null,
     editBio: false,
@@ -13,7 +13,7 @@ const model = {
 	// TODO: make sure all pages can be opened to a "default" view even if no user or list id is set
 
 	signedInInfo: {
-		userId: null,			// The currently logged in UserID
+		userId: 1,			// The currently logged in UserID
 	},
 
 	idCounters: {
@@ -97,7 +97,7 @@ const model = {
 			description: "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
 		},
 	],
-
+	// a day in milliseconds = 8.64e+7 "for testing"
 	movieLists: [			// A list over all the existing movieLists (DATA)
 		{
 			ID: 0,
@@ -226,7 +226,7 @@ const model = {
 			],
 			personalComments: ["SUPER BRA!!!", "Dårlig", "Liker ikke slanger", "SUPER BRA!!!", "Dårlig", "Liker ikke slanger", "SUPER BRA!!!", "Dårlig", "Liker ikke slanger"],
 			ratings: [10, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8],
-			lastChanged: Date.now(),
+			lastChanged: Date.now() - 8.64e+7,
 		},
 		{
 			ID: 1,
