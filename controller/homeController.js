@@ -55,7 +55,7 @@ function notificationTimer(list){
     html += " Hours ago";
   }
   else if(newDate.getMinutes() < new Date().getMinutes()){
-    html = new Date().getMilliseconds() - newDate.getMinutes();
+    html = new Date().getMinutes() - newDate.getMinutes();
     html += " Minutes ago";
   }
   else{
