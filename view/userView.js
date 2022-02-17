@@ -62,7 +62,7 @@ function userView() {
     `
     html += /*html*/ `<span><input value="${curViewedUser.age}" onchange="editAge(this)" placeholder="Age"/></span>`
     html += /*html*/ `<span><input value="${curViewedUser.favGenre}" onchange="editFavGenre(this)"placeholder="Favorite genre"/></span>`
-    html += /*html*/ `<span><input value="${curViewedUser.userDescription}" onchange="editUserDescription(this)"placeholder="Description"/></span>`
+    html += /*html*/ `<span><textarea onchange="editUserDescription(this)"placeholder="Description">${curViewedUser.userDescription}</textarea></span>`
   } else {
     html += /*html*/ `
       <span class="user nameSpan">

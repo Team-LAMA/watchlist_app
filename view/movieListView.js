@@ -1,3 +1,6 @@
+/**
+ * Generates and shows the movie-list view
+ */
 function movieListView() {
 	let curViewedUser = findUserByMovieListID(model.app.listID);
 	let html = "";

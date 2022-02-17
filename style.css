@@ -399,11 +399,30 @@ body{
   height: 3vh;
 }
 
+
 .user.signoutBtn{
   width: 20vw;
   height: 3vh;
   background-color: #f3e5f5;
   border: black 1px solid;
+}
+
+.user.profileInfo>span>input{
+  width: calc(90vw - 12vh - 3vw);
+  height: 2vh;
+  font-size: 1.5vh;
+  box-sizing: border-box;
+}
+.user.profileInfo>span>textarea{
+  min-width: calc(90vw - 12vh - 3vw);
+  max-width: calc(90vw - 12vh - 3vw);
+  min-height: calc(20vh - 2vh - 2vh - 3vh - 2px);
+  max-height: calc(20vh - 2vh - 2vh - 3vh - 2px);
+  margin-top: 1px;
+  height: 2vh;
+  font-size: 1.5vh;
+  box-sizing: border-box;
+  resize: none;
 }
 
 .user.topMoviesContainer {

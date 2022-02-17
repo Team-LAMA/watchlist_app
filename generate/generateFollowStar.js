@@ -1,3 +1,10 @@
+/**
+ * Generates the HTML used to show the follow-star
+ *
+ * @param {color} color Takes a CSS-valid color value and applies that to the center of the star
+ * @param {boolean} [isTogglable=true] If true; the onclick on the star will run the [toggleFollow()]{@linkcode toggleFollow()} function
+ * @return {string} HTML to be added to another page 
+ */
 function generateFollowStar(color, isTogglable = true){
   let html = /*html*/ `
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" ${isTogglable ? "onclick='toggleFollow()'" : ""}>
