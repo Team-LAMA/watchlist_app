@@ -7,7 +7,7 @@ const model = {
 
 		expandedIndex: null, // the index of the currently expanded movieList element if there is any
 		scrollOffset: null,
-    editBio: false
+    editBio: false,
 	},
 
 	// TODO: make sure all pages can be opened to a "default" view even if no user or list id is set

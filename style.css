@@ -351,6 +351,15 @@ body{
   width: 12vh;
   border: 1px solid black;
 }
+.user.profileImageBtn {
+  position: fixed;
+  top: 23vh;
+  width: 12.3vh;
+  height: 3vh;
+  font-size: 1.5vh;
+  box-sizing: border-box;
+  /* width: fit-content; */
+  }
 
 .user.profileStar{
   width: 8vh;

@@ -5,12 +5,21 @@ function userView() {
 	let curSignedInUser = findUserByID(model.signedInInfo.userId);
 	let isFollowing = checkIsFollowing(curSignedInUser, curViewedUser);
 
+  if(curSignedInUser != curViewedUser) {
+    model.app.editBio = false;
+  }
+
+  
   html += /*html*/ `
 		<div class="user profileInfo">
       <div class="user profileInfo left">
         <img class="user profileImage" src="${curViewedUser.profilePicture}" onclick="editProfileImage()"/>
-	`
-
+  `
+  if(model.app.editBio){
+    html += /*html*/ `
+      <button class="user profileImageBtn" onclick="editProfileImage()">Change Image</button>
+	  `
+  }
 
   // Star
   if (model.app.userID == model.signedInInfo.userId){
@@ -72,7 +81,7 @@ function userView() {
         <span>
           <span class="user profileInfo name">${curViewedUser.profileName}</span>
         </span>
-        ${(curSignedInUser == curViewedUser) ? '<div><button class="user signoutBtn" >Log out</button></div>' : ''}
+        ${(curSignedInUser == curViewedUser) ? '<div><button class="user signoutBtn" onclick="signOut()">Log out</button></div>' : ''}
       </span>
     `
     html += /*html*/ `<span>${curViewedUser.age ? curViewedUser.age : ""}</span>`
