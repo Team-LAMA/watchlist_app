@@ -63,16 +63,16 @@ function userView() {
         </div>
       </span>
     `
-    html += /*html*/ `<span><input value="${curViewedUser.age}" onchange="editAge(this)"/></span>`
-    html += /*html*/ `<span><input value="${curViewedUser.favGenre}" onchange="editFavGenre(this)"/></span>`
-    html += /*html*/ `<span><input value="${curViewedUser.userDescription}" onchange="editUserDescription(this)"/></span>`
+    html += /*html*/ `<span><input value="${curViewedUser.age}" onchange="editAge(this)" placeholder="Age"/></span>`
+    html += /*html*/ `<span><input value="${curViewedUser.favGenre}" onchange="editFavGenre(this)"placeholder="Favorite genre"/></span>`
+    html += /*html*/ `<span><input value="${curViewedUser.userDescription}" onchange="editUserDescription(this)"placeholder="Description"/></span>`
   } else {
     html += /*html*/ `
       <span class="user nameSpan">
         <span>
           <span class="user profileInfo name">${curViewedUser.profileName}</span>
         </span>
-        ${(curSignedInUser == curViewedUser) ? '<div><button class="user signoutBtn" >Log out</button></div>' : ''}
+        ${(curSignedInUser == curViewedUser) ? '<div><button class="user signoutBtn" >Sign out</button></div>' : ''}
       </span>
     `
     html += /*html*/ `<span>${curViewedUser.age ? curViewedUser.age : ""}</span>`
@@ -178,7 +178,6 @@ function userView() {
 	document.getElementById('app').innerHTML = html;
 
   document.getElementsByClassName("user profileInfo right")[0].addEventListener("click", element => {
-    console.log("test");
     if (model.app.page == "user"){
       if (element.target.tagName !== "TEXTAREA" && element.target.tagName !== "INPUT" && element.target.tagName !== "BUTTON"){
         toggleEditProfile();
