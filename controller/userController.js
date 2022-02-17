@@ -33,8 +33,6 @@ function editProfileImage() {
 function toggleFollow() {
   //userView();
 
-  console.log("heihei");
-
   let curViewedUser = findUserByMovieListID(model.app.listID);
   let curSignedInUser = findUserByID(model.signedInInfo.userId);
 
