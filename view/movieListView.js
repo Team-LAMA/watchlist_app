@@ -19,7 +19,6 @@ function movieListView() {
 
   if(isEditable){
     unratedOffset = sortMovieList(curMovieList, true);
-    console.log(unratedOffset);
     if(model.app.expandedIndex != null){
       model.app.expandedIndex += unratedOffset;
     }

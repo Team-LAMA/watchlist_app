@@ -9,7 +9,7 @@ function userView() {
     model.app.editBio = false;
   }
 
-  
+
   html += /*html*/ `
 		<div class="user profileInfo">
       <div class="user profileInfo left">
@@ -72,9 +72,9 @@ function userView() {
         </div>
       </span>
     `
-    html += /*html*/ `<span><input value="${curViewedUser.age}" onchange="editAge(this)"/></span>`
-    html += /*html*/ `<span><input value="${curViewedUser.favGenre}" onchange="editFavGenre(this)"/></span>`
-    html += /*html*/ `<span><input value="${curViewedUser.userDescription}" onchange="editUserDescription(this)"/></span>`
+    html += /*html*/ `<span><input value="${curViewedUser.age}" onchange="editAge(this)" placeholder="Age"/></span>`
+    html += /*html*/ `<span><input value="${curViewedUser.favGenre}" onchange="editFavGenre(this)"placeholder="Favorite genre"/></span>`
+    html += /*html*/ `<span><input value="${curViewedUser.userDescription}" onchange="editUserDescription(this)"placeholder="Description"/></span>`
   } else {
     html += /*html*/ `
       <span class="user nameSpan">
@@ -187,7 +187,6 @@ function userView() {
 	document.getElementById('app').innerHTML = html;
 
   document.getElementsByClassName("user profileInfo right")[0].addEventListener("click", element => {
-    console.log("test");
     if (model.app.page == "user"){
       if (element.target.tagName !== "TEXTAREA" && element.target.tagName !== "INPUT" && element.target.tagName !== "BUTTON"){
         toggleEditProfile();

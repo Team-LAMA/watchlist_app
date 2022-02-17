@@ -15,7 +15,6 @@ function notificationUpdate(curUser){
           <div class="home notification" onclick="openMovieList(${notificationList[i].ID})">
             <h1 class="notification list">${notificationList[i].name}</h1>
             <img class="home profilePic" src="${model.users[notificationList[i].ID].profilePicture}">`
-            console.log("a", notificationList[i].lastChanged);
             html += notificationTimer(notificationList[i].lastChanged);
            html += `</div>
         `
@@ -24,7 +23,6 @@ function notificationUpdate(curUser){
   if(notificationList.length == 0){
     html += /*html*/ ``;
   }
-  console.log(notificationList);
 	return html;
   // model.users[curUser].notifications
 }
@@ -32,12 +30,8 @@ function notificationUpdate(curUser){
 function notificationTimer(list){
   let html = "";
   let newDate = new Date();
-  
-  console.log("list", list);
 
   newDate.setTime(list)
-
-    console.log("getTime", newDate.getTime());
 
   if(newDate.getFullYear() < new Date().getFullYear()){
     html = new Date().getFullYear() - newDate.getFullYear();
@@ -61,7 +55,7 @@ function notificationTimer(list){
     html += " Hours ago";
   }
   else if(newDate.getMinutes() < new Date().getMinutes()){
-    html = new Date().getMilliseconds() - newDate.getMinutes();
+    html = new Date().getMinutes() - newDate.getMinutes();
     html += " Minutes ago";
   }
   else{
