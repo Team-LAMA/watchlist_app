@@ -15,9 +15,10 @@ function notificationUpdate(curUser){
           <div class="home notification" onclick="openMovieList(${notificationList[i].ID})">
             <h1 class="notification list">${notificationList[i].name}</h1>
             <img class="home profilePic" src="${model.users[notificationList[i].ID].profilePicture}">`
+            html += `<div class="notification timer">`
             html += notificationTimer(notificationList[i].lastChanged);
-           html += `</div>
-        `
+            html += "</div>"
+            html += "</div>"
     }
   }
   if(notificationList.length == 0){
@@ -55,7 +56,7 @@ function notificationTimer(list){
     html += " Hours ago";
   }
   else if(newDate.getMinutes() < new Date().getMinutes()){
-    html = new Date().getMilliseconds() - newDate.getMinutes();
+    html = new Date().getMinutes() - newDate.getMinutes();
     html += " Minutes ago";
   }
   else{
