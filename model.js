@@ -1,6 +1,6 @@
 const model = {
 	app: {
-		page: "user",
+		page: "home",
 		lastPage: "", 	// The last page type
 		userID: 1,			// User ID being viewed
 		listID: null,			// List ID being viewed
@@ -13,7 +13,7 @@ const model = {
 	// TODO: make sure all pages can be opened to a "default" view even if no user or list id is set
 
 	signedInInfo: {
-		userId: null,			// The currently logged in UserID
+		userId: 2,			// The currently logged in UserID
 	},
 
 	idCounters: {
