@@ -1,6 +1,7 @@
 body{
 	font-family: Arial, Helvetica, sans-serif, Times, serif;
 	font-size: 1.7vh;
+  background-color: #eceff1;
 }
 
 #app {
@@ -19,12 +20,14 @@ body{
   height: 7vh;
   top: 0px;
   left: 0px;
-	background-color: lightgrey;
+	background-color: #b2ebf2;
   font-size: 2vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: black 1px solid;
 }
+
 
 #backBtn{
 	position: fixed;
@@ -41,10 +44,12 @@ body{
   width: 100vw;
   height: 10vh;
 	bottom: 0vh;
-  background-color: rgb(46, 159, 252);
+  background-color: #b2ebf2;
+  border-top: black 1px solid;
   font-size: 3vh;
   display: flex;
   justify-content: center;
+  border-top: 1px black solid;
 }
 
 /*##############*/
@@ -101,14 +106,16 @@ body{
   flex-direction: column;
   align-items: center;
   overflow-y: auto; 
+  overflow-x: hidden;
 }
 
 .home.notification {
   display: flex;
-  background-color: rgb(46, 159, 252);
   gap: 5vw;
   width: 90vw;
+  background-color: #c5cae9;
   align-items: center;
+  max-width: 90vw;;
 }
 
 .notification.list {
@@ -148,7 +155,7 @@ body{
   align-items: center;
   min-height: 7vh;
   min-width: 90vw;
-  background-color: rgb(46, 159, 252);
+  background-color: #c5cae9;
   font-size: 3vh;
   justify-content: space-between;
 }
@@ -166,7 +173,7 @@ body{
   font-size: 3vw;
 }
 .signinPromt > button{
-  background-color: rgb(46, 159, 252);
+  background-color: #c5cae9;
   color: #000000;
   font-size: 3vh;
   border: 0.5vw black solid;
@@ -202,13 +209,16 @@ body{
   height: 2vh;
   font-size: 2vh;
   margin-bottom: 0.5vh;
+  background-color: #eceff1;
+  border: black 1px solid;
+  border-radius: 0.5vh;
 }
 
 .signInBtn,
 .signUpBtn {
   border: none;
   border-radius: 0.5vh;
-  color: white;
+  color: black;
   font-family: inherit;
   font-size: 1.5vh;
   padding: 0.5vh 1vh;
@@ -219,13 +229,13 @@ body{
   height: 3vh;
 }
 .signUpBtn {
-  background-color: rgb(97, 76, 76);
+  background-color: #9fa8da;
 }
 .signInBtn {
-  background-color: rgb(177, 77, 77);
+  background-color: #c5cae9;
 }
 .failMessage {
-  color: red;
+  color: #f44336;
 }
 /*End SignIn & SignUp*/
 
@@ -240,7 +250,7 @@ body{
   height: 5vh;
   top: 10vh;
   border-radius: 1vh;
-  background-color: #bdbdbd;
+  background-color: #9fa8da;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -252,6 +262,7 @@ body{
   height: 3vh;
   border-radius: .75vh;
   font-size: 3vh;
+  background-color: #eceff1;
 }
 
 .search.searchBtn {
@@ -259,6 +270,7 @@ body{
   height: 3.5vh;
   margin-left: 1vh;
   border-radius: .75vh;
+  background-color: #f3e5f5;
 }
 
 .search.resultContainer {
@@ -276,7 +288,7 @@ body{
   width: 90vw;
   height: 10vh;
   margin-bottom: 1vh;
-  background-color: lightgrey;
+  background-color: #c5cae9;
   border-radius: 0.5vh;
   outline: 1px black solid;
   display: flex;
@@ -311,52 +323,87 @@ body{
 /*#   USER    #*/
 /*#           #*/
 /*#############*/
+
 .user.profileInfo {
   position: fixed;
-  width: 75vw;
+  width: 90vw;
+  height: 20vh;
   top: 13.5vh;
-  /*background-color: brown;*/
+  background-color: #c5cae9;
   display: flex;
 }
 
+.user.profileInfo.left{
+  width: 12vh;
+  background-color: #9fa8da;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*display: n;*/
+}
+
 .user.profileImage {
-  min-width: 12vh;
   height: 12vh;
+  width: calc(12vh - 2px);
   border: 1px solid black;
-  margin-right: 5vw;
 }
 .user.profileImageBtn {
-position: fixed;
-top: 23vh;
-width: 12.3vh;
-/* box-sizing: border-box; */
-/* width: fit-content; */
+  position: fixed;
+  top: 23vh;
+  width: 12.3vh;
+  height: 3vh;
+  font-size: 1.5vh;
+  box-sizing: border-box;
+  /* width: fit-content; */
+  }
+
+.user.profileStar{
+  width: 8vh;
+  height: 8vh;
+}
+.user.profileInfo.right{
+  position: fixed;
+  left: calc(5vw + 12vh + 3vw);
+  width: calc(90vw - 12vh - 3vw);
+  background-color: #c5cae9;
+  display: flex;
+  flex-direction: column;
 }
 
-.user.signOutBtn {
-  color: black;
-  background-color: red;
-  width: 15vw; /*css*/
+.user.nameSpan{
+  width: calc(90vw - 12vh - 3vw);
+  display: flex;
+  justify-content: space-between;
+  
 }
 
-.user.profileDescription {
-  border: solid black 1px;
-  height: 20vh;
-  width: 100%;
-  background-color: gray;
+.user.profileInfo.name{
+  height: 3vh;
+  width: calc(70vw - 12vh - 3vw);
+  font-weight: bold;
+  font-size: 3vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #c5cae9;
+}
+.user.profileInfo.name.noBtn{
+  width: calc(90vw - 12vh - 3vw);
 }
 
-.user.profileDescription.content{
-	margin-left: 0vw;
-	width: 80%;
-	background-color: transparent;
+/*For div around signoutBtn*/
+.user.profileInfo.name>div{
+  width:10vw;
+  height: 3vh;
 }
 
-.user.movieImage {
-  width: 10vh;
-  height: 10vh;
-  border: 1px solid black;
-  float: left;
+.user.signoutBtn{
+  width: 20vw;
+  height: 3vh;
+  background-color: #f3e5f5;
+  border: black 1px solid;
 }
 
 .user.topMoviesContainer {
@@ -372,48 +419,19 @@ width: 12.3vh;
 .user.topMoviesTitle {
   width: 90vw;
   height: 7vh;
-  background-color: gray;
+  background-color: #9fa8da;
   font-size: 35px;
   text-align: center;
 }
 
-.user.topMoviesTitle input[type="text"] {
-  height: 7vh; 
-  width: 90vw;
-  background-color: grey;
-  box-sizing: border-box;
-  font-size: 35px;
-  text-align: center;
-}
-
-.user.topMoviesTitle input[type="text"]::placeholder {
-  color:lightgray; 
-}
-
-.user.profileStar {
-  position: fixed;
-  margin-top: 12vh;
-  margin-left: 3vw;
-}
-.user.profileStar img {
-  width: 64px;
-  height: 64px;
-}
 .user.followStar {
 	position: fixed;
   margin-top: 12vh;
   margin-left: 3vw;
-	/* right: 0vw; */
-	/* margin-right: 5vw; */
-	/* margin-top: 12vh; */
-  /* margin-left: 3vw; */
-	/* width: 5vh; */
-	/* font-s;ze: xx-large; */
 }
 
 .user.filmInfo {
   text-align: center;
-  /* float: LEFT; */
 }
 
 .user.movieRating {
@@ -422,6 +440,12 @@ width: 12.3vh;
 }
 
 /*User ending*/
+
+/*#############*/
+/*#           #*/
+/*# MOVIELIST #*/
+/*#           #*/
+/*#############*/
 
 .movieList.container {
   position: fixed;
@@ -435,7 +459,7 @@ width: 12.3vh;
   position: fixed;
   width: 90vw;
   height: 8vh;
-  background-color: lightgrey;
+  background-color: #9fa8da;
   font-size: 2vh;
 
   display: flex;
@@ -454,6 +478,8 @@ width: 12.3vh;
   font-size: 1.5em;
   font-weight: bold;
   text-align: center;
+  background-color: #eceff1;
+  border: grey 1px solid;
 }
 
 .movieList.profileImage{
@@ -492,8 +518,6 @@ width: 12.3vh;
   width: 90vw;
   height: 10vh;
 	margin-bottom: 10vh;
-
-	background-color: grey;
 }
 
 .movieElement.container{
@@ -504,10 +528,11 @@ width: 12.3vh;
 	margin-bottom: 1vh;
 	height: 10vh;
 
-	background-color: lightgrey;
+	background-color: #c5cae9;
 
 	outline: grey 1px solid;
 }
+
 .movieElement.container.expanded{
 	/*box-sizing: border-box;*/
 	height: fit-content;
@@ -519,6 +544,14 @@ width: 12.3vh;
 	height: 10vh;
 
 	display: flex;
+}
+
+.movieElement > input,
+.movieElement > textarea,
+.movieElement.detailBox>div>div>textarea,
+.movieElement.score>div>div>input {
+  background-color: #eceff1;
+  border: grey 1px solid;
 }
 
 .movieElement.image{
@@ -541,11 +574,11 @@ width: 12.3vh;
 	max-width: 9.25vh;
 	min-width: 9.25vh;
 	font-size: 1vh;
+  background-color: #f3e5f5;
 }
 
 .movieElement.minimal.midSection{
 	flex-grow: 1;
-	/*background-color: red;*/
 
 	display: flex;
 	flex-direction: column;
@@ -606,7 +639,6 @@ width: 12.3vh;
 	right: 0px;
 	min-width: calc(0.75vw + 3vh + 5vh + 0.5vh); /* Edge padding + width of outOf + width of score*/
 	max-width: 1vw;
-	/*background-color: seagreen;*/
 	font-size: 3vh;
 	font-weight: bold;
 
@@ -619,7 +651,6 @@ width: 12.3vh;
 	min-width: 3vh;
 	margin-top: 1vh;
 	margin-right: 1vw;
-	/*background-color: aqua;*/
 	font-size: 2vh;
 	text-align: right;
 	
@@ -681,5 +712,6 @@ width: 12.3vh;
 .movieElement.deleteBtn{
   width: 85vw;
   margin: 2.5vw;
-  color: red;
+  color: #f44336;
+  background-color: #f3e5f5;
 }
