@@ -97,7 +97,7 @@ const model = {
 			description: "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
 		},
 	],
-
+	// a day in milliseconds = 8.64e+7 "for testing"
 	movieLists: [			// A list over all the existing movieLists (DATA)
 		{
 			ID: 0,
@@ -226,7 +226,7 @@ const model = {
 			],
 			personalComments: ["SUPER BRA!!!", "Dårlig", "Liker ikke slanger", "SUPER BRA!!!", "Dårlig", "Liker ikke slanger", "SUPER BRA!!!", "Dårlig", "Liker ikke slanger"],
 			ratings: [10, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8],
-			lastChanged: Date.now(),
+			lastChanged: Date.now() - 8.64e+7,
 		},
 		{
 			ID: 1,
