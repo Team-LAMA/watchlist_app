@@ -81,7 +81,10 @@ function userView() {
         <span>
           <span class="user profileInfo name">${curViewedUser.profileName}</span>
         </span>
-        ${(curSignedInUser == curViewedUser) ? '<div><button class="user signoutBtn" onclick="signOut()">Sign out</button></div>' : ''}
+        ${(curSignedInUser == curViewedUser) 
+            ? '<div><button class="user signoutBtn" onclick="signOut()">Sign out</button></div>'
+            : '<span class="user signoutBtn" style="background-color: transparent; border: 0px"></span>'
+        }
       </span>
     `
     html += /*html*/ `<span>${curViewedUser.age ? curViewedUser.age : ""}</span>`
