@@ -79,7 +79,7 @@ function userView() {
     html += /*html*/ `
       <span class="user nameSpan">
         <span>
-          <span class="user profileInfo name">${curViewedUser.profileName}</span>
+          <span class="user profileInfo name ${(curSignedInUser != curViewedUser) ? "noBtn" : ""}">${curViewedUser.profileName}</span>
         </span>
         ${(curSignedInUser == curViewedUser) 
             ? '<div><button class="user signoutBtn" onclick="signOut()">Sign out</button></div>'

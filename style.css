@@ -380,6 +380,7 @@ body{
   width: calc(90vw - 12vh - 3vw);
   display: flex;
   justify-content: space-between;
+  
 }
 
 .user.profileInfo.name{
@@ -393,7 +394,9 @@ body{
   overflow: hidden;
   white-space: nowrap;
   background-color: #c5cae9;
-
+}
+.user.profileInfo.name.noBtn{
+  width: calc(90vw - 12vh - 3vw);
 }
 
 /*For div around signoutBtn*/
