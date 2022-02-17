@@ -13,8 +13,11 @@ function signIn() {
   }
   if(!isSignedIn) {
     model.signedInInfo.userId = -1;
+    signInView();
   }
-  updateView();
+  else{
+    updateView();
+  }
 } 
 
 function updateUsernameSignIn(element) {

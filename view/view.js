@@ -40,7 +40,7 @@ function updateView() {
 		searchView();
 	}
 	else if (app.page == "user") {
-		if (model.signedInInfo.userId == null) {
+		if (model.signedInInfo.userId < 0 || model.signedInInfo.userId == null) {
 			if (app.userID == null) {
 				model.app.page = "signIn";
 				signInView();
@@ -57,7 +57,7 @@ function updateView() {
 		}
 	}
 	else if (app.page == "list") {
-		if (model.signedInInfo.userId == null) {
+		if (model.signedInInfo.userId < 0 || model.signedInInfo.userId == null) {
 			if (app.listID == null) {
 				model.app.page = "signIn";
 				signInView();
