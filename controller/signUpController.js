@@ -76,7 +76,7 @@ function makeUser() {
 		// The rest will be changed by the users input in the userView/Controller
 		movieLists:[],
 		profileName: model.inputs.makeUser.username, //Sets the username as the default profileName
-		profilePicture: "",
+		profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
 		age:"",
 		favGenre: "",
 		userDescription: "",
