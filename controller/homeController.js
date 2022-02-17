@@ -15,9 +15,10 @@ function notificationUpdate(curUser){
           <div class="home notification" onclick="openMovieList(${notificationList[i].ID})">
             <h1 class="notification list">${notificationList[i].name}</h1>
             <img class="home profilePic" src="${model.users[notificationList[i].ID].profilePicture}">`
+            html += `<div class="notification timer">`
             html += notificationTimer(notificationList[i].lastChanged);
-           html += `</div>
-        `
+            html += "</div>"
+            html += "</div>"
     }
   }
   if(notificationList.length == 0){
@@ -46,7 +47,7 @@ function notificationTimer(list){
     //   (a number between 0 and 6) so the if has a pass-through 4 times a month,
     //   while getDate return the day of the month (number between 1 and 31).
     // minus 1 because getDate is the only one to start counting at 1
-    html = new Date().getDate() - newDate.getDate() - 1;
+    html = new Date().getDate() - newDate.getDate();
     if(html == 1) {html += " Day ago";}
     else {html += " Days ago";}
   }

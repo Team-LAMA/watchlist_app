@@ -111,40 +111,41 @@ body{
 
 .home.notification {
   display: flex;
-  justify-content: space-between;
+  gap: 5vw;
+  width: 90vw;
   background-color: #c5cae9;
-  gap: 8vh;
-  min-width: 90vw;
-  min-height: 5vh;
   align-items: center;
   max-width: 90vw;;
 }
 
 .notification.list {
+  min-width: 30vw;
   font-size: small;
-  margin: 4vw;
   display: flex;
   align-items: center;
+  margin: 0 0 0 2vw;
 }
 
-.notification.name {
-  margin: 2vw;
-  max-width: fit-content;
-  display: flex;
-  align-items: center;
-  font-size: 4vw;
+.home.profilePic{
+  min-width: 6vh;
+  height: 6vh;
+  border: 1px solid black;
+  margin: 1vh;
+}
+
+.notification.timer {
+  
+  margin: 0 2vw 0 0;
 }
 
 .home.followedList {
   position: fixed;
   top: 54vh;
   height: 36vh;
-  width: 90vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1vh;
-  min-width: 80vw;
   overflow-y: auto;
 }
 
@@ -153,7 +154,7 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 7vh;
-  min-width: 80vw;
+  min-width: 90vw;
   background-color: #c5cae9;
   font-size: 3vh;
   justify-content: space-between;
@@ -162,13 +163,6 @@ body{
 .home.followed > h1 {
   font-size: small;
   margin: 4vw;
-}
-
-.home.profilePic{
-  min-width: 6vh;
-  height: 6vh;
-  border: 1px solid black;
-  margin: 2vh;
 }
 
 .signinPromt{
