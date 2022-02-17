@@ -420,6 +420,11 @@ model.users[1].followedUsers.push(model.users[2]);
 
 model.users[2].followedUsers.push(model.users[0]);
 model.users[2].followedUsers.push(model.users[1]);
+model.users[2].followedUsers.push(model.users[3]);
+
+model.users[3].followedUsers.push(model.users[0]);
+model.users[3].followedUsers.push(model.users[1]);
+model.users[3].followedUsers.push(model.users[2]);
 
 
 
