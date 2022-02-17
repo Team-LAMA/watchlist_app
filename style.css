@@ -350,7 +350,7 @@ body{
 
 .user.profileImage {
   height: 12vh;
-  width: 12vh;
+  width: calc(12vh - 2px);
   border: 1px solid black;
 }
 .user.profileImageBtn {
