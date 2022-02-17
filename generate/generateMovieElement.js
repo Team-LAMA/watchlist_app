@@ -203,7 +203,7 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 			html += /*html*/ `<textarea  onchange="updateMoviePersonalComments(this, ${movieList.ID}, ${index})">${movieList.personalComments[index]}</textarea>`
 		}
 		else {
-			html += movieList.movies[index].actors;
+			html += movieList.movies[index].personalComments;
 		}
 		html += /*html*/`
 			</div>
