@@ -13,7 +13,7 @@ function userView() {
   html += /*html*/ `
 		<div class="user profileInfo">
       <div class="user profileInfo left">
-        <img class="user profileImage" src="${curViewedUser.profilePicture}" onclick="editProfileImage()"/>
+        <img class="user profileImage" src="${curViewedUser.profilePicture}"/>
   `
   if(model.app.editBio){
     html += /*html*/ `
@@ -81,7 +81,7 @@ function userView() {
         <span>
           <span class="user profileInfo name">${curViewedUser.profileName}</span>
         </span>
-        ${(curSignedInUser == curViewedUser) ? '<div><button class="user signoutBtn" onclick="signOut()">Log out</button></div>' : ''}
+        ${(curSignedInUser == curViewedUser) ? '<div><button class="user signoutBtn" onclick="signOut()">Sign out</button></div>' : ''}
       </span>
     `
     html += /*html*/ `<span>${curViewedUser.age ? curViewedUser.age : ""}</span>`
