@@ -344,6 +344,25 @@ const model = {
 			ratings: [],
 			lastChanged: Date.now() - 32000000000,
 		},
+    {
+			ID: 4,
+			name: "Terje",
+			movies: [
+				{
+					ID: null,
+					title: "",
+					image: "",
+					year: null,
+					genres: "",
+					directors: "",
+					actors: "",
+					description: "",
+				},
+			],
+			personalComments: [],
+			ratings: [],
+			lastChanged: Date.now() - 38000000654,
+		},
 	],
 
 	users: [					// A list over all the existing users (DATA)
@@ -403,6 +422,20 @@ const model = {
 			followedUsers: [],
 			// followedListIDs: [],
 		},
+    {
+			ID: 4,
+			username: "Terje",
+			password: "123",
+			eMail: "terje@getacademy.no",
+			movieLists: [],
+			profileName: "GetTerje",
+			profilePicture: "https://pbs.twimg.com/profile_images/1359478001/Terje_Kolderup.jpg",
+			age: "1",
+			favGenre: "Spreke Filmer",
+			userDescription: "",
+			followedUsers: [],
+			// followedListIDs: [],
+		},
 	],
 }
 
@@ -412,11 +445,13 @@ model.users[0].movieLists.push(model.movieLists[0]);
 model.users[1].movieLists.push(model.movieLists[1]);
 model.users[2].movieLists.push(model.movieLists[2]);
 model.users[3].movieLists.push(model.movieLists[3]);
+model.users[4].movieLists.push(model.movieLists[4]);
 
 model.users[0].followedUsers.push(model.users[1]);
 model.users[0].followedUsers.push(model.users[2]);
 
 model.users[1].followedUsers.push(model.users[2]);
+model.users[1].followedUsers.push(model.users[4]);
 
 model.users[2].followedUsers.push(model.users[0]);
 model.users[2].followedUsers.push(model.users[1]);

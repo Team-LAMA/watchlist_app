@@ -177,7 +177,7 @@ function userView() {
 	html += generateLogoHTML();
 	document.getElementById('app').innerHTML = html;
 
-  document.getElementsByClassName("user profileInfo right")[0].addEventListener("click", element => {
+  document.getElementsByClassName("user profileInfo")[0].addEventListener("click", element => {
     if (model.app.page == "user"){
       if (element.target.tagName !== "TEXTAREA" && element.target.tagName !== "INPUT" && element.target.tagName !== "BUTTON"){
         toggleEditProfile();
