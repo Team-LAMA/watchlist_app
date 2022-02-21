@@ -72,11 +72,9 @@ function signOut() {
 function toggleEditProfile() {
   if (model.app.editBio) {
     model.app.editBio = false;
-    console.log(model.app.editBio);
   }
   else {
     model.app.editBio = true;
-    console.log(model.app.editBio);
   }
   userView();
 }
