@@ -47,5 +47,5 @@ function signInView() {
     }
   });
 
-  document.getElementsByClassName("signInBtn")[0].focus();
+  document.getElementsByClassName("signIn container")[0].getElementsByTagName("input")[0].focus();
 }
