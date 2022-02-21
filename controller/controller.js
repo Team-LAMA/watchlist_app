@@ -7,6 +7,47 @@ function go(page) {
   let app = model.app;
   history.pushState(null, null, `#${app.page}/${app.lastPage}/${app.userID}/${app.listID}`);
   app.page = page;
+  model.inputs = {
+		makeUser: {
+			username: "",
+			password: "",
+			eMail: "",
+		},
+
+		signIn: {
+			username: "",
+			password: "",
+		},
+
+		editMovie: {
+			title: "",		
+			image: "",
+			year: null,
+			genres: [],
+			directors: [],
+			actors: [],
+			description: "",
+
+			personalComment: "",
+			rating: "",
+		},
+
+		editProfile: {
+			image: "",
+			name: "",
+			description: "",
+			age: "",
+			favGenre: "",
+		},
+
+		editMovieList: {
+			name: "",
+		},
+
+		search: {				
+			searchWord: "",
+		},
+	},
   updateView();
 }
 
