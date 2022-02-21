@@ -369,7 +369,7 @@ const model = {
 		{
 			ID: 0,
 			username: "Alexander",
-			password: "321",
+			password: "123",
 			eMail: "AlexB@Team3.no",
 			movieLists: [],
 			profileName: "Alexander Bøhler",
@@ -397,7 +397,7 @@ const model = {
 		{
 			ID: 2,
 			username: "Linn",
-			password: "132",
+			password: "123",
 			eMail: "LinnO@Team3.no",
 			movieLists: [],
 			profileName: "Linn Østgaard",
@@ -411,7 +411,7 @@ const model = {
 		{
 			ID: 3,
 			username: "Magnus",
-			password: "312",
+			password: "123",
 			eMail: "MagnusS@Team3.no",
 			movieLists: [],
 			profileName: "Magnus Sandholmen",
