@@ -4,8 +4,6 @@ function signUp() {
 	let isUsernameUnique = false;
 	let isEmailUnique = false;
 
-	console.log(somethingInInput());
-
 	// Checking that the inputted username doesn't exist yet
 	if (model.inputs.makeUser.username) {
 		isUsernameUnique = true;
