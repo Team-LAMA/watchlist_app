@@ -2,7 +2,7 @@
 
 
 function doSearch(){
-	getSearchResults(model.inputs.search.searchWord)
+	getSearchResults(model.inputs.search.searchWord);
 }
 
 
