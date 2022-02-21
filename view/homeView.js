@@ -53,7 +53,7 @@ function homeView() {
 		<div class="signinPromt">
 			<h1 class="signinPromt">you are not following anyone yet</h1>
 				<button class="signinPromt" onclick="signInView()">Sign in</button>
-			<h1 class="signinPromt">Too continue</h1>
+			<h1 class="signinPromt">To continue</h1>
 		</div>
 			`;
 	}
