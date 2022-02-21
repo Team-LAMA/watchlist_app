@@ -13,6 +13,7 @@ function signIn() {
   }
   if(!isSignedIn) {
     model.signedInInfo.userId = -1;
+    model.inputs.signIn.password = "";
     signInView();
   }
   else{

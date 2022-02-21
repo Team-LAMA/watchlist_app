@@ -35,6 +35,9 @@ function signUp() {
 
 		// Takes you back to the page you were on before signing up
 		model.app.page = model.app.lastPage;
+	} else {
+		model.signedInInfo.userId = -1;
+		console.log('Feila')
 	}
 	updateView();
 }
