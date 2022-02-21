@@ -170,16 +170,16 @@ body{
   flex-direction: column;
   align-content: flex-start;
   align-items: center;
-  font-size: 3vw;
+  font-size: 2vh;
 }
 .signinPromt > button{
   background-color: #c5cae9;
   color: #000000;
   font-size: 3vh;
-  border: 0.5vw black solid;
-  font-size: 3vw;
+  border: 0.1vh black solid;
+  font-size: 2vh;
   padding: 0.7vh;
-  max-width: 20vw;
+  max-width: 20vh;
   text-align: center;
   border-radius: 0.5vh;
 }
