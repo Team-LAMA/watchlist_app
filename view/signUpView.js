@@ -11,10 +11,15 @@ function signUpView() {
 			<input onchange="updateEmailSignUp(this)" type="text" placeholder="Email"/>
 			<div>
 				<button class="signUpBtn" onclick="signUp()">Sign Up</button>
-				<!--<button class="signInBtn" onclick="model.app.page = 'signIn';updateView()">Sign In</button>-->
 			</div>
-    </div>
   `;
+	
+	if(model.signedInInfo.userId === -1){	
+		html +=	/*html*/ `<h4 class="failMessage">Username or Email is already used</h4>`;
+		model.signedInInfo.userId = null;
+	}
+
+	html +=/*html*/ `</div>`;
 
 	html += generateNavbarHTML();
 	document.getElementById('app').innerHTML = html;

@@ -5,8 +5,8 @@ function signInView() {
 	html += /*html*/`
     <div class="signIn container">
         <h1>Sign in</h1>
-        <input onchange="updateUsernameSignIn(this)" type="text" placeholder="Username"/>
-        <input onchange="updatePasswordSignIn(this)" type="password" placeholder="Password"/>
+        <input onchange="updateUsernameSignIn(this)" type="text" placeholder="Username" value="${model.inputs.signIn.username}"/>
+        <input onchange="updatePasswordSignIn(this)" type="password" placeholder="Password" value="${model.inputs.signIn.password}"/>
 				<div>
         	<button class="signUpBtn" onclick="go('signUp')">Sign Up</button>
         	<button class="signInBtn" onclick="signIn()">Sign In</button>
