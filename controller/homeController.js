@@ -36,11 +36,13 @@ function notificationTimer(list){
 
   if(newDate.getFullYear() < new Date().getFullYear()){
     html = new Date().getFullYear() - newDate.getFullYear();
-    html += " Years ago";
+    if(html == 1) {html += " Year ago"}
+    else {html += " Years ago";}
   }
   else if(newDate.getMonth() < new Date().getMonth()){
     html = new Date().getMonth() - newDate.getMonth();
-    html += " Months ago";
+    if(html == 1) {html += " Month ago";}
+    else {html += " Months ago";}
   }
   else if(newDate.getDate() < new Date().getDate()){
     // Using getDate instead of getDay, because getDay only returns the weekday
@@ -53,15 +55,18 @@ function notificationTimer(list){
   }
   else if(newDate.getHours() < new Date().getHours()){
     html = new Date().getHours() - newDate.getHours();
-    html += " Hours ago";
+    if(html == 1) {html += " Hour ago";}
+    else {html += " Hours ago";}
   }
   else if(newDate.getMinutes() < new Date().getMinutes()){
     html = new Date().getMinutes() - newDate.getMinutes();
-    html += " Minutes ago";
+    if(html == 1) {html += " Minute ago";}
+    else {html += " Minutes ago";}
   }
   else{
     html = new Date().getSeconds() - newDate.getSeconds();
-    html += " Seconds ago";
+    if(html == 1) {html += " Second ago";}
+    else {html += " Seconds ago";}
   }
   return html;
 }
