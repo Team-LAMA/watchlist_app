@@ -381,7 +381,7 @@ const model = {
 			eMail: "LinnO@Team3.no",
 			movieLists: [],
 			profileName: "Linn",
-			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
+			profilePicture: "http://icreatived.com/wp-content/uploads/2014/10/Interesting-Creative-Facebook-Profile-Picture-Ideas-5.jpg",
 			age: "23",
 			favGenre: "Docu, Action, Cars",
 			userDescription: "Jeg liker å se på filmer",
