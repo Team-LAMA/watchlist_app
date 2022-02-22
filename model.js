@@ -262,7 +262,7 @@ const model = {
 			movies: [
 				{
 					ID: 5,
-					title: "Shang-Chi and the Legend of the Ten Rings",
+					title: "Shang-Chi and the Legend of the ..",
 					image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwI96_vboie8MGY7AbmF8pWf0Q-6eJDf6JFX3FtHRNsZhyBnUc",
 					year: 2021,
 					genres: "Action, Adventure, Fantasy, Sci-Fi",
