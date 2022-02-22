@@ -396,11 +396,11 @@ const model = {
 		},
 		{
 			ID: 2,
-			username: "Linn",
+			username: "linn",
 			password: "123",
 			eMail: "LinnO@Team3.no",
 			movieLists: [],
-			profileName: "Linn Østgaard",
+			profileName: "Linn",
 			profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg",
 			age: "23",
 			favGenre: "Docu, Action, Cars",
