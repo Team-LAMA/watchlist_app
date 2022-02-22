@@ -342,7 +342,7 @@ const model = {
 				},
 			],
 			personalComments: ["Historien og fortellingen er så fin i denne filmen", "Morsom og en god MARVEL film", "Gråt gjennom hele filmen, for en stjerne han er", "Denne er kjempe bra, spennede hvordan det går med Tony Stark", "Helt grei film","Bra film og morsomme måter å overleve i tiden på","Denne filmen viser virkelig rivaliseringen mellom de to karene opp gjennom årene. Det ultimate venepunktet er jo skildringen av Lauda sin ulykke i Tysland 1976. Utrolig bra film","Morsom og litt spennende film"],
-			ratings: [9,5,10,7,4,8.5,9.5,3],
+			ratings: [9,5,10,7,4.7,8.5,9.8,3],
 			lastChanged: Date.now() - 32000000000,
 		},
 		{
