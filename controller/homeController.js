@@ -36,32 +36,37 @@ function notificationTimer(list){
 
   if(newDate.getFullYear() < new Date().getFullYear()){
     html = new Date().getFullYear() - newDate.getFullYear();
-    html += " Years ago";
+    if(html == 1) {html += " Year ago"}
+    else {html += " Years ago";}
   }
   else if(newDate.getMonth() < new Date().getMonth()){
     html = new Date().getMonth() - newDate.getMonth();
-    html += " Months ago";
+    if(html == 1) {html += " Month ago";}
+    else {html += " Months ago";}
   }
   else if(newDate.getDate() < new Date().getDate()){
     // Using getDate instead of getDay, because getDay only returns the weekday
     //   (a number between 0 and 6) so the if has a pass-through 4 times a month,
     //   while getDate return the day of the month (number between 1 and 31).
-    // minus 1 because getDate is the only one to start counting at 1
+    //   minus 1 because getDate is the only one to start counting at 1
     html = new Date().getDate() - newDate.getDate();
     if(html == 1) {html += " Day ago";}
     else {html += " Days ago";}
   }
   else if(newDate.getHours() < new Date().getHours()){
     html = new Date().getHours() - newDate.getHours();
-    html += " Hours ago";
+    if(html == 1) {html += " Hour ago";}
+    else {html += " Hours ago";}
   }
   else if(newDate.getMinutes() < new Date().getMinutes()){
     html = new Date().getMinutes() - newDate.getMinutes();
-    html += " Minutes ago";
+    if(html == 1) {html += " Minute ago";}
+    else {html += " Minutes ago";}
   }
   else{
     html = new Date().getSeconds() - newDate.getSeconds();
-    html += " Seconds ago";
+    if(html == 1) {html += " Second ago";}
+    else {html += " Seconds ago";}
   }
   return html;
 }
