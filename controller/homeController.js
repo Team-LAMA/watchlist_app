@@ -48,7 +48,7 @@ function notificationTimer(list){
     // Using getDate instead of getDay, because getDay only returns the weekday
     //   (a number between 0 and 6) so the if has a pass-through 4 times a month,
     //   while getDate return the day of the month (number between 1 and 31).
-    // minus 1 because getDate is the only one to start counting at 1
+    //   minus 1 because getDate is the only one to start counting at 1
     html = new Date().getDate() - newDate.getDate();
     if(html == 1) {html += " Day ago";}
     else {html += " Days ago";}
