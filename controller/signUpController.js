@@ -37,7 +37,6 @@ function signUp() {
 		model.app.page = model.app.lastPage;
 	} else {
 		model.signedInInfo.userId = -1;
-		console.log('Feila')
 	}
 	updateView();
 }
