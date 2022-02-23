@@ -327,7 +327,7 @@ const model = {
 		},
 		{
 			ID: 3,
-			name: "Magnus",
+			name: "Magnus sin liste",
 			movies: [
 				{
 					ID: null,
