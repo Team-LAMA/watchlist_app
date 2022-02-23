@@ -6,7 +6,6 @@ function openMovieList(listID) {
 function go(page) {
   let app = model.app;
   history.pushState(null, null, `#${app.page}/${app.lastPage}/${app.userID}/${app.listID}`);
-  app.lastPage = app.page;
   app.page = page;
   model.inputs = {
 		makeUser: {
