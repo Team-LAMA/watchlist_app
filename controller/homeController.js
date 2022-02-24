@@ -70,8 +70,3 @@ function notificationTimer(list){
   }
   return html;
 }
-
-function testNotificationTimer() {
-
-  if(n){}
-}

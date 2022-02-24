@@ -478,7 +478,7 @@ const model = {
 			password: "123",
 			eMail: "LinnO@Team3.no",
 			movieLists: [],
-			profileName: "Linn",
+			profileName: "Linn Østgaard",
 			profilePicture: "https://www.pngitem.com/pimgs/m/146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png",
 			age: "23",
 			favGenre: "Docu, Action, Cars",

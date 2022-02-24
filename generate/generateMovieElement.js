@@ -117,10 +117,10 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 		`
 
 		if (options.expanded && options.editable) {
-			html += /*html*/ `<textarea onchange="updateMovieGeneres(this, ${movieList.ID}, ${index})">${movieList.movies[index].genres}</textarea>`
+			html += /*html*/ `<textarea onchange="updateMovieGeneres(this, ${movieList.ID}, ${index})">${(movieList.movies[index].genres) ? movieList.movies[index].genres : ""}</textarea>`
 		}
 		else {
-			html += movieList.movies[index].genres;
+			html += (movieList.movies[index].genres) ? movieList.movies[index].genres : "";
 		}
 
 		html += /*html*/ `
@@ -138,10 +138,10 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 				<div>
 		`
 		if (options.expanded && options.editable) {
-			html += /*html*/ `<textarea onchange="updateMovieDirectors(this, ${movieList.ID}, ${index})">${movieList.movies[index].directors}</textarea>`
+			html += /*html*/ `<textarea onchange="updateMovieDirectors(this, ${movieList.ID}, ${index})">${(movieList.movies[index].directors) ? movieList.movies[index].directors : ""}</textarea>`
 		}
 		else {
-			html += movieList.movies[index].directors;
+			html += (movieList.movies[index].directors) ? movieList.movies[index].directors : "";
 		}
 		html += /*html*/ `
 				</div>
@@ -163,10 +163,10 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 				<u>Description</u>
 			`
 		if (options.expanded && options.editable) {
-			html += /*html*/ `<textarea onchange="updateMovieDescription(this, ${movieList.ID}, ${index})">${movieList.movies[index].description}</textarea>`
+			html += /*html*/ `<textarea onchange="updateMovieDescription(this, ${movieList.ID}, ${index})">${(movieList.movies[index].description) ? movieList.movies[index].description : ""}</textarea>`
 		}
 		else {
-			html += `<span>${movieList.movies[index].description}<span>`
+			html += `<span>${(movieList.movies[index].description) ? movieList.movies[index].description : ""}<span>`
 		}
 		html += `</div>`
 	}
@@ -180,10 +180,10 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 				<u>Actors</u>
 		`
 		if (options.expanded && options.editable) {
-			html += /*html*/ `<textarea  onchange="updateMovieActors(this, ${movieList.ID}, ${index})">${movieList.movies[index].actors}</textarea>`
+			html += /*html*/ `<textarea  onchange="updateMovieActors(this, ${movieList.ID}, ${index})">${(movieList.movies[index].actors) ? movieList.movies[index].actors : ""}</textarea>`
 		}
 		else {
-			html += movieList.movies[index].actors;
+			html += (movieList.movies[index].actors) ? movieList.movies[index].actors : "";
 		}
 		html += /*html*/ `
 			</div>
@@ -200,10 +200,10 @@ function generateMovieElement(movieList, index, onClick, options = {}) {
 				<u>Personal Comments</u>
 				`
 		if (options.expanded && options.editable) {
-			html += /*html*/ `<textarea  onchange="updateMoviePersonalComments(this, ${movieList.ID}, ${index})">${movieList.personalComments[index]}</textarea>`
+			html += /*html*/ `<textarea  onchange="updateMoviePersonalComments(this, ${movieList.ID}, ${index})">${(movieList.personalComments[index]) ? movieList.personalComments[index] : ""}</textarea>`
 		}
 		else {
-			html += movieList.personalComments[index];
+			html += (movieList.personalComments[index]) ? movieList.personalComments[index] : "";
 		}
 		html += /*html*/`
 			</div>
